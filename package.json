@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "vuepress": "^1.0.2"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "predeploy": "yarn docs:build",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "latest": "yarn upgrade-interactive --latest"
+  }
+}
