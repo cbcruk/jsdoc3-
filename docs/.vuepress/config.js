@@ -3,7 +3,9 @@ module.exports = {
   serviceWorker: true,
   title: 'Use JSDoc',
   description: 'Official documentation for JSDoc 3.',
+  theme: 'default-prefers-color-scheme',
   themeConfig: {
+    defaultTheme: 'dark',
     sidebar: {
       '/about/': [
         {
@@ -116,4 +118,10 @@ module.exports = {
       ],
     },
   },
-};
+  postcss: {
+    plugins: [
+      require('css-prefers-color-scheme/postcss'),
+      require('autoprefixer'),
+    ],
+  },
+}
