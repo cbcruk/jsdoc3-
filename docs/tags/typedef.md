@@ -1,6 +1,8 @@
-# @typedef
-
-[[toc]]
+---
+id: typedef
+title: @typedef
+sidebar_label: @typedef
+---
 
 ## Syntax
 

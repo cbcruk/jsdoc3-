@@ -1,6 +1,8 @@
-# @memberof
-
-[[toc]]
+---
+id: memberof
+title: @memberof
+sidebar_label: @memberof
+---
 
 ## Syntax
 

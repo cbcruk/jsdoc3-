@@ -1,6 +1,8 @@
-# @throws
-
-[[toc]]
+---
+id: throws
+title: @throws
+sidebar_label: @throws
+---
 
 ## Synonyms
 

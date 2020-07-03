@@ -1,6 +1,8 @@
-# @class
-
-[[toc]]
+---
+id: class
+title: @class
+sidebar_label: @class
+---
 
 ## Synonyms
 

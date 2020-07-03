@@ -1,6 +1,8 @@
-# @module
-
-[[toc]]
+---
+id: module
+title: @module
+sidebar_label: @module
+---
 
 ## Syntax
 

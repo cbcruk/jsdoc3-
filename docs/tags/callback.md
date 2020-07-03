@@ -1,6 +1,8 @@
-# @callback
-
-[[toc]]
+---
+id: callback
+title: @callback
+sidebar_label: @callback
+---
 
 ## Syntax
 

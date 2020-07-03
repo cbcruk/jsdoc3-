@@ -1,6 +1,8 @@
-# @author
-
-[[toc]]
+---
+id: author
+title: @author
+sidebar_label: @author
+---
 
 ## Syntax
 

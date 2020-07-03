@@ -1,6 +1,8 @@
-# @interface
-
-[[toc]]
+---
+id: interface
+title: @interface
+sidebar_label: @interface
+---
 
 ## Syntax
 

@@ -1,6 +1,8 @@
-# @protected
-
-[[toc]]
+---
+id: protected
+title: @protected
+sidebar_label: @protected
+---
 
 ## Syntax
 

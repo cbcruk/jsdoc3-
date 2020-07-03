@@ -1,8 +1,8 @@
-# Tutorials
-
-<!-- markdownlint-disable MD030 -->
-
-[[toc]]
+---
+id: tutorials
+title: Tutorials
+sidebar_label: Tutorials
+---
 
 JSDoc allows you to include tutorials alongside your API documentation. You can use this feature to provide detailed instructions for using your API, such as a "getting started" guide or a step-by-step process for implementing a feature.
 
@@ -42,36 +42,11 @@ In JSDoc 3.2.0 and later, you can use the following formats for the JSON file:
 
 1.  A tree of objects, with child tutorials defined in the `children` property of their parent. For example, if `tutorial1` has two children, `childA` and `childB`, and `tutorial2` is at the same level as `tutorial1` and has no children:
 
-    ```json
-    {
-      "tutorial1": {
-        "title": "Tutorial One",
-        "children": {
-          "childA": {
-            "title": "Child A"
-          },
-          "childB": {
-            "title": "Child B"
-          }
-        }
-      },
-      "tutorial2": {
-        "title": "Tutorial Two"
-      }
-    }
-    ```
-
-2.  A top-level object whose properties are all tutorial objects, with child tutorials listed by name in an array. For example, if `tutorial1` has two children, `childA` and `childB`, and `tutorial2` is at the same level as `tutorial1` and has no children:
-
-    ```json
-    {
-      "tutorial1": {
-        "title": "Tutorial One",
-        "children": ["childA", "childB"]
-      },
-      "tutorial2": {
-        "title": "Tutorial Two"
-      },
+```json
+{
+  "tutorial1": {
+    "title": "Tutorial One",
+    "children": {
       "childA": {
         "title": "Child A"
       },
@@ -79,7 +54,32 @@ In JSDoc 3.2.0 and later, you can use the following formats for the JSON file:
         "title": "Child B"
       }
     }
-    ```
+  },
+  "tutorial2": {
+    "title": "Tutorial Two"
+  }
+}
+```
+
+2.  A top-level object whose properties are all tutorial objects, with child tutorials listed by name in an array. For example, if `tutorial1` has two children, `childA` and `childB`, and `tutorial2` is at the same level as `tutorial1` and has no children:
+
+```json
+{
+  "tutorial1": {
+    "title": "Tutorial One",
+    "children": ["childA", "childB"]
+  },
+  "tutorial2": {
+    "title": "Tutorial Two"
+  },
+  "childA": {
+    "title": "Child A"
+  },
+  "childB": {
+    "title": "Child B"
+  }
+}
+```
 
 You can also provide an individual `.json` file for each tutorial, using the tutorial identifier as the filename. This method is deprecated and should not be used for new projects.
 

@@ -1,6 +1,8 @@
-# @listens
-
-[[toc]]
+---
+id: listens
+title: @listens
+sidebar_label: @listens
+---
 
 ## Syntax
 

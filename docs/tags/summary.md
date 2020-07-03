@@ -1,6 +1,8 @@
-# @summary
-
-[[toc]]
+---
+id: summary
+title: @summary
+sidebar_label: @summary
+---
 
 ## Syntax
 

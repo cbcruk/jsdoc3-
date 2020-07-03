@@ -1,6 +1,8 @@
-# @variation
-
-[[toc]]
+---
+id: variation
+title: @variation
+sidebar_label: @variation
+---
 
 ## Syntax
 

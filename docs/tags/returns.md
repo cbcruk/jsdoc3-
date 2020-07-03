@@ -1,6 +1,8 @@
-# @returns
-
-[[toc]]
+---
+id: returns
+title: @returns
+sidebar_label: @returns
+---
 
 ## Synonyms
 

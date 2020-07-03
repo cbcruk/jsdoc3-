@@ -1,6 +1,8 @@
-# @exports
-
-[[toc]]
+---
+id: exports
+title: @exports
+sidebar_label: @exports
+---
 
 ## Syntax
 

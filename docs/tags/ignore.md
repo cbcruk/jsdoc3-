@@ -1,6 +1,8 @@
-# @ignore
-
-[[toc]]
+---
+id: ignore
+title: @ignore
+sidebar_label: @ignore
+---
 
 ## Overview
 

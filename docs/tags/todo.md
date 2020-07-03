@@ -1,6 +1,8 @@
-# @todo
-
-[[toc]]
+---
+id: todo
+title: @todo
+sidebar_label: @todo
+---
 
 ## Syntax
 

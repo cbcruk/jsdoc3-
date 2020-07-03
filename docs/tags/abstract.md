@@ -1,6 +1,8 @@
-# @abstract
-
-[[toc]]
+---
+id: abstract
+title: @abstract
+sidebar_label: @abstract
+---
 
 ## Synonyms
 

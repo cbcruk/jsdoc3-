@@ -1,6 +1,8 @@
-# @implements
-
-[[toc]]
+---
+id: implements
+title: @implements
+sidebar_label: @implements
+---
 
 ## Syntax
 

@@ -1,10 +1,12 @@
-# Configuring JSDoc's default template
-
-[[toc]]
+---
+id: configuring-default-template
+title: Configuring JSDoc's default template
+sidebar_label: Configuring JSDoc's default template
+---
 
 JSDoc's default template provides several options that you can use to customize the appearance and content of generated documentation.
 
-To use these options, you must [create a configuration file](../about/configuring-jsdoc.md) for JSDoc and set the appropriate options in the configuration file.
+To use these options, you must [create a configuration file](./configuring-jsdoc.md) for JSDoc and set the appropriate options in the configuration file.
 
 ## Generating pretty-printed source files
 
@@ -57,4 +59,4 @@ To use this feature, set the option `templates.default.layoutFile` to the path t
 
 ## Related Links
 
-[Configuring JSDoc with a configuration file](../about/configuring-jsdoc.md)
+[Configuring JSDoc with a configuration file](./configuring-jsdoc.md)

@@ -1,6 +1,8 @@
-# @fires
-
-[[toc]]
+---
+id: fires
+title: @fires
+sidebar_label: @fires
+---
 
 ## Synonyms
 

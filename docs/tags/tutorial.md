@@ -1,6 +1,8 @@
-# @tutorial
-
-[[toc]]
+---
+id: tutorial
+title: @tutorial
+sidebar_label: @tutorial
+---
 
 ## Syntax
 

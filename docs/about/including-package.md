@@ -1,6 +1,8 @@
-# Including a Package File
-
-<!-- markdownlint-disable MD030 -->
+---
+id: including-package
+title: Including a Package File
+sidebar_label: Including a Package File
+---
 
 Package files contain information that can be useful for your project's documentation, such as the project's name and version number. JSDoc can automatically use information from your project's `package.json` file when it generates documentation. For example, the default template shows the project's name and version number in the documentation.
 

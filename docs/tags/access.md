@@ -1,6 +1,8 @@
-# @access
-
-[[toc]]
+---
+id: access
+title: @access
+sidebar_label: @access
+---
 
 ## Syntax
 

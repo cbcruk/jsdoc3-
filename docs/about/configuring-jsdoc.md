@@ -1,8 +1,8 @@
-# Configuring JSDoc with a configuration file
-
-<!-- markdownlint-disable MD030 -->
-
-[[toc]]
+---
+id: configuring-jsdoc
+title: Configuring JSDoc with a configuration file
+sidebar_label: Configuring JSDoc with a configuration file
+---
 
 ## Configuration file formats
 

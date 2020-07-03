@@ -1,6 +1,8 @@
-# ES 2015 Modules
-
-[[toc]]
+---
+id: es2015-modules
+title: ES 2015 Modules
+sidebar_label: ES 2015 Modules
+---
 
 JSDoc 3 makes it possible to document modules that follow the [ECMAScript 2015 specification](http://www.ecma-international.org/ecma-262/6.0/#sec-modules). ES 2015 modules are supported in JSDoc 3.4.0 and later.
 

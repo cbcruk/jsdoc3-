@@ -1,6 +1,8 @@
-# @external
-
-[[toc]]
+---
+id: external
+title: @external
+sidebar_label: @external
+---
 
 ## Synonyms
 

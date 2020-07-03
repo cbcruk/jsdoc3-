@@ -1,6 +1,8 @@
-# @license
-
-[[toc]]
+---
+id: license
+title: @license
+sidebar_label: @license
+---
 
 ## Syntax
 

@@ -1,6 +1,8 @@
-# @example
-
-[[toc]]
+---
+id: example
+title: @example
+sidebar_label: @example
+---
 
 ## Overview
 

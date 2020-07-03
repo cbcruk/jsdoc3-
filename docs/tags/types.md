@@ -1,8 +1,8 @@
-# @type
-
-<!-- markdownlint-disable MD040 -->
-
-[[toc]]
+---
+id: types
+title: @type
+sidebar_label: @type
+---
 
 ## Syntax
 

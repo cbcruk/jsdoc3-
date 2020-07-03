@@ -1,6 +1,8 @@
-# @name
-
-[[toc]]
+---
+id: name
+title: @name
+sidebar_label: @name
+---
 
 ## Syntax
 

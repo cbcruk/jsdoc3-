@@ -1,6 +1,8 @@
-# @constant
-
-[[toc]]
+---
+id: constant
+title: @constant
+sidebar_label: @constant
+---
 
 ## Synonyms
 

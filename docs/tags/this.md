@@ -1,6 +1,8 @@
-# @this
-
-[[toc]]
+---
+id: this
+title: @this
+sidebar_label: @this
+---
 
 ## Syntax
 

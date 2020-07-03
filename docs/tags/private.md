@@ -1,6 +1,8 @@
-# @private
-
-[[toc]]
+---
+id: private
+title: @private
+sidebar_label: @private
+---
 
 ## Syntax
 

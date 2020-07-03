@@ -1,6 +1,8 @@
-# @inheritdoc
-
-[[toc]]
+---
+id: inheritdoc
+title: @inheritdoc
+sidebar_label: @inheritdoc
+---
 
 ## Overview
 

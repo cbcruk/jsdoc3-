@@ -1,6 +1,8 @@
-# @static
-
-[[toc]]
+---
+id: static
+title: @static
+sidebar_label: @static
+---
 
 ## Overview
 

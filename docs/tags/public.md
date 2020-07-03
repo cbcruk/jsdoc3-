@@ -1,6 +1,8 @@
-# @public
-
-[[toc]]
+---
+id: public
+title: @public
+sidebar_label: @public
+---
 
 ## Overview
 

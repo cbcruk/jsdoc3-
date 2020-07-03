@@ -1,6 +1,8 @@
-# @instance
-
-[[toc]]
+---
+id: instance
+title: @instance
+sidebar_label: @instance
+---
 
 ## Overview
 

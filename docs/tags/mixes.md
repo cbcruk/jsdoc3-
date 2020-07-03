@@ -1,6 +1,8 @@
-# @mixes
-
-[[toc]]
+---
+id: mixes
+title: @mixes
+sidebar_label: @mixes
+---
 
 ## Syntax
 

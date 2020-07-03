@@ -1,6 +1,8 @@
-# @override
-
-[[toc]]
+---
+id: override
+title: @override
+sidebar_label: @override
+---
 
 ## Overview
 

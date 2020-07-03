@@ -1,6 +1,8 @@
-# @version
-
-[[toc]]
+---
+id: version
+title: @version
+sidebar_label: @version
+---
 
 ## Overview
 

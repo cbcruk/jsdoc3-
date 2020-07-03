@@ -1,6 +1,8 @@
-# @param
-
-[[toc]]
+---
+id: param
+title: @param
+sidebar_label: @param
+---
 
 ## Synonyms
 

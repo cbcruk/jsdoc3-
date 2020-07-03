@@ -1,6 +1,8 @@
-# @property
-
-[[toc]]
+---
+id: property
+title: @property
+sidebar_label: @property
+---
 
 ## Synonyms
 

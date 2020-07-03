@@ -1,6 +1,8 @@
-# @global
-
-[[toc]]
+---
+id: global
+title: @global
+sidebar_label: @global
+---
 
 ## Overview
 

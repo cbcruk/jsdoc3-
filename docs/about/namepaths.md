@@ -1,6 +1,8 @@
-# Using namepaths with JSDoc 3
-
-[[toc]]
+---
+id: namepaths
+title: Using namepaths with JSDoc 3
+sidebar_label: Using namepaths with JSDoc 3
+---
 
 ## Namepaths in JSDoc 3
 

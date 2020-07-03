@@ -1,6 +1,8 @@
-# ES 2015 Classes
-
-[[toc]]
+---
+id: es2015-classes
+title: ES 2015 Classes
+sidebar_label: ES 2015 Classes
+---
 
 JSDoc 3 makes it easy to document classes that follow the [ECMAScript 2015 specification](http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions). You don't need to use tags such as `@class` and `@constructor` with ES 2015 classes—JSDoc automatically identifies classes and their constructors simply by parsing your code. ES 2015 classes are supported in JSDoc 3.4.0 and later.
 

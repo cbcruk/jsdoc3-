@@ -1,6 +1,8 @@
-# @package
-
-[[toc]]
+---
+id: package
+title: @package
+sidebar_label: @package
+---
 
 ## Syntax
 

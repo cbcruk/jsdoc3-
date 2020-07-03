@@ -1,6 +1,8 @@
-# @enum
-
-[[toc]]
+---
+id: enum
+title: @enum
+sidebar_label: @enum
+---
 
 ## Syntax
 

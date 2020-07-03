@@ -1,6 +1,8 @@
-# @member
-
-[[toc]]
+---
+id: member
+title: @member
+sidebar_label: @member
+---
 
 ## Synonyms
 

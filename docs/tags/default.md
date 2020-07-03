@@ -1,6 +1,8 @@
-# @default
-
-[[toc]]
+---
+id: default
+title: @default
+sidebar_label: @default
+---
 
 ## Synonyms
 

@@ -1,6 +1,8 @@
-# @inner
-
-[[toc]]
+---
+id: inner
+title: @inner
+sidebar_label: @inner
+---
 
 ## Overview
 

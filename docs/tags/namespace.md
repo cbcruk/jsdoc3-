@@ -1,6 +1,8 @@
-# @namespace
-
-[[toc]]
+---
+id: namespace
+title: @namespace
+sidebar_label: @namespace
+---
 
 ## Syntax
 

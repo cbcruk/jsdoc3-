@@ -1,6 +1,8 @@
-# @borrows
-
-[[toc]]
+---
+id: borrows
+title: @borrows
+sidebar_label: @borrows
+---
 
 ## Syntax
 

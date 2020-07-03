@@ -1,6 +1,8 @@
-# @event
-
-[[toc]]
+---
+id: event
+title: @event
+sidebar_label: @event
+---
 
 ## Syntax
 

@@ -1,6 +1,8 @@
-# @function
-
-[[toc]]
+---
+id: function
+title: @function
+sidebar_label: @function
+---
 
 ## Synonyms
 

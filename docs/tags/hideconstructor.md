@@ -1,6 +1,8 @@
-# @hideconstructor
-
-[[toc]]
+---
+id: hideconstructor
+title: @hideconstructor
+sidebar_label: @hideconstructor
+---
 
 ## Syntax
 

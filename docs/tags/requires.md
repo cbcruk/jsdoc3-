@@ -1,6 +1,8 @@
-# @requires
-
-[[toc]]
+---
+id: requires
+title: @requires
+sidebar_label: @requires
+---
 
 ## Syntax
 

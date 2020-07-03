@@ -1,6 +1,8 @@
-# Getting Started with JSDoc 3
-
-[[toc]]
+---
+id: getting-started
+title: Getting Started with JSDoc 3
+sidebar_label: Getting Started with JSDoc 3
+---
 
 ## Getting started
 

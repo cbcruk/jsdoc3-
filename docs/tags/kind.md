@@ -1,6 +1,8 @@
-# @kind
-
-[[toc]]
+---
+id: kind
+title: @kind
+sidebar_label: @kind
+---
 
 ## Syntax
 

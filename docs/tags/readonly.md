@@ -1,6 +1,8 @@
-# @readonly
-
-[[toc]]
+---
+id: readonly
+title: @readonly
+sidebar_label: @readonly
+---
 
 ## Overview
 

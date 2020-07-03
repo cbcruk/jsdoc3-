@@ -1,6 +1,8 @@
-# @mixin
-
-[[toc]]
+---
+id: mixin
+title: @mixin
+sidebar_label: @mixin
+---
 
 ## Syntax
 

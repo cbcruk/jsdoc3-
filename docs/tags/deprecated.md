@@ -1,6 +1,8 @@
-# @deprecated
-
-[[toc]]
+---
+id: deprecated
+title: @deprecated
+sidebar_label: @deprecated
+---
 
 ## Syntax
 

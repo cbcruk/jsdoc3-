@@ -1,6 +1,8 @@
-# @description
-
-[[toc]]
+---
+id: description
+title: @description
+sidebar_label: @description
+---
 
 ## Synonyms
 

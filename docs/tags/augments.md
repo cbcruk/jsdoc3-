@@ -1,6 +1,8 @@
-# @augments
-
-[[toc]]
+---
+id: augments
+title: @augments
+sidebar_label: @augments
+---
 
 ## Synonyms
 
