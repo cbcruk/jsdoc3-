@@ -1,6 +1,8 @@
-# @private
-
-[[toc]]
+---
+id: private
+title: '@private'
+sidebar_label: '@private'
+---
 
 ## Syntax
 
@@ -37,8 +39,8 @@ var Documents = {
    * My diary.
    * @private
    */
-  Diary: 2
-};
+  Diary: 2,
+}
 ```
 
 ## Related Links

@@ -1,6 +1,8 @@
-# @returns
-
-[[toc]]
+---
+id: returns
+title: '@returns'
+sidebar_label: '@returns'
+---
 
 ## Synonyms
 
@@ -28,7 +30,7 @@ Return value with a type
  * @returns {number}
  */
 function sum(a, b) {
-  return a + b;
+  return a + b
 }
 ```
 
@@ -42,7 +44,7 @@ Return value with a type and description
  * @returns {number} Sum of a and b
  */
 function sum(a, b) {
-  return a + b;
+  return a + b
 }
 ```
 
@@ -58,9 +60,9 @@ Return value with multiple types
  */
 function sum(a, b, retArr) {
   if (retArr) {
-    return [a, b, a + b];
+    return [a, b, a + b]
   }
-  return a + b;
+  return a + b
 }
 ```
 
@@ -74,9 +76,9 @@ Returns a promise
  * @returns {Promise} Promise object represents the sum of a and b
  */
 function sumAsync(a, b) {
-  return new Promise(function(resolve, reject) {
-    resolve(a + b);
-  });
+  return new Promise(function (resolve, reject) {
+    resolve(a + b)
+  })
 }
 ```
 

@@ -1,6 +1,8 @@
-# @package
-
-[[toc]]
+---
+id: package
+title: '@package'
+sidebar_label: '@package'
+---
 
 ## Syntax
 
@@ -30,7 +32,7 @@ Using the @package tag
 /** @constructor */
 function Thingy() {
   /** @package */
-  this._bar = 1;
+  this._bar = 1
 }
 ```
 

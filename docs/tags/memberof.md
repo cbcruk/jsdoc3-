@@ -1,6 +1,8 @@
-# @memberof
-
-[[toc]]
+---
+id: memberof
+title: '@memberof'
+sidebar_label: '@memberof'
+---
 
 ## Syntax
 
@@ -23,12 +25,12 @@ Using @memberof
 
 ```js
 /** @namespace */
-var Tools = {};
+var Tools = {}
 
 /** @memberof Tools */
-var hammer = function() {};
+var hammer = function () {}
 
-Tools.hammer = hammer;
+Tools.hammer = hammer
 ```
 
 For instance members of a class, use the syntax "@memberof ClassName.prototype" or "@memberof ClassName#". Alternatively, you can combine "@memberof ClassName" with the "@instance" tag.
@@ -37,7 +39,7 @@ Using @memberof with a class prototype
 
 ```js
 /** @class Observable */
-create("Observable", {
+create('Observable', {
   /**
    * This will be a static member, Observable.cache.
    * @memberof Observable
@@ -48,21 +50,21 @@ create("Observable", {
    * This will be an instance member, Observable#publish.
    * @memberof Observable.prototype
    */
-  publish: function(msg) {},
+  publish: function (msg) {},
 
   /**
    * This will also be an instance member, Observable#save.
    * @memberof Observable#
    */
-  save: function() {},
+  save: function () {},
 
   /**
    * This will also be an instance member, Observable#end.
    * @memberof Observable
    * @instance
    */
-  end: function() {}
-});
+  end: function () {},
+})
 ```
 
 The following example uses the forced @memberof tag, "@memberof!", to document a property of an object (Data#point) that is an instance member of a class (Data).
@@ -88,8 +90,8 @@ function Data() {
      * @memberof! Data#
      */
     x: 0,
-    y: 1
-  };
+    y: 1,
+  }
 }
 ```
 

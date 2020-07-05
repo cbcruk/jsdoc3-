@@ -1,6 +1,8 @@
-# @exports
-
-[[toc]]
+---
+id: exports
+title: '@exports'
+sidebar_label: '@exports'
+---
 
 ## Syntax
 
@@ -25,9 +27,9 @@ CommonJS module
  */
 
 /** Say hello. */
-exports.sayHello = function() {
-  return "Hello world";
-};
+exports.sayHello = function () {
+  return 'Hello world'
+}
 ```
 
 Node.js module
@@ -39,34 +41,34 @@ Node.js module
  */
 
 /** SAY HELLO. */
-module.exports = function() {
-  return "HELLO WORLD";
-};
+module.exports = function () {
+  return 'HELLO WORLD'
+}
 ```
 
 AMD module that exports an object literal
 
 ```js
-define(function() {
+define(function () {
   /**
    * A module that whispers hello!
    * @module hello/world
    */
-  var exports = {};
+  var exports = {}
 
   /** say hello. */
-  exports.sayHello = function() {
-    return "hello world";
-  };
+  exports.sayHello = function () {
+    return 'hello world'
+  }
 
-  return exports;
-});
+  return exports
+})
 ```
 
 AMD module that exports a constructor
 
 ```js
-define(function() {
+define(function () {
   /**
    * A module that creates greeters.
    * @module greeter
@@ -76,17 +78,17 @@ define(function() {
    * @constructor
    * @param {string} subject - The subject to greet.
    */
-  var exports = function(subject) {
-    this.subject = subject || "world";
-  };
+  var exports = function (subject) {
+    this.subject = subject || 'world'
+  }
 
   /** Say hello to the subject. */
-  exports.prototype.sayHello = function() {
-    return "Hello " + this.subject;
-  };
+  exports.prototype.sayHello = function () {
+    return 'Hello ' + this.subject
+  }
 
-  return exports;
-});
+  return exports
+})
 ```
 
 If your module exports an object named anything other than "exports" or "module.exports", use the @exports tag to indicate what is being exported.
@@ -94,20 +96,20 @@ If your module exports an object named anything other than "exports" or "module.
 AMD module that exports an object
 
 ```js
-define(function() {
+define(function () {
   /**
    * A module that says hello!
    * @exports hello/world
    */
-  var ns = {};
+  var ns = {}
 
   /** Say hello. */
-  ns.sayHello = function() {
-    return "Hello world";
-  };
+  ns.sayHello = function () {
+    return 'Hello world'
+  }
 
-  return ns;
-});
+  return ns
+})
 ```
 
 ## Related Links

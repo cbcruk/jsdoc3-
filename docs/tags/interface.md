@@ -1,6 +1,8 @@
-# @interface
-
-[[toc]]
+---
+id: interface
+title: '@interface'
+sidebar_label: '@interface'
+---
 
 ## Syntax
 
@@ -41,9 +43,9 @@ function Color() {}
  * @returns {Array<number>} An array containing the red, green, and blue values,
  * in that order.
  */
-Color.prototype.rgb = function() {
-  throw new Error("not implemented");
-};
+Color.prototype.rgb = function () {
+  throw new Error('not implemented')
+}
 ```
 
 The following example uses virtual comments, rather than code, to define the `Color` interface:

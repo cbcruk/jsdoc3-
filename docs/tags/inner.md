@@ -1,6 +1,8 @@
-# @inner
-
-[[toc]]
+---
+id: inner
+title: '@inner'
+sidebar_label: '@inner'
+---
 
 ## Overview
 
@@ -33,8 +35,8 @@ var MyNamespace = {
    * foo is now MyNamespace~foo rather than MyNamespace.foo.
    * @inner
    */
-  foo: 1
-};
+  foo: 1,
+}
 ```
 
 In the above example, we use @inner to force a member of a namespace to be documented as an inner member (by default, it would be a static member). This means that `foo` now has the longname `MyNamespace~foo` instead of `MyNamespace.foo`.

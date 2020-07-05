@@ -1,6 +1,8 @@
-# @override
-
-[[toc]]
+---
+id: override
+title: '@override'
+sidebar_label: '@override'
+---
 
 ## Overview
 
@@ -26,9 +28,9 @@ function Connection() {}
 /**
  * Open the connection.
  */
-Connection.prototype.open = function() {
+Connection.prototype.open = function () {
   // ...
-};
+}
 
 /**
  * @classdesc Class representing a socket connection.
@@ -41,9 +43,9 @@ function Socket() {}
  * Open the socket.
  * @override
  */
-Socket.prototype.open = function() {
+Socket.prototype.open = function () {
   // ...
-};
+}
 ```
 
 ## Related Links

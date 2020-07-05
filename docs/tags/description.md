@@ -1,6 +1,8 @@
-# @description
-
-[[toc]]
+---
+id: description
+title: '@description'
+sidebar_label: '@description'
+---
 
 ## Synonyms
 
@@ -28,7 +30,7 @@ Describing a symbol without the @description tag
  * @returns {number}
  */
 function add(a, b) {
-  return a + b;
+  return a + b
 }
 ```
 
@@ -44,7 +46,7 @@ Describing a symbol with the @description tag
  * @description Add two numbers.
  */
 function add(a, b) {
-  return a + b;
+  return a + b
 }
 ```
 

@@ -1,6 +1,8 @@
-# @implements
-
-[[toc]]
+---
+id: implements
+title: '@implements'
+sidebar_label: '@implements'
+---
 
 ## Syntax
 
@@ -35,9 +37,9 @@ function Color() {}
  * @returns {Array<number>} An array containing the red, green, and blue values,
  * in that order.
  */
-Color.prototype.rgb = function() {
-  throw new Error("not implemented");
-};
+Color.prototype.rgb = function () {
+  throw new Error('not implemented')
+}
 
 /**
  * Class representing a color with transparency information.
@@ -48,9 +50,9 @@ Color.prototype.rgb = function() {
 function TransparentColor() {}
 
 // inherits the documentation from `Color#rgb`
-TransparentColor.prototype.rgb = function() {
+TransparentColor.prototype.rgb = function () {
   // ...
-};
+}
 
 /**
  * Get the color as an array of red, green, blue, and alpha values, represented
@@ -59,9 +61,9 @@ TransparentColor.prototype.rgb = function() {
  * @returns {Array<number>} An array containing the red, green, blue, and alpha
  * values, in that order.
  */
-TransparentColor.prototype.rgba = function() {
+TransparentColor.prototype.rgba = function () {
   // ...
-};
+}
 ```
 
 ## Related Links

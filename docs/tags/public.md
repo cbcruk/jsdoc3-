@@ -1,6 +1,8 @@
-# @public
-
-[[toc]]
+---
+id: public
+title: '@public'
+sidebar_label: '@public'
+---
 
 ## Overview
 
@@ -26,7 +28,7 @@ function Thingy() {
    * of 'Thingy', in spite of the @public tag.
    * @public
    */
-  var foo = 0;
+  var foo = 0
 }
 ```
 

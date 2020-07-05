@@ -1,6 +1,8 @@
-# @mixin
-
-[[toc]]
+---
+id: mixin
+title: '@mixin'
+sidebar_label: '@mixin'
+---
 
 ## Syntax
 
@@ -27,7 +29,7 @@ var Eventful = {
    * @param {string} eventName - Name of the event.
    * @param {function(Object)} handler - The handler to call.
    */
-  on: function(eventName, handler) {
+  on: function (eventName, handler) {
     // code...
   },
 
@@ -36,10 +38,10 @@ var Eventful = {
    * @param {string} eventName - Name of the event.
    * @param {Object} eventData - The data provided to each handler.
    */
-  fire: function(eventName, eventData) {
+  fire: function (eventName, eventData) {
     // code...
-  }
-};
+  },
+}
 ```
 
 ## Related Links

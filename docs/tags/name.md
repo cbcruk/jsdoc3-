@@ -1,6 +1,8 @@
-# @name
-
-[[toc]]
+---
+id: name
+title: '@name'
+sidebar_label: '@name'
+---
 
 ## Syntax
 
@@ -27,7 +29,7 @@ Using the @name tag
  * @global
  * @param {string} term - The search term to highlight.
  */
-eval("window.highlightSearchTerm = function(term) {};");
+eval('window.highlightSearchTerm = function(term) {};')
 ```
 
 ## Related Links

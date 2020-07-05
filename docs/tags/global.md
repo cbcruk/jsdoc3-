@@ -1,6 +1,8 @@
-# @global
-
-[[toc]]
+---
+id: global
+title: '@global'
+sidebar_label: '@global'
+---
 
 ## Overview
 
@@ -13,12 +15,12 @@ Use the @global tag to specify that a symbol should be documented as global.
 Document an inner variable as a global
 
 ```js
-(function() {
+;(function () {
   /** @global */
-  var foo = "hello foo";
+  var foo = 'hello foo'
 
-  this.foo = foo;
-}.apply(window));
+  this.foo = foo
+}.apply(window))
 ```
 
 ## Related Links

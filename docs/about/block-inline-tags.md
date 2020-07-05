@@ -1,6 +1,8 @@
-# Block and inline tags
-
-[[toc]]
+---
+id: block-inline-tags
+title: Block and inline tags
+sidebar_label: Block and inline tags
+---
 
 ## Overview
 

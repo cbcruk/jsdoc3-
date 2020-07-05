@@ -1,6 +1,8 @@
-# @access
-
-[[toc]]
+---
+id: access
+title: '@access'
+sidebar_label: '@access'
+---
 
 ## Syntax
 
@@ -27,16 +29,16 @@ Using @access as a synonym for other tags
 /** @constructor */
 function Thingy() {
   /** @access private */
-  var foo = 0;
+  var foo = 0
 
   /** @access protected */
-  this._bar = 1;
+  this._bar = 1
 
   /** @access package */
-  this.baz = 2;
+  this.baz = 2
 
   /** @access public */
-  this.pez = 3;
+  this.pez = 3
 }
 
 // same as...
@@ -44,16 +46,16 @@ function Thingy() {
 /** @constructor */
 function OtherThingy() {
   /** @private */
-  var foo = 0;
+  var foo = 0
 
   /** @protected */
-  this._bar = 1;
+  this._bar = 1
 
   /** @package */
-  this.baz = 2;
+  this.baz = 2
 
   /** @public */
-  this.pez = 3;
+  this.pez = 3
 }
 ```
 

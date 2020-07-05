@@ -1,6 +1,8 @@
-# @function
-
-[[toc]]
+---
+id: function
+title: '@function'
+sidebar_label: '@function'
+---
 
 ## Synonyms
 
@@ -21,7 +23,7 @@ Using @function to mark a function.
 
 ```js
 /** @function */
-var paginate = paginateFactory(pages);
+var paginate = paginateFactory(pages)
 ```
 
 Without the @function tag, the `paginate` object would be documented as a generic object (a [@member](./member.md)), because it isn't possible to tell from examining the line of code what type of value `paginate` will hold when it is run.

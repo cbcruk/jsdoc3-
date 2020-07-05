@@ -1,6 +1,8 @@
-# @abstract
-
-[[toc]]
+---
+id: abstract
+title: '@abstract'
+sidebar_label: '@abstract'
+---
 
 ## Synonyms
 
@@ -26,9 +28,9 @@ function DairyProduct() {}
  * @abstract
  * @return {boolean}
  */
-DairyProduct.prototype.isSolid = function() {
-  throw new Error("must be implemented by subclass!");
-};
+DairyProduct.prototype.isSolid = function () {
+  throw new Error('must be implemented by subclass!')
+}
 
 /**
  * Cool, refreshing milk.
@@ -41,7 +43,7 @@ function Milk() {}
  * Check whether milk is solid at room temperature.
  * @return {boolean} Always returns false.
  */
-Milk.prototype.isSolid = function() {
-  return false;
-};
+Milk.prototype.isSolid = function () {
+  return false
+}
 ```

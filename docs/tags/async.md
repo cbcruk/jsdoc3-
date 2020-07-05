@@ -1,6 +1,8 @@
-# @async
-
-[[toc]]
+---
+id: async
+title: '@async'
+sidebar_label: '@async'
+---
 
 ## Syntax
 

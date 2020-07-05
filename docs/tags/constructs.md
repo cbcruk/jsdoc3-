@@ -1,6 +1,8 @@
-# @constructs
-
-[[toc]]
+---
+id: constructs
+title: '@constructs'
+sidebar_label: '@constructs'
+---
 
 ## Overview
 
@@ -19,32 +21,32 @@ var Person = makeClass(
   /** @lends Person.prototype */
   {
     /** @constructs */
-    initialize: function(name) {
-      this.name = name;
+    initialize: function (name) {
+      this.name = name
     },
     /** Describe me. */
-    say: function(message) {
-      return this.name + " says: " + message;
-    }
+    say: function (message) {
+      return this.name + ' says: ' + message
+    },
   }
-);
+)
 ```
 
 Without @lends you must provide the name of the class
 
 ```js
 makeClass(
-  "Menu",
+  'Menu',
   /**
    * @constructs Menu
    * @param items
    */
-  function(items) {},
+  function (items) {},
   {
     /** @memberof Menu# */
-    show: function() {}
+    show: function () {},
   }
-);
+)
 ```
 
 ## Related Links

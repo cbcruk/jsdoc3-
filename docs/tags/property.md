@@ -1,6 +1,8 @@
-# @property
-
-[[toc]]
+---
+id: property
+title: '@property'
+sidebar_label: '@property'
+---
 
 ## Synonyms
 
@@ -32,12 +34,12 @@ A namespace with defaults and nested default properties
 var config = {
   defaults: {
     players: 1,
-    level: "beginner",
+    level: 'beginner',
     treasure: {
-      gold: 0
-    }
-  }
-};
+      gold: 0,
+    },
+  },
+}
 ```
 
 The following example shows how to indicate that a property is optional.

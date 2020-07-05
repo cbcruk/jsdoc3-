@@ -1,6 +1,8 @@
-# @copyright
-
-[[toc]]
+---
+id: copyright
+title: '@copyright'
+sidebar_label: '@copyright'
+---
 
 ## Syntax
 

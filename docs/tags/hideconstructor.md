@@ -1,6 +1,8 @@
-# @hideconstructor
-
-[[toc]]
+---
+id: hideconstructor
+title: '@hideconstructor'
+sidebar_label: '@hideconstructor'
+---
 
 ## Syntax
 
@@ -24,8 +26,8 @@ For ES2015 classes, use this tag in the JSDoc comment for your constructor. If y
  * @class
  * @hideconstructor
  */
-var Toaster = (function() {
-  var instance = null;
+var Toaster = (function () {
+  var instance = null
 
   function Toaster() {}
 
@@ -38,7 +40,7 @@ var Toaster = (function() {
    * @param {BreadyThing} item - The item to toast.
    * @return {Toast} A toasted bready thing.
    */
-  Toaster.prototype.toast = function(item) {};
+  Toaster.prototype.toast = function (item) {}
 
   return {
     /**
@@ -47,16 +49,16 @@ var Toaster = (function() {
      * @alias Toaster.getInstance
      * @returns {Toaster} The Toaster instance.
      */
-    getInstance: function() {
+    getInstance: function () {
       if (instance === null) {
-        instance = new Toaster();
-        delete instance.constructor;
+        instance = new Toaster()
+        delete instance.constructor
       }
 
-      return instance;
-    }
-  };
-})();
+      return instance
+    },
+  }
+})()
 ```
 
 @hideconstructor tag with ES2015 class

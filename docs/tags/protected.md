@@ -1,6 +1,8 @@
-# @protected
-
-[[toc]]
+---
+id: protected
+title: '@protected'
+sidebar_label: '@protected'
+---
 
 ## Syntax
 
@@ -30,7 +32,7 @@ Using the @protected tag
 /** @constructor */
 function Thingy() {
   /** @protected */
-  this._bar = 1;
+  this._bar = 1
 }
 ```
 

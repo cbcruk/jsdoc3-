@@ -1,16 +1,28 @@
 {
-  "devDependencies": {
-    "gh-pages": "^2.2.0",
-    "vuepress": "^1.5.0"
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-alpha.58",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.58",
+    "clsx": "^1.1.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "predeploy": "yarn docs:build",
-    "deploy": "gh-pages -d docs/.vuepress/dist",
-    "latest": "yarn upgrade-interactive --latest"
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "pages": "gh-pages -d build"
   },
-  "dependencies": {
-    "vuepress-theme-default-prefers-color-scheme": "^1.0.7"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

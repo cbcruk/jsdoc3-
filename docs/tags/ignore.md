@@ -1,6 +1,8 @@
-# @ignore
-
-[[toc]]
+---
+id: ignore
+title: '@ignore'
+sidebar_label: '@ignore'
+---
 
 ## Overview
 
@@ -24,7 +26,7 @@ Class with `@ignore` tag
  */
 function Jacket() {
   /** The jacket's color. */
-  this.color = null;
+  this.color = null
 }
 ```
 
@@ -42,9 +44,9 @@ var Clothes = {
    * @class
    * @ignore
    */
-  Jacket: function() {
+  Jacket: function () {
     /** The jacket's color. */
-    this.color = null;
-  }
-};
+    this.color = null
+  },
+}
 ```

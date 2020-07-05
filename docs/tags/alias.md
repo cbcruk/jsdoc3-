@@ -1,6 +1,8 @@
-# @alias
-
-[[toc]]
+---
+id: alias
+title: '@alias'
+sidebar_label: '@alias'
+---
 
 ## Syntax
 
@@ -40,18 +42,18 @@ Using @alias with an anonymous constructor function
 
 ```js
 Klass(
-  "trackr.CookieManager",
+  'trackr.CookieManager',
 
   /**
    * @class
    * @alias trackr.CookieManager
    * @param {Object} kv
    */
-  function(kv) {
+  function (kv) {
     /** The value. */
-    this.value = kv;
+    this.value = kv
   }
-);
+)
 ```
 
 You can also use the @alias tag with members that are created within an immediately invoked function expression (IIFE). The @alias tag tells JSDoc that these members are exposed outside of the IIFE's scope.
@@ -60,20 +62,20 @@ Using @alias for static members of a namespace
 
 ```js
 /** @namespace */
-var Apple = {};
+var Apple = {}
 
-(function(ns) {
+;(function (ns) {
   /**
    * @namespace
    * @alias Apple.Core
    */
-  var core = {};
+  var core = {}
 
   /** Documented as Apple.Core.seed */
-  core.seed = function() {};
+  core.seed = function () {}
 
-  ns.Core = core;
-})(Apple);
+  ns.Core = core
+})(Apple)
 ```
 
 For members that are defined within an object literal, you can use the @alias tag as an alternative to the [@lends](./lends.md) tag.
@@ -83,7 +85,7 @@ Using @alias for an object literal
 ```js
 // Documenting objectA with @alias
 
-var objectA = (function() {
+var objectA = (function () {
   /**
    * Documented as objectA
    * @alias objectA
@@ -94,11 +96,11 @@ var objectA = (function() {
      * Documented as objectA.myProperty
      * @member
      */
-    myProperty: "foo"
-  };
+    myProperty: 'foo',
+  }
 
-  return x;
-})();
+  return x
+})()
 
 // Documenting objectB with @lends
 
@@ -106,18 +108,18 @@ var objectA = (function() {
  * Documented as objectB
  * @namespace
  */
-var objectB = (function() {
+var objectB = (function () {
   /** @lends objectB */
   var x = {
     /**
      * Documented as objectB.myProperty
      * @member
      */
-    myProperty: "bar"
-  };
+    myProperty: 'bar',
+  }
 
-  return x;
-})();
+  return x
+})()
 ```
 
 ## Related Links

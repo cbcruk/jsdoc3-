@@ -1,6 +1,8 @@
-# @borrows
-
-[[toc]]
+---
+id: borrows
+title: '@borrows'
+sidebar_label: '@borrows'
+---
 
 ## Syntax
 
@@ -24,8 +26,8 @@ Duplicate the documentation for trstr as util.trim
  * @borrows trstr as trim
  */
 var util = {
-  trim: trstr
-};
+  trim: trstr,
+}
 
 /**
  * Remove whitespace from around a string.

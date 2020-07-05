@@ -1,6 +1,8 @@
-# @version
-
-[[toc]]
+---
+id: version
+title: '@version'
+sidebar_label: '@version'
+---
 
 ## Overview
 
@@ -18,7 +20,7 @@ Using the @version tag
  * @tutorial solver
  */
 function solver(a, b) {
-  return b / a;
+  return b / a
 }
 ```
 

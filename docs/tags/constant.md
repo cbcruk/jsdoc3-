@@ -1,6 +1,8 @@
-# @constant
-
-[[toc]]
+---
+id: constant
+title: '@constant'
+sidebar_label: '@constant'
+---
 
 ## Synonyms
 
@@ -25,10 +27,10 @@ A string constant representing the color red
         @type {string}
         @default
     */
-const RED = "FF0000";
+const RED = 'FF0000'
 
 /** @constant {number} */
-var ONE = 1;
+var ONE = 1
 ```
 
 Note that the example provides the type in a @type tag. This is optional. Also the optional @default tag is used here too, this will automatically add whatever the assigned value is (for example 'FF0000') to the documentation.

@@ -1,6 +1,8 @@
-# @event
-
-[[toc]]
+---
+id: event
+title: '@event'
+sidebar_label: '@event'
+---
 
 ## Syntax
 
@@ -28,7 +30,7 @@ Documenting a function call as an event
  *
  * @fires Hurl#snowball
  */
-Hurl.prototype.snowball = function() {
+Hurl.prototype.snowball = function () {
   /**
    * Snowball event.
    *
@@ -36,10 +38,10 @@ Hurl.prototype.snowball = function() {
    * @type {object}
    * @property {boolean} isPacked - Indicates whether the snowball is tightly packed.
    */
-  this.emit("snowball", {
-    isPacked: this._snowball.isPacked
-  });
-};
+  this.emit('snowball', {
+    isPacked: this._snowball.isPacked,
+  })
+}
 ```
 
 Using a named doclet to document an event
@@ -50,9 +52,9 @@ Using a named doclet to document an event
  *
  * @fires Hurl#snowball
  */
-Hurl.prototype.snowball = function() {
+Hurl.prototype.snowball = function () {
   // ...
-};
+}
 
 /**
  * Snowball event.

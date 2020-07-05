@@ -1,6 +1,8 @@
-# @param
-
-[[toc]]
+---
+id: param
+title: '@param'
+sidebar_label: '@param'
+---
 
 ## Synonyms
 
@@ -30,7 +32,7 @@ Name only
  * @param somebody
  */
 function sayHello(somebody) {
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -41,7 +43,7 @@ Name and type
  * @param {string} somebody
  */
 function sayHello(somebody) {
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -52,7 +54,7 @@ Name, type, and description
  * @param {string} somebody Somebody's name.
  */
 function sayHello(somebody) {
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -65,7 +67,7 @@ Name, type, and description, with a hyphen before the description
  * @param {string} somebody - Somebody's name.
  */
 function sayHello(somebody) {
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -82,9 +84,9 @@ Documenting a parameter's properties
  * @param {string} employee.name - The name of the employee.
  * @param {string} employee.department - The employee's department.
  */
-Project.prototype.assign = function(employee) {
+Project.prototype.assign = function (employee) {
   // ...
-};
+}
 ```
 
 If a parameter is destructured without an explicit name, you can give the object an appropriate one and document its properties.
@@ -98,9 +100,9 @@ Documenting a destructuring parameter
  * @param {string} employee.name - The name of the employee.
  * @param {string} employee.department - The employee's department.
  */
-Project.prototype.assign = function({ name, department }) {
+Project.prototype.assign = function ({ name, department }) {
   // ...
-};
+}
 ```
 
 You can also combine this syntax with JSDoc's syntax for array parameters. For example, if multiple employees can be assigned to a project:
@@ -114,9 +116,9 @@ Documenting properties of values in an array
  * @param {string} employees[].name - The name of an employee.
  * @param {string} employees[].department - The employee's department.
  */
-Project.prototype.assign = function(employees) {
+Project.prototype.assign = function (employees) {
   // ...
-};
+}
 ```
 
 ### Optional parameters and default values
@@ -131,9 +133,9 @@ An optional parameter (using JSDoc syntax)
  */
 function sayHello(somebody) {
   if (!somebody) {
-    somebody = "John Doe";
+    somebody = 'John Doe'
   }
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -145,9 +147,9 @@ An optional parameter (using Google Closure Compiler syntax)
  */
 function sayHello(somebody) {
   if (!somebody) {
-    somebody = "John Doe";
+    somebody = 'John Doe'
   }
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -159,9 +161,9 @@ An optional parameter and default value
  */
 function sayHello(somebody) {
   if (!somebody) {
-    somebody = "John Doe";
+    somebody = 'John Doe'
   }
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -177,11 +179,11 @@ Allows one type OR another type (type union)
  */
 function sayHello(somebody) {
   if (!somebody) {
-    somebody = "John Doe";
+    somebody = 'John Doe'
   } else if (Array.isArray(somebody)) {
-    somebody = somebody.join(", ");
+    somebody = somebody.join(', ')
   }
-  alert("Hello " + somebody);
+  alert('Hello ' + somebody)
 }
 ```
 
@@ -192,7 +194,7 @@ Allows any type
  * @param {*} somebody - Whatever you want.
  */
 function sayHello(somebody) {
-  console.log("Hello " + JSON.stringify(somebody));
+  console.log('Hello ' + JSON.stringify(somebody))
 }
 ```
 
@@ -206,11 +208,11 @@ Allows a parameter to be repeated
 function sum(num) {
   var i = 0,
     n = arguments.length,
-    t = 0;
+    t = 0
   for (; i < n; i++) {
-    t += arguments[i];
+    t += arguments[i]
   }
-  return t;
+  return t
 }
 ```
 

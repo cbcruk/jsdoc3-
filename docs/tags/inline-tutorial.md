@@ -1,6 +1,8 @@
-# {@tutorial}
-
-[[toc]]
+---
+id: inline-tutorial
+title: '{@tutorial}'
+sidebar_label: '{@tutorial}'
+---
 
 ## Syntax
 
@@ -38,8 +40,8 @@ Output for {@link} tags
 
 ```html
 See <a href="tutorial-gettingstarted.html">Getting Started</a> and
-<a href="tutorial-dashboard.html">Configuring the Dashboard</a>.
-For more information, see <a href="tutorial-create.html">Creating a Widget</a> and
+<a href="tutorial-dashboard.html">Configuring the Dashboard</a>. For more
+information, see <a href="tutorial-create.html">Creating a Widget</a> and
 <a href="tutorial-destroy.html">Destroying a Widget</a>.
 ```
 
