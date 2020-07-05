@@ -1,6 +1,8 @@
-# @fires
-
-[[toc]]
+---
+id: fires
+title: '@fires'
+sidebar_label: '@fires'
+---
 
 ## Synonyms
 
@@ -24,9 +26,9 @@ Method that fires a 'drain' event
  *
  * @fires Milkshake#drain
  */
-Milkshake.prototype.drink = function() {
+Milkshake.prototype.drink = function () {
   // ...
-};
+}
 ```
 
 ## Related Links

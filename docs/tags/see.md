@@ -1,6 +1,8 @@
-# @see
-
-[[toc]]
+---
+id: see
+title: '@see'
+sidebar_label: '@see'
+---
 
 ## Syntax
 

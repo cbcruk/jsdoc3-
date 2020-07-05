@@ -1,6 +1,8 @@
-# @listens
-
-[[toc]]
+---
+id: listens
+title: '@listens'
+sidebar_label: '@listens'
+---
 
 ## Syntax
 
@@ -17,7 +19,7 @@ The following example shows how to document an event named `module:hurler~event:
 Documenting an event and its listener
 
 ```js
-define("hurler", [], function() {
+define('hurler', [], function () {
   /**
    * Event reporting that a snowball has been hurled.
    *
@@ -37,15 +39,15 @@ define("hurler", [], function() {
      * @method
      * @fires module:hurler~snowball
      */
-    attack: function() {
-      this.emit("snowball", { velocity: 10 });
-    }
-  };
+    attack: function () {
+      this.emit('snowball', { velocity: 10 })
+    },
+  }
 
-  return exports;
-});
+  return exports
+})
 
-define("playground/monitor", [], function() {
+define('playground/monitor', [], function () {
   /**
    * Keeps an eye out for snowball-throwers.
    *
@@ -59,13 +61,13 @@ define("playground/monitor", [], function() {
      * @param {module:hurler~event:snowball} e - A snowball event.
      * @listens module:hurler~event:snowball
      */
-    reportThrowage: function(e) {
-      this.log("snowball thrown: velocity " + e.velocity);
-    }
-  };
+    reportThrowage: function (e) {
+      this.log('snowball thrown: velocity ' + e.velocity)
+    },
+  }
 
-  return exports;
-});
+  return exports
+})
 ```
 
 ## Related Links

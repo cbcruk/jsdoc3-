@@ -1,6 +1,8 @@
-# @this
-
-[[toc]]
+---
+id: this
+title: '@this'
+sidebar_label: '@this'
+---
 
 ## Syntax
 
@@ -17,13 +19,13 @@ In the following example, the @this tag causes "this.name" to be documented as "
 ```js
 /** @constructor */
 function Greeter(name) {
-  setName.apply(this, name);
+  setName.apply(this, name)
 }
 
 /** @this Greeter */
 function setName(name) {
   /** document me */
-  this.name = name;
+  this.name = name
 }
 ```
 

@@ -1,6 +1,8 @@
-# @kind
-
-[[toc]]
+---
+id: kind
+title: '@kind'
+sidebar_label: '@kind'
+---
 
 ## Syntax
 
@@ -37,13 +39,13 @@ Using @kind
  * A constant.
  * @kind constant
  */
-const asdf = 1;
+const asdf = 1
 
 /**
  * A constant.
  * @constant
  */
-const asdf = 1;
+const asdf = 1
 ```
 
 In the case of tags with conflicting kinds (for example, using both @module, which sets the kind to "module", and "@kind constant" which sets the kind to "constant"), the last tag determines the kind.

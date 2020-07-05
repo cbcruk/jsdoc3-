@@ -1,6 +1,8 @@
-# @yields
-
-[[toc]]
+---
+id: yields
+title: '@yields'
+sidebar_label: '@yields'
+---
 
 ## Synonyms
 

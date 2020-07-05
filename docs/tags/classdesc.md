@@ -1,6 +1,8 @@
-# @classdesc
-
-[[toc]]
+---
+id: classdesc
+title: '@classdesc'
+sidebar_label: '@classdesc'
+---
 
 ## Syntax
 

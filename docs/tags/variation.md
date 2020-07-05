@@ -1,6 +1,8 @@
-# @variation
-
-[[toc]]
+---
+id: variation
+title: '@variation'
+sidebar_label: '@variation'
+---
 
 ## Syntax
 
@@ -46,8 +48,8 @@ Widget.properties = {
   /**
    * Indicates whether the widget is metallic.
    */
-  metallic: true
-};
+  metallic: true,
+}
 ```
 
 ## Related Links

@@ -1,6 +1,8 @@
-# AMD Modules
-
-[[toc]]
+---
+id: amd-modules
+title: AMD Modules
+sidebar_label: AMD Modules
+---
 
 ## Overview
 

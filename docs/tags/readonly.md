@@ -1,6 +1,8 @@
-# @readonly
-
-[[toc]]
+---
+id: readonly
+title: '@readonly'
+sidebar_label: '@readonly'
+---
 
 ## Overview
 
@@ -16,7 +18,7 @@ Using the @readonly tag
  * @readonly
  * @const {number}
  */
-const FOO = 1;
+const FOO = 1
 ```
 
 Using the @readonly tag with a getter
@@ -30,13 +32,13 @@ var pieOptions = {
   /**
    * Plain.
    */
-  plain: "pie",
+  plain: 'pie',
   /**
    * A la mode.
    * @readonly
    */
   get aLaMode() {
-    return this.plain + " with ice cream";
-  }
-};
+    return this.plain + ' with ice cream'
+  },
+}
 ```

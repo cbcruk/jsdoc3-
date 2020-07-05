@@ -1,6 +1,8 @@
-# @inheritdoc
-
-[[toc]]
+---
+id: inheritdoc
+title: '@inheritdoc'
+sidebar_label: '@inheritdoc'
+---
 
 ## Overview
 
@@ -26,9 +28,9 @@ function Connection() {}
 /**
  * Open the connection.
  */
-Connection.prototype.open = function() {
+Connection.prototype.open = function () {
   // ...
-};
+}
 
 /**
  * @classdesc Class representing a socket connection.
@@ -38,9 +40,9 @@ Connection.prototype.open = function() {
 function Socket() {}
 
 /** @inheritdoc */
-Socket.prototype.open = function() {
+Socket.prototype.open = function () {
   // ...
-};
+}
 ```
 
 You can get the same result by omitting the JSDoc comment from `Socket#open`:
@@ -57,9 +59,9 @@ function Connection() {}
 /**
  * Open the connection.
  */
-Connection.prototype.open = function() {
+Connection.prototype.open = function () {
   // ...
-};
+}
 
 /**
  * @classdesc Class representing a socket connection.
@@ -68,9 +70,9 @@ Connection.prototype.open = function() {
  */
 function Socket() {}
 
-Socket.prototype.open = function() {
+Socket.prototype.open = function () {
   // ...
-};
+}
 ```
 
 ## Related Links

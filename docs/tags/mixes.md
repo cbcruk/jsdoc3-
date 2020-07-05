@@ -1,6 +1,8 @@
-# @mixes
-
-[[toc]]
+---
+id: mixes
+title: '@mixes'
+sidebar_label: '@mixes'
+---
 
 ## Syntax
 
@@ -29,7 +31,7 @@ var Eventful = {
    * @param {string} eventName - Name of the event.
    * @param {function(Object)} handler - The handler to call.
    */
-  on: function(eventName, handler) {
+  on: function (eventName, handler) {
     // code...
   },
 
@@ -38,10 +40,10 @@ var Eventful = {
    * @param {string} eventName - Name of the event.
    * @param {Object} eventData - The data provided to each handler.
    */
-  fire: function(eventName, eventData) {
+  fire: function (eventName, eventData) {
     // code...
-  }
-};
+  },
+}
 ```
 
 Now we add a FormButton class and call a "mix" function that mixes all of the Eventful functions into FormButton, so that FormButton can also fire events and have listeners. We use the @mixes tag to indicate that FormButton mixes the Eventful functions.
@@ -53,13 +55,13 @@ Using the @mixes tag
  * @constructor FormButton
  * @mixes Eventful
  */
-var FormButton = function() {
+var FormButton = function () {
   // code...
-};
-FormButton.prototype.press = function() {
-  this.fire("press", {});
-};
-mix(Eventful).into(FormButton.prototype);
+}
+FormButton.prototype.press = function () {
+  this.fire('press', {})
+}
+mix(Eventful).into(FormButton.prototype)
 ```
 
 ## Related Links

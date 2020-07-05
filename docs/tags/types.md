@@ -1,8 +1,8 @@
-# @type
-
-<!-- markdownlint-disable MD040 -->
-
-[[toc]]
+---
+id: types
+title: '@type'
+sidebar_label: '@type'
+---
 
 ## Syntax
 
@@ -113,11 +113,11 @@ Indicates that the function accepts a variable number of parameters, and specifi
 function sum(num) {
   var i = 0,
     n = arguments.length,
-    t = 0;
+    t = 0
   for (; i < n; i++) {
-    t += arguments[i];
+    t += arguments[i]
   }
-  return t;
+  return t
 }
 ```
 
@@ -147,8 +147,8 @@ Indicates that the parameter is optional. When using JSDoc's syntax for optional
  * @param {number} x - ...
  */
 
-/ @type {myCallback} /;
-var cb;
+;/ @type {myCallback} /
+var cb
 ```
 
 Document a callback using the [@callback](./callback.md) tag. The syntax is identical to the @typedef tag, except that a callback's type is always "function."
@@ -167,7 +167,7 @@ Document a callback using the [@callback](./callback.md) tag. The syntax is iden
  */
 
 /** @type {PropertiesHash} */
-var props;
+var props
 ```
 
 You can document complex types using the [@typedef](./typedef.md) tag, then refer to the type definition elsewhere in your documentation.
@@ -178,9 +178,9 @@ Example
 
 ```js
 /** @type {(string|Array.)} */
-var foo;
+var foo
 /** @type {number} */
-var bar = 1;
+var bar = 1
 ```
 
 In many cases, you can include a type expression as part of another tag, rather than including a separate @type tag in your JSDoc comment.
@@ -192,12 +192,12 @@ Type expressions can accompany many tags.
  * @type {number}
  * @const
  */
-var FOO = 1;
+var FOO = 1
 
 // same as:
 
 /** @const {number} */
-var FOO = 1;
+var FOO = 1
 ```
 
 ## Related Links

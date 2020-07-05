@@ -1,6 +1,8 @@
-# @example
-
-[[toc]]
+---
+id: example
+title: '@example'
+sidebar_label: '@example'
+---
 
 ## Overview
 
@@ -23,9 +25,9 @@ Documenting examples
  * globalNS.method(5, 15);
  * @returns {Number} Returns the value of x for the equation.
  */
-globalNS.method1 = function(a, b) {
-  return b / a;
-};
+globalNS.method1 = function (a, b) {
+  return b / a
+}
 ```
 
 Examples can also be captioned using `<caption></caption>` after the @example tag.
@@ -40,7 +42,7 @@ Documenting examples with a caption
  * globalNS.method1(5, 10);
  * @returns {Number} Returns the value of x for the equation.
  */
-globalNS.method1 = function(a, b) {
-  return b / a;
-};
+globalNS.method1 = function (a, b) {
+  return b / a
+}
 ```

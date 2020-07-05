@@ -1,6 +1,8 @@
-# Including a README File
-
-<!-- markdownlint-disable MD030 -->
+---
+id: including-readme
+title: Including a README File
+sidebar_label: Including a README File
+---
 
 There are two ways to incorporate a `README` file into your documentation:
 

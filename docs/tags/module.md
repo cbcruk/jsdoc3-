@@ -1,6 +1,8 @@
-# @module
-
-[[toc]]
+---
+id: module
+title: '@module'
+sidebar_label: '@module'
+---
 
 ## Syntax
 
@@ -39,10 +41,10 @@ Basic @module use
 /** @module myModule */
 
 /** will be module:myModule~foo */
-var foo = 1;
+var foo = 1
 
 /** will be module:myModule.bar */
-var bar = function() {};
+var bar = function () {}
 ```
 
 When an exported symbol is defined as a member of `module.exports`, `exports`, or `this`, JSDoc infers that the symbol is a static member of the module.
@@ -54,10 +56,10 @@ Defining exported symbols as a member of 'this'
 ```js
 /** @module bookshelf */
 /** @class */
-this.Book = function(title) {
+this.Book = function (title) {
   /** The title. */
-  this.title = title;
-};
+  this.title = title
+}
 ```
 
 In the following example, the two functions have the namepaths "module:color/mixer.blend" and "module:color/mixer.darken".
@@ -68,10 +70,10 @@ Defining exported symbols as a member of 'module.exports' or 'exports'
 /** @module color/mixer */
 module.exports = {
   /** Blend two colours together. */
-  blend: function(color1, color2) {}
-};
+  blend: function (color1, color2) {},
+}
 /** Darkens a color. */
-exports.darken = function(color, shade) {};
+exports.darken = function (color, shade) {}
 ```
 
 See [Documenting JavaScript Modules](../howto/commonjs-modules.md) for further examples.

@@ -1,6 +1,8 @@
-# @default
-
-[[toc]]
+---
+id: default
+title: '@default'
+sidebar_label: '@default'
+---
 
 ## Synonyms
 
@@ -25,5 +27,5 @@ Document the number value of a constant
  *  @constant
  *  @default
  */
-const RED = 0xff0000;
+const RED = 0xff0000
 ```

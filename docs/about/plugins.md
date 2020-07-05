@@ -1,8 +1,8 @@
-# About JSDoc plugins
-
-<!-- markdownlint-disable MD030 -->
-
-[[toc]]
+---
+id: plugins
+title: About JSDoc plugins
+sidebar_label: About JSDoc plugins
+---
 
 ## Creating and Enabling a Plugin
 

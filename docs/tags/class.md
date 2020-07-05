@@ -1,6 +1,8 @@
-# @class
-
-[[toc]]
+---
+id: class
+title: '@class'
+sidebar_label: '@class'
+---
 
 ## Synonyms
 
@@ -25,7 +27,7 @@ A function that constructs Person instances.
  */
 function Person() {}
 
-var p = new Person();
+var p = new Person()
 ```
 
 ## Related Links

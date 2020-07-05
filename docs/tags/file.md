@@ -1,6 +1,8 @@
-# @file
-
-[[toc]]
+---
+id: file
+title: '@file'
+sidebar_label: '@file'
+---
 
 ## Synonyms
 

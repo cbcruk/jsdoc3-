@@ -1,6 +1,8 @@
-# @member
-
-[[toc]]
+---
+id: member
+title: '@member'
+sidebar_label: '@member'
+---
 
 ## Synonyms
 
@@ -22,7 +24,7 @@ Using @member with Data#point
 /** @class */
 function Data() {
   /** @member {Object} */
-  this.point = {};
+  this.point = {}
 }
 ```
 
@@ -44,5 +46,5 @@ The above example is equivalent to the following:
  * A variable in the global namespace called 'foo'.
  * @type {number}
  */
-var foo;
+var foo
 ```

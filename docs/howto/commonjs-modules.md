@@ -1,6 +1,8 @@
-# CommonJS Modules
-
-[[toc]]
+---
+id: commonjs-modules
+title: CommonJS Modules
+sidebar_label: CommonJS Modules
+---
 
 ## Overview
 

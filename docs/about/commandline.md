@@ -1,6 +1,8 @@
-# Command-line arguments to JSDoc
-
-[[toc]]
+---
+id: commandline
+title: Command-line arguments to JSDoc
+sidebar_label: Command-line arguments to JSDoc
+---
 
 At its most basic level, JSDoc is used like so:
 

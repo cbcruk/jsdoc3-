@@ -1,6 +1,8 @@
-# @generator
-
-[[toc]]
+---
+id: generator
+title: '@generator'
+sidebar_label: '@generator'
+---
 
 ## Syntax
 

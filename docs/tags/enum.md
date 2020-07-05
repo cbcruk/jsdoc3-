@@ -1,6 +1,8 @@
-# @enum
-
-[[toc]]
+---
+id: enum
+title: '@enum'
+sidebar_label: '@enum'
+---
 
 ## Syntax
 
@@ -29,8 +31,8 @@ var triState = {
   TRUE: 1,
   FALSE: -1,
   /** @type {boolean} */
-  MAYBE: true
-};
+  MAYBE: true,
+}
 ```
 
 ## Related Links

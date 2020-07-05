@@ -1,9 +1,7 @@
 ---
-home: true
-footer: Copyright © 2011-2017 the contributors to the JSDoc 3 documentation project.
+id: index
+title: Index
 ---
-
-# Index
 
 ## Getting Started
 

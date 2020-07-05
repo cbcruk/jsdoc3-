@@ -1,6 +1,8 @@
-# @namespace
-
-[[toc]]
+---
+id: namespace
+title: '@namespace'
+sidebar_label: '@namespace'
+---
 
 ## Syntax
 
@@ -25,10 +27,10 @@ Using the @namespace tag with an object
  */
 var MyNamespace = {
   /** documented as MyNamespace.foo */
-  foo: function() {},
+  foo: function () {},
   /** documented as MyNamespace.bar */
-  bar: 1
-};
+  bar: 1,
+}
 ```
 
 Using the @namespace tag for virtual comments
@@ -57,9 +59,9 @@ Using the @namespace tag with unusual member names
  * Shorthand for the alert function.
  * Refer to it as {@link window."!"} (note the double quotes).
  */
-window["!"] = function(msg) {
-  alert(msg);
-};
+window['!'] = function (msg) {
+  alert(msg)
+}
 ```
 
 ## Related Links

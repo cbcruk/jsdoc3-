@@ -1,6 +1,8 @@
-# {@link}
-
-[[toc]]
+---
+id: inline-link
+title: '{@link}'
+sidebar_label: '{@link}'
+---
 
 ## Synonyms
 

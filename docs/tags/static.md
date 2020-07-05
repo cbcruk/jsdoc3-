@@ -1,6 +1,8 @@
-# @static
-
-[[toc]]
+---
+id: static
+title: '@static'
+sidebar_label: '@static'
+---
 
 ## Overview
 
@@ -36,7 +38,7 @@ Using @static to override the default scope
  * rather than Rollerskate~wheel.
  * @static
  */
-var wheel = 1;
+var wheel = 1
 ```
 
 ## Related Links

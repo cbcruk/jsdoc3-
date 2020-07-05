@@ -1,6 +1,8 @@
-# Using the Markdown plugin
-
-[[toc]]
+---
+id: plugins-markdown
+title: Using the Markdown plugin
+sidebar_label: Using the Markdown plugin
+---
 
 ## Overview
 
