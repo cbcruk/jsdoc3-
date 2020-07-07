@@ -14,6 +14,11 @@ module.exports = {
       style: 'dark',
       copyright: `Copyright © 2011-${new Date().getFullYear()} the contributors to the JSDoc 3 documentation project.`,
     },
+    algolia: {
+      apiKey: 'd729f128e448823af1aa52956cf8b90f',
+      indexName: 'jsdoc3',
+      algoliaOptions: {},
+    },
   },
   presets: [
     [
