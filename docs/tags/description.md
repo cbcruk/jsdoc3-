@@ -14,7 +14,7 @@ sidebar_label: '@description'
 
 ## Overview
 
-The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the [Markdown plugin](../about/markdown.md) is enabled.
+The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the [Markdown plugin](../about/plugins-markdown.md) is enabled.
 
 ## Examples
 

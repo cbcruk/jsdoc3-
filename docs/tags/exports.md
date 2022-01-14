@@ -115,5 +115,5 @@ define(function () {
 ## Related Links
 
 - [@module](./module.md)
-- [CommonJS Modules](../jsdoc-examples/howto-commonjs-modules.md)
-- [AMD Modules](..jsdoc-examples/howto-amd-modules.md)
+- [CommonJS Modules](../howto/commonjs-modules.md)
+- [AMD Modules](../howto/amd-modules.md)
