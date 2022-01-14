@@ -1,7 +1,12 @@
-module.exports = {
+// @ts-check
+
+/**
+ * @type {import('@docusaurus/types').Config}
+ */
+const config = {
   title: 'Use JSDoc',
   tagline: '',
-  url: 'https://cbcruk.github.io',
+  url: 'https://jsdoc3.vercel.app',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'cbcruk',
@@ -23,15 +28,20 @@ module.exports = {
   presets: [
     [
       '@docusaurus/preset-classic',
-      {
+      /**
+       * @type {import('@docusaurus/preset-classic').Options}
+       */
+      ({
         docs: {
-          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
+      }),
     ],
   ],
 }
+
+module.exports = config

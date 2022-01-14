@@ -77,4 +77,4 @@ Socket.prototype.open = function () {
 
 ## Related Links
 
-[@override](./override.html)
+[@override](./override.md)

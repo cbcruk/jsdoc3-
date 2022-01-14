@@ -72,4 +72,4 @@ Virtual comments that define an interface
 
 ## Related Links
 
-[@implements](./implements.html)
+[@implements](./implements.md)

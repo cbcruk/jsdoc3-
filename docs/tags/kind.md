@@ -68,4 +68,4 @@ Conflicting @kind statements
 
 ## Related Links
 
-[@type](./type.html)
+[@type](./type.md)
