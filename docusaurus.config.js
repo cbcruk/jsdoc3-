@@ -15,9 +15,9 @@ module.exports = {
       copyright: `Copyright © 2011-${new Date().getFullYear()} the contributors to the JSDoc 3 documentation project.`,
     },
     algolia: {
-      apiKey: 'd729f128e448823af1aa52956cf8b90f',
+      appId: 'GU9CGVV878',
+      apiKey: 'ff2457ab3519907fddfc48648f50baf5',
       indexName: 'jsdoc3',
-      algoliaOptions: {},
     },
   },
   presets: [
@@ -26,7 +26,6 @@ module.exports = {
       {
         docs: {
           routeBasePath: '/',
-          homePageId: 'index',
           sidebarPath: require.resolve('./sidebars.js'),
         },
         theme: {
