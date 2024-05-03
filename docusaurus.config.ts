@@ -1,8 +1,6 @@
-// @ts-check
+import type { Config } from '@docusaurus/types'
+import type * as Preset from '@docusaurus/preset-classic'
 
-/**
- * @type {import('@docusaurus/types').Config}
- */
 const config = {
   title: 'Use JSDoc',
   tagline: '',
@@ -31,7 +29,7 @@ const config = {
       /**
        * @type {import('@docusaurus/preset-classic').Options}
        */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
@@ -43,9 +41,9 @@ const config = {
           trackingID: 'G-ZVZXBXRLX7',
           anonymizeIP: true,
         },
-      }),
+      },
     ],
   ],
-}
+} satisfies Config
 
 module.exports = config
