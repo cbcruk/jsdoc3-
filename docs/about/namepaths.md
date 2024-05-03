@@ -24,22 +24,22 @@ Use a documentation tag to describe your code.
 
 ```js
 /** @constructor */
-Person = function() {
-  this.say = function() {
-    return "I'm an instance.";
-  };
+Person = function () {
+  this.say = function () {
+    return "I'm an instance."
+  }
 
   function say() {
-    return "I'm inner.";
+    return "I'm inner."
   }
-};
-Person.say = function() {
-  return "I'm static.";
-};
+}
+Person.say = function () {
+  return "I'm static."
+}
 
-var p = new Person();
-p.say(); // I'm an instance.
-Person.say(); // I'm static.
+var p = new Person()
+p.say() // I'm an instance.
+Person.say() // I'm static.
 // there is no way to directly access the inner function from here
 ```
 
@@ -61,18 +61,18 @@ Use a documentation tag to describe your code.
 
 ```js
 /** @constructor */
-Person = function() {
+Person = function () {
   /** @constructor */
-  this.Idea = function() {
-    this.consider = function() {
-      return "hmmm";
-    };
-  };
-};
+  this.Idea = function () {
+    this.consider = function () {
+      return 'hmmm'
+    }
+  }
+}
 
-var p = new Person();
-var i = new p.Idea();
-i.consider();
+var p = new Person()
+var i = new p.Idea()
+i.consider()
 ```
 
 In this case, to refer to the method named "consider," you would use the following namepath: `Person#Idea#consider`
@@ -104,7 +104,7 @@ var chat = {
    * Refer to this by {@link chat."#channel"}.
    * @namespace
    */
-  "#channel": {
+  '#channel': {
     /**
      * Refer to this by {@link chat."#channel".open}.
      * @type {boolean}
@@ -115,9 +115,9 @@ var chat = {
      * Internal quotes have to be escaped by backslash. This is
      * {@link chat."#channel"."say-\"hello\""}.
      */
-    'say-"hello"': function(msg) {}
-  }
-};
+    'say-"hello"': function (msg) {},
+  },
+}
 
 /**
  * Now we define an event in our {@link chat."#channel"} namespace.
@@ -130,4 +130,4 @@ Above is an example of a namespace with "unusual" characters in its member names
 ## Related Links
 
 - [Block and inline tags](./block-inline-tags.md)
-- [{@link}](../tags/inline-link.md)
+- [@link](../tags/inline-link.md)

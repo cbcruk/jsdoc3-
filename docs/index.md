@@ -343,11 +343,11 @@ Document the value yielded by a generator function.
 
 ## Inline Tags
 
-[{@link}](./tags/inline-link.md) (synonyms: {@linkcode}, {@linkplain})
+[@link](./tags/inline-link.md) (synonyms: @linkcode, @linkplain)
 
 Link to another item in the documentation.
 
-[{@tutorial}](./tags/inline-tutorial.md)
+[@tutorial](./tags/inline-tutorial.md)
 
 Link to a tutorial.
 

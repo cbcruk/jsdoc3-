@@ -1,7 +1,7 @@
 ---
 id: inline-tutorial
-title: '{@tutorial}'
-sidebar_label: '{@tutorial}'
+title: '@tutorial'
+sidebar_label: '@tutorial'
 ---
 
 ## Syntax
@@ -15,13 +15,13 @@ sidebar_label: '{@tutorial}'
 
 ## Overview
 
-The `{@tutorial}` inline tag creates a link to the tutorial identifier that you specify. When you use the `{@tutorial}` tag, you can also provide link text, using one of several different formats. If you don't provide any link text, JSDoc uses the tutorial's title as the link text.
+The `@tutorial` inline tag creates a link to the tutorial identifier that you specify. When you use the `@tutorial` tag, you can also provide link text, using one of several different formats. If you don't provide any link text, JSDoc uses the tutorial's title as the link text.
 
-If you need to link to a namepath or a URL, use the [`{@link}` inline tag](./inline-link.md) instead of the `{@tutorial}` tag.
+If you need to link to a namepath or a URL, use the [`@link` inline tag](./inline-link.md) instead of the `@tutorial` tag.
 
 ## Examples
 
-The following example shows all of the ways to provide link text for the `{@tutorial}` tag:
+The following example shows all of the ways to provide link text for the `@tutorial` tag:
 
 Providing link text
 
@@ -36,7 +36,7 @@ function myFunction() {}
 
 If all of these tutorials are defined, and the title of the `gettingstarted` tutorial is "Getting Started," the example above produces output similar to the following:
 
-Output for {@link} tags
+Output for @link tags
 
 ```html
 See <a href="tutorial-gettingstarted.html">Getting Started</a> and

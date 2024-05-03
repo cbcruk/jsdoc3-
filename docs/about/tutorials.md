@@ -27,7 +27,7 @@ JSDoc also searches for JSON files that contain information about the titles, or
 
 JSDoc assigns an identifier to each tutorial. The identifier is the filename without its extension. For example, the identifier for `/path/to/tutorials/overview.md` is `overview`.
 
-In tutorial files, you can use the [`{@link}`](../tags/inline-link.md) and [`{@tutorial}`](../tags/inline-tutorial.md) inline tags to link to other parts of the documentation. JSDoc will automatically resolve the links.
+In tutorial files, you can use the [`@link`](../tags/inline-link.md) and [`@tutorial`](../tags/inline-tutorial.md) inline tags to link to other parts of the documentation. JSDoc will automatically resolve the links.
 
 ## Configuring titles, order, and hierarchy
 
@@ -103,11 +103,11 @@ Using the `@tutorial` block tag
 function Socket() {}
 ```
 
-### {@tutorial} inline tag
+### @tutorial inline tag
 
-You can also use the [`{@tutorial}` inline tag](../tags/inline-tutorial.md) to link to a tutorial within the text of another tag. By default, JSDoc will use the tutorial's title as the link text.
+You can also use the [`@tutorial` inline tag](../tags/inline-tutorial.md) to link to a tutorial within the text of another tag. By default, JSDoc will use the tutorial's title as the link text.
 
-Using the `{@tutorial}` inline tag
+Using the `@tutorial` inline tag
 
 ```js
 /**

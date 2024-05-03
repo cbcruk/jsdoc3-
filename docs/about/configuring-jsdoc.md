@@ -26,11 +26,11 @@ JSON configuration file
 JavaScript configuration file
 
 ```js
-"use strict";
+'use strict'
 
 module.exports = {
-  plugins: ["plugins/markdown"]
-};
+  plugins: ['plugins/markdown'],
+}
 ```
 
 For a more comprehensive example of a JSON configuration file, see the file [`conf.json.EXAMPLE`](https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE).
@@ -68,7 +68,7 @@ This means:
 - JSDoc supports code that uses [ES2015 modules](../howto/es2015-modules.md) (`sourceType`).
 - JSDoc allows you to use unrecognized tags (`tags.allowUnknownTags`).
 - Both standard JSDoc tags and [Closure Compiler tags](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) are enabled ( `tags.dictionaries`).
-- [Inline `{@link}` tags](../tags/inline-link.md) are rendered in plain text (`templates.cleverLinks`, `templates.monospaceLinks`).
+- [Inline `@link` tags](../tags/inline-link.md) are rendered in plain text (`templates.cleverLinks`, `templates.monospaceLinks`).
 
 These options and others are explained in the following sections.
 
@@ -252,7 +252,7 @@ The options in `templates` affect the appearance and content of generated docume
 }
 ```
 
-If `templates.monospaceLinks` is true, all link text from the [inline `{@link}` tag](../tags/inline-link.md) will be rendered in monospace.
+If `templates.monospaceLinks` is true, all link text from the [inline `@link` tag](../tags/inline-link.md) will be rendered in monospace.
 
 If `templates.cleverLinks` is true, `{@link asdf}` will be rendered in normal font if `asdf` is a URL, and monospace otherwise. For example, `{@link http://github.com}` will render in plain text, but `{@link MyNamespace.myFunction}` will be in monospace.
 

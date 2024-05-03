@@ -33,5 +33,5 @@ function MyClass() {}
 ## Related Links
 
 - [Tutorials](../about/tutorials.md)
-- [{@tutorial}](./inline-tutorial.md)
+- [@tutorial](./inline-tutorial.md)
 - [@see](./see.md)

@@ -25,7 +25,7 @@ Using the @see tag
  */
 function foo() {}
 
-// Use the inline {@link} tag to include a link within a free-form description.
+// Use the inline @link tag to include a link within a free-form description.
 /**
  * @see {@link foo} for further information.
  * @see {@link http://github.com|GitHub}
@@ -35,4 +35,4 @@ function bar() {}
 
 ## Related Links
 
-[{@link}](./inline-link.md)
+[@link](./inline-link.md)

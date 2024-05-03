@@ -21,7 +21,7 @@ Most JSDoc tags are block tags. In general, when this site refers to "JSDoc tags
 
 ## Examples
 
-In the following example, `@param` is a block tag, and `{@link}` is an inline tag:
+In the following example, `@param` is a block tag, and `@link` is an inline tag:
 
 Block and inline tags in JSDoc comments
 
@@ -31,9 +31,9 @@ Block and inline tags in JSDoc comments
  *
  * @param {string} color - The shoe's color.
  */
-Shoe.prototype.setColor = function(color) {
+Shoe.prototype.setColor = function (color) {
   // ...
-};
+}
 ```
 
 You can use inline tags within a description, as shown above, or within a block tag, as shown below:
@@ -47,9 +47,9 @@ Inline tag used within a block tag
  * @param {SHOE_COLORS} color - The shoe color. Must be an enumerated
  * value of {@link SHOE_COLORS}.
  */
-Shoe.prototype.setColor = function(color) {
+Shoe.prototype.setColor = function (color) {
   // ...
-};
+}
 ```
 
 When you use multiple block tags in a JSDoc comment, they must be separated by line breaks:
@@ -63,7 +63,7 @@ Multiple block tags separated by line breaks
  * @param {LACE_COLORS} color - The shoelace color.
  * @param {LACE_TYPES} type - The type of shoelace.
  */
-Shoe.prototype.setLaceType = function(color, type) {
+Shoe.prototype.setLaceType = function (color, type) {
   // ...
-};
+}
 ```
