@@ -24,7 +24,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "dev": "docusaurus start"
+    "dev": "docusaurus start",
+    "dev:ko": "docusaurus start --locale ko"
   },
   "browserslist": {
     "production": [

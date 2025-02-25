@@ -12,6 +12,12 @@ const config: Config = {
   themeConfig: {
     navbar: {
       title: 'Use JSDoc',
+      items: [
+        {
+          type: 'localeDropdown',
+          position: 'left',
+        },
+      ],
     },
     footer: {
       style: 'dark',
@@ -41,6 +47,11 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'ko'],
+    path: 'i18n',
+  },
 }
 
 module.exports = config
