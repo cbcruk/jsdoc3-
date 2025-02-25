@@ -1,7 +1,7 @@
 import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
-const config = {
+const config: Config = {
   title: 'Use JSDoc',
   tagline: '',
   url: 'https://jsdoc3.vercel.app',
@@ -22,13 +22,10 @@ const config = {
       apiKey: 'ff2457ab3519907fddfc48648f50baf5',
       indexName: 'jsdoc3',
     },
-  },
+  } satisfies Preset.ThemeConfig,
   presets: [
     [
       '@docusaurus/preset-classic',
-      /**
-       * @type {import('@docusaurus/preset-classic').Options}
-       */
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -41,9 +38,9 @@ const config = {
           trackingID: 'G-ZVZXBXRLX7',
           anonymizeIP: true,
         },
-      },
+      } satisfies Preset.Options,
     ],
   ],
-} satisfies Config
+}
 
 module.exports = config
