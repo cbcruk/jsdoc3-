@@ -1,64 +1,64 @@
 ---
 id: getting-started
-title: Getting Started with JSDoc 3
-sidebar_label: Getting Started with JSDoc 3
+title: JSDoc 3 시작하기
+sidebar_label: JSDoc 3 시작하기
 ---
 
 ## 시작하기
 
-JSDoc 3 is an API documentation generator for JavaScript, similar to Javadoc or phpDocumentor. You add documentation comments directly to your source code, right alongside the code itself. The JSDoc tool will scan your source code and generate an HTML documentation website for you.
+JSDoc 3은 Javadoc 또는 phpDocumentor와 유사한 JavaScript용 API 문서 생성기입니다. 문서화 주석을 소스 코드에 직접 추가하여 코드와 함께 배치합니다. JSDoc 도구는 소스 코드를 스캔하고 HTML 문서 웹사이트를 생성합니다.
 
-## Adding documentation comments to your code
+## 코드에 문서화 주석 추가하기
 
-JSDoc's purpose is to document the API of your JavaScript application or library. It is assumed that you will want to document things like modules, namespaces, classes, methods, method parameters, and so on.
+JSDoc의 목적은 JavaScript 애플리케이션 또는 라이브러리의 API를 문서화하는 것입니다. 모듈, 네임스페이스, 클래스, 메서드, 메서드 매개변수 등을 문서화하려고 할 것이라고 가정합니다.
 
-JSDoc comments should generally be placed immediately before the code being documented. Each comment must start with a `/**` sequence in order to be recognized by the JSDoc parser. Comments beginning with `/*`, `/***`, or more than 3 stars will be ignored. This is a feature to allow you to suppress parsing of comment blocks.
+JSDoc 주석은 일반적으로 문서화할 코드 바로 앞에 위치해야 합니다. 각 주석은 JSDoc 파서에 의해 인식되기 위해 `/**` 시퀀스로 시작해야 합니다. `/*`, `/***`, 또는 3개 이상의 별표로 시작하는 주석은 무시됩니다. 이는 주석 블록의 파싱을 억제할 수 있도록 하는 기능입니다.
 
-The simplest documentation is just a description
+가장 간단한 문서는 설명입니다.
 
 ```js
-/** This is a description of the foo function. */
+/** 이것은 foo 함수에 대한 설명입니다. */
 function foo() {}
 ```
 
-Adding a description is simple—just type the description you want in the documentation comment.
+설명을 추가하는 것은 간단합니다—주석에 원하는 설명을 입력하기만 하면 됩니다.
 
-Special "JSDoc tags" can be used to give more information. For example, if the function is a constructor for a class, you can indicate this by adding a `@constructor` tag.
+특별한 "JSDoc 태그"를 사용하여 더 많은 정보를 제공할 수 있습니다. 예를 들어, 함수가 클래스의 생성자인 경우 `@constructor` 태그를 추가하여 이를 나타낼 수 있습니다.
 
-Use a JSDoc tag to describe your code
+코드를 설명하기 위해 JSDoc 태그 사용하기
 
 ```js
 /**
- * Represents a book.
+ * 책을 나타냅니다.
  * @constructor
  */
 function Book(title, author) {}
 ```
 
-More tags can be used to add more information. See the [home page](/#block-tags) for a complete list of tags that are recognized by JSDoc 3.
+더 많은 정보를 추가하기 위해 더 많은 태그를 사용할 수 있습니다. JSDoc 3에서 인식되는 태그의 전체 목록은 [홈 페이지](/#block-tags)를 참조하십시오.
 
-Adding more information with tags
+태그로 더 많은 정보 추가하기
 
 ```js
 /**
- * Represents a book.
+ * 책을 나타냅니다.
  * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * @param {string} title - 책의 제목입니다.
+ * @param {string} author - 책의 저자입니다.
  */
 function Book(title, author) {}
 ```
 
-## Generating a website
+## 웹사이트 생성하기
 
-Once your code is commented, you can use the JSDoc 3 tool to generate an HTML website from your source files.
+코드에 주석을 추가한 후, JSDoc 3 도구를 사용하여 소스 파일에서 HTML 웹사이트를 생성할 수 있습니다.
 
-By default, JSDoc uses the built-in "default" template to turn the documentation into HTML. You can edit this template to suit your own needs or create an entirely new template if that is what you prefer.
+기본적으로 JSDoc는 문서를 HTML로 변환하기 위해 내장된 "기본" 템플릿을 사용합니다. 이 템플릿을 필요에 맞게 편집하거나 완전히 새로운 템플릿을 만들 수 있습니다.
 
-Running the documentation generator on the command line
+명령줄에서 문서 생성기 실행하기
 
 ```bash
     jsdoc book.js
 ```
 
-This command will create a directory named `out/` in the current working directory. Within that directory, you will find the generated HTML pages.
+이 명령은 현재 작업 디렉터리에 `out/`이라는 이름의 디렉터리를 생성합니다. 해당 디렉터리 내에서 생성된 HTML 페이지를 찾을 수 있습니다.

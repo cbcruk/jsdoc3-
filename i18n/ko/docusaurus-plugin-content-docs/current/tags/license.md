@@ -4,53 +4,48 @@ title: '@license'
 sidebar_label: '@license'
 ---
 
-## Syntax
+## 문법
 
-`@license <identifier>`
+`@license <식별자>`
 
-## Overview
+## 개요
 
-The `@license` tag identifies the software license that applies to any portion of your code.
+`@license` 태그는 코드의 어떤 부분에 적용되는 소프트웨어 라이선스를 식별합니다.
 
-You can use any text to identify the license you are using. If your code uses a standard open-source license, consider using the appropriate identifier from the [Software Package Data Exchange (SPDX) License List](https://spdx.org/licenses/).
+사용하고 있는 라이선스를 식별하기 위해 어떤 텍스트라도 사용할 수 있습니다. 코드가 표준 오픈 소스 라이선스를 사용하는 경우, [소프트웨어 패키지 데이터 교환 (SPDX) 라이선스 목록](https://spdx.org/licenses/)에서 적절한 식별자를 사용하는 것을 고려하세요.
 
-Some JavaScript processing tools, such as Google's Closure Compiler, will automatically preserve any JSDoc comment that includes a `@license` tag. If you are using one of these tools, you may wish to add a standalone JSDoc comment that includes the `@license` tag, along with the entire text of the license, so that the license text will be included in generated JavaScript files.
+Google의 Closure Compiler와 같은 일부 JavaScript 처리 도구는 `@license` 태그를 포함한 모든 JSDoc 주석을 자동으로 보존합니다. 이러한 도구를 사용하는 경우, 라이선스 텍스트가 생성된 JavaScript 파일에 포함될 수 있도록 전체 라이선스 텍스트와 함께 `@license` 태그가 포함된 독립형 JSDoc 주석을 추가하는 것이 좋습니다.
 
-## Examples
+## 예시
 
-A module that is distributed under the Apache License 2.0
+Apache License 2.0 하에 배포되는 모듈
 
 ```js
 /**
- * Utility functions for the foo package.
+ * foo 패키지를 위한 유틸리티 함수.
  * @module foo/util
  * @license Apache-2.0
  */
 ```
 
-A standalone JSDoc comment with the complete MIT license
+완전한 MIT 라이선스가 포함된 독립형 JSDoc 주석
 
 ```js
 /**
  * @license
  * Copyright (c) 2015 Example Corporation Inc.
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * 본 소프트웨어 및 관련 문서 파일(이하 "소프트웨어")의 복사본을 얻는 모든 사람에게,
+ * 어떠한 대가 없이 소프트웨어를 사용, 복사, 수정, 병합, 출판, 배포, 
+ * 서브 라이선스 및/또는 판매할 수 있는 권한을 허여합니다. 
+ * 또한 소프트웨어가 제공된 사람도 그렇게 할 수 있도록 허용합니다. 
+ * 단, 다음 조건을 준수해야 합니다:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * 위 저작권 고지와 이 허가 고지는 소프트웨어의 모든 복사본 또는 중요한 부분에 포함되어야 합니다.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * 본 소프트웨어는 "있는 그대로" 제공되며, 명시적이거나 묵시적인 어떠한 종류의 보증도 없으며,
+ * 상품성, 특정 목적에의 적합성 및 비침해에 대한 보증을 포함하되 이에 국한되지 않습니다.
+ * 저자 또는 저작권 보유자는 소프트웨어의 사용이나 기타 거래와 관련하여 발생하는
+ * 어떠한 청구, 손해 또는 기타 책임에 대해 책임을 지지 않습니다.
  */
 ```

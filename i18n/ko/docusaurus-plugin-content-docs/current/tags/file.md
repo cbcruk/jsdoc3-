@@ -4,27 +4,27 @@ title: '@file'
 sidebar_label: '@file'
 ---
 
-## Synonyms
+## 동의어
 
 - `@fileoverview`
 - `@overview`
 
-## Overview
+## 개요
 
-The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file.
+@file 태그는 파일에 대한 설명을 제공합니다. 파일의 시작 부분에 있는 JSDoc 주석에서 이 태그를 사용하세요.
 
-## Example
+## 예시
 
-File description
+파일 설명
 
 ```js
 /**
- * @file Manages the configuration settings for the widget.
+ * @file 위젯의 구성 설정을 관리합니다.
  * @author Rowina Sanela
  */
 ```
 
-## Related Links
+## 관련 링크
 
 - [@author](./author.md)
 - [@version](./version.md)

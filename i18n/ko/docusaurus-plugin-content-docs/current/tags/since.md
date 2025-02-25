@@ -4,26 +4,26 @@ title: '@since'
 sidebar_label: '@since'
 ---
 
-## Syntax
+## 문법
 
-`@since <versionDescription>`
+`@since <버전설명>`
 
-## Overview
+## 개요
 
-The @since tag indicates that a class, method, or other symbol was added in a specific version.
+@since 태그는 클래스, 메서드 또는 기타 심볼이 특정 버전에서 추가되었음을 나타냅니다.
 
-## Examples
+## 예시
 
-Using the @since tag
+@since 태그 사용
 
 ```js
 /**
- * Provides access to user information.
+ * 사용자 정보에 대한 접근을 제공합니다.
  * @since 1.0.1
  */
 function UserRecord() {}
 ```
 
-## Related Links
+## 관련 링크
 
 [@version](./version.md)

@@ -4,17 +4,17 @@ title: '@this'
 sidebar_label: '@this'
 ---
 
-## Syntax
+## 문법
 
 `@this <namePath>`
 
-## Overview
+## 개요
 
-The @this tag indicates what the `this` keyword refers to when used within another symbol.
+@this 태그는 다른 기호 내에서 사용될 때 `this` 키워드가 무엇을 참조하는지를 나타냅니다.
 
-## Examples
+## 예제
 
-In the following example, the @this tag causes "this.name" to be documented as "Greeter#name" rather than a global symbol called "name".
+다음 예제에서 @this 태그는 "this.name"이 전역 기호 "name"이 아닌 "Greeter#name"으로 문서화되도록 합니다.
 
 ```js
 /** @constructor */
@@ -24,11 +24,11 @@ function Greeter(name) {
 
 /** @this Greeter */
 function setName(name) {
-  /** document me */
+  /** 문서화 해주세요 */
   this.name = name
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@memberof](./memberof.md)

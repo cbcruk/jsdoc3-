@@ -4,24 +4,24 @@ title: '@requires'
 sidebar_label: '@requires'
 ---
 
-## Syntax
+## 문법
 
 `@requires <someModuleName>`
 
-## Overview
+## 개요
 
-The @requires tag allows you to document that a module is needed to use this code. A JSDoc comment can have multiple @require tags. The module name can be specified as "moduleName" or "module:moduleName"; both forms will be interpreted as modules.
+@requires 태그는 이 코드를 사용하기 위해 모듈이 필요함을 문서화할 수 있게 해줍니다. JSDoc 주석에는 여러 개의 @require 태그가 포함될 수 있습니다. 모듈 이름은 "moduleName" 또는 "module:moduleName"으로 지정할 수 있으며, 두 형태 모두 모듈로 해석됩니다.
 
-JSDoc does not attempt to process the module that is being included. If you want the module to be included in the documentation, you must include the module in the list of JavaScript files to process.
+JSDoc는 포함된 모듈을 처리하려고 하지 않습니다. 문서에 모듈을 포함시키려면, 처리할 JavaScript 파일 목록에 모듈을 포함해야 합니다.
 
-## Examples
+## 예시
 
-Using the @requires tag
+@requires 태그 사용
 
 ```js
 /**
- * This class requires the modules {@link module:xyzcorp/helper} and
- * {@link module:xyzcorp/helper.ShinyWidget#polish}.
+ * 이 클래스는 {@link module:xyzcorp/helper}와
+ * {@link module:xyzcorp/helper.ShinyWidget#polish} 모듈이 필요합니다.
  * @class
  * @requires module:xyzcorp/helper
  * @requires xyzcorp/helper.ShinyWidget#polish

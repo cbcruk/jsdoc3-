@@ -4,23 +4,23 @@ title: '@throws'
 sidebar_label: '@throws'
 ---
 
-## Synonyms
+## 동의어
 
 `@exception`
 
-## Syntax
+## 구문
 
-- `@throws free-form description`
-- `@throws {<type>}`
-- `@throws {<type>} free-form description`
+- `@throws 자유형 설명`
+- `@throws {<유형>}`
+- `@throws {<유형>} 자유형 설명`
 
-## Overview
+## 개요
 
-The @throws tag allows you to document an error that a function might throw. You can include the @throws tag more than once in a single JSDoc comment.
+@throws 태그는 함수가 발생시킬 수 있는 오류를 문서화할 수 있도록 해줍니다. 단일 JSDoc 주석에서 @throws 태그를 여러 번 포함할 수 있습니다.
 
-## Examples
+## 예제
 
-Using the @throws tag with a type
+유형과 함께 @throws 태그 사용
 
 ```js
 /**
@@ -29,20 +29,20 @@ Using the @throws tag with a type
 function foo(x) {}
 ```
 
-Using the @throws tag with a description
+설명과 함께 @throws 태그 사용
 
 ```js
 /**
- * @throws Will throw an error if the argument is null.
+ * @throws 인수가 null일 경우 오류를 발생시킵니다.
  */
 function bar(x) {}
 ```
 
-Using the @throws tag with a type and description
+유형과 설명과 함께 @throws 태그 사용
 
 ```js
 /**
- * @throws {DivideByZero} Argument x must be non-zero.
+ * @throws {DivideByZero} 인수 x는 0이 아니어야 합니다.
  */
 function baz(x) {}
 ```

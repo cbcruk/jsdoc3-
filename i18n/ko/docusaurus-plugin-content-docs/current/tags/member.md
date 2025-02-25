@@ -4,21 +4,21 @@ title: '@member'
 sidebar_label: '@member'
 ---
 
-## Synonyms
+## 동의어
 
 `@var`
 
-## Syntax
+## 구문
 
 `@member [<type>] [<name>]`
 
-## Overview
+## 개요
 
-The @member tag identifies any member that does not have a more specialized kind, such as "class", "function", or "constant". A member can optionally have a type as well as a name.
+@member 태그는 "class", "function", "constant"과 같이 더 전문화된 종류가 없는 모든 멤버를 식별합니다. 멤버는 선택적으로 타입과 이름을 가질 수 있습니다.
 
-## Examples
+## 예제
 
-Using @member with Data#point
+Data#point와 함께 @member 사용하기
 
 ```js
 /** @class */
@@ -28,22 +28,22 @@ function Data() {
 }
 ```
 
-Here is an example of using @var, a synonym of @member, to document a (virtual) variable 'foo'.
+@member의 동의어인 @var를 사용하여 (가상) 변수 'foo'를 문서화하는 예입니다.
 
-Using @var to document a virtual member
+가상 멤버를 문서화하기 위해 @var 사용하기
 
 ```js
 /**
- * A variable in the global namespace called 'foo'.
+ * 전역 네임스페이스에서 'foo'라는 변수.
  * @var {number} foo
  */
 ```
 
-The above example is equivalent to the following:
+위의 예는 다음과 동등합니다:
 
 ```js
 /**
- * A variable in the global namespace called 'foo'.
+ * 전역 네임스페이스에서 'foo'라는 변수.
  * @type {number}
  */
 var foo

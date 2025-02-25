@@ -4,25 +4,25 @@ title: '@hideconstructor'
 sidebar_label: '@hideconstructor'
 ---
 
-## Syntax
+## 문법
 
 `@hideconstructor`
 
-## Overview
+## 개요
 
-The `@hideconstructor` tag tells JSDoc that the generated documentation should not display the constructor for a class. This tag is available in JSDoc 3.5.0 and later.
+`@hideconstructor` 태그는 JSDoc에 클래스의 생성자를 문서화하지 않아야 함을 알려줍니다. 이 태그는 JSDoc 3.5.0 이상에서 사용할 수 있습니다.
 
-For pre-ES2015 classes, use this tag in combination with the [`@class` or `@constructor` tag](./class.md).
+ES2015 이전 클래스에서는 이 태그를 [`@class` 또는 `@constructor` 태그](./class.md)와 함께 사용하십시오.
 
-For ES2015 classes, use this tag in the JSDoc comment for your constructor. If your class does not have an explicit constructor, use this tag in the JSDoc comment for the class.
+ES2015 클래스에서는 생성자에 대한 JSDoc 주석에서 이 태그를 사용하십시오. 클래스에 명시적인 생성자가 없는 경우, 클래스에 대한 JSDoc 주석에서 이 태그를 사용하십시오.
 
-## Examples
+## 예제
 
-@hideconstructor tag with pre-ES2015 class
+ES2015 이전 클래스를 위한 @hideconstructor 태그
 
 ```js
 /**
- * @classdesc Toaster singleton.
+ * @classdesc 토스터 싱글톤.
  * @class
  * @hideconstructor
  */
@@ -32,22 +32,22 @@ var Toaster = (function () {
   function Toaster() {}
 
   /**
-   * Toast an item.
+   * 아이템을 굽습니다.
    *
    * @alias toast
    * @memberof Toaster
    * @instance
-   * @param {BreadyThing} item - The item to toast.
-   * @return {Toast} A toasted bready thing.
+   * @param {BreadyThing} item - 굽는 아이템.
+   * @return {Toast} 굽힌 빵 같은 것.
    */
   Toaster.prototype.toast = function (item) {}
 
   return {
     /**
-     * Get the Toaster instance.
+     * Toaster 인스턴스를 가져옵니다.
      *
      * @alias Toaster.getInstance
-     * @returns {Toaster} The Toaster instance.
+     * @returns {Toaster} Toaster 인스턴스.
      */
     getInstance: function () {
       if (instance === null) {
@@ -61,17 +61,17 @@ var Toaster = (function () {
 })()
 ```
 
-@hideconstructor tag with ES2015 class
+ES2015 클래스를 위한 @hideconstructor 태그
 
 ```js
     /**
-     * Waffle iron singleton.
+     * 와플 철판 싱글톤.
      */
     class WaffleIron {
         #instance = null;
 
         /**
-         * Create the waffle iron.
+         * 와플 철판을 생성합니다.
          *
          * @hideconstructor
          */
@@ -81,10 +81,10 @@ var Toaster = (function () {
             }
 
             /**
-             * Cook a waffle.
+             * 와플을 요리합니다.
              *
-             * @param {Batter} batter - The waffle batter.
-             * @return {Waffle} The cooked waffle.
+             * @param {Batter} batter - 와플 반죽.
+             * @return {Waffle} 요리된 와플.
              */
             this.cook = function(batter) {};
 
@@ -92,9 +92,9 @@ var Toaster = (function () {
         }
 
         /**
-         * Get the WaffleIron instance.
+         * WaffleIron 인스턴스를 가져옵니다.
          *
-         * @return {WaffleIron} The WaffleIron instance.
+         * @return {WaffleIron} WaffleIron 인스턴스.
          */
         getInstance() {
             return new WaffleIron();
@@ -102,6 +102,6 @@ var Toaster = (function () {
     }
 ```
 
-## Related Links
+## 관련 링크
 
 [@class](./class.md)

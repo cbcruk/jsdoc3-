@@ -4,35 +4,35 @@ title: '@name'
 sidebar_label: '@name'
 ---
 
-## Syntax
+## 문법
 
 `@name <namePath>`
 
-## Overview
+## 개요
 
-The @name tag forces JSDoc to associate the remainder of the JSDoc comment with the given name, ignoring all surrounding code. This tag is best used in "virtual comments" for symbols that are not readily visible in the code, such as methods that are generated at runtime.
+@name 태그는 JSDoc에게 주어진 이름과 JSDoc 주석의 나머지를 연결하도록 강제하며, 주변 코드는 무시합니다. 이 태그는 코드에서 쉽게 볼 수 없는 기호, 예를 들어 런타임에 생성되는 메서드와 같은 "가상 주석"에 사용하면 좋습니다.
 
-When you use the @name tag, you must provide additional tags that tell JSDoc what kind of symbol you are documenting; whether the symbol is a member of another symbol; and so on. If you do not provide this information, the symbol will not be documented correctly.
+@name 태그를 사용할 때는, 문서화하고 있는 기호의 종류, 기호가 다른 기호의 구성원인지 여부 등을 JSDoc에게 알려주는 추가 태그를 제공해야 합니다. 이 정보를 제공하지 않으면 기호가 올바르게 문서화되지 않습니다.
 
-**Warning**: By using the @name tag, you are telling JSDoc to _ignore the surrounding code_ and treat your documentation comment in isolation. In many cases, it is best to use the [@alias tag](./alias.md) instead, which changes a symbol's name in the documentation but preserves other information about the symbol.
+**경고**: @name 태그를 사용함으로써 JSDoc에게 _주변 코드를 무시하고_ 문서화 주석을 독립적으로 처리하도록 지시하는 것입니다. 많은 경우, 기호의 이름을 문서에서 변경하지만 기호에 대한 다른 정보는 보존하는 [@alias 태그](./alias.md)를 사용하는 것이 더 좋습니다.
 
-## Examples
+## 예시
 
-The following example shows how to use the @name tag to document a function that JSDoc would not normally recognize.
+다음 예시는 JSDoc이 일반적으로 인식하지 못하는 함수를 문서화하기 위해 @name 태그를 사용하는 방법을 보여줍니다.
 
-Using the @name tag
+@name 태그 사용
 
 ```js
 /**
  * @name highlightSearchTerm
  * @function
  * @global
- * @param {string} term - The search term to highlight.
+ * @param {string} term - 강조할 검색어.
  */
 eval('window.highlightSearchTerm = function(term) {};')
 ```
 
-## Related Links
+## 관련 링크
 
-- [Using namepaths with JSDoc 3](../about/namepaths.md)
+- [JSDoc 3와 함께 namepath 사용하기](../about/namepaths.md)
 - [@alias](./alias.md)

@@ -1,362 +1,340 @@
 ---
 id: index
-title: Index
+title: 색인
 ---
 
 ## 시작하기
 
-[Getting Started with JSDoc 3](/about/getting-started)
+[JSDoc 3로 시작하기](./about/getting-started.md)
 
-A quick-start to documenting JavaScript with JSDoc.
+JSDoc로 JavaScript 문서화를 위한 빠른 시작.
 
-[Using namepaths with JSDoc 3](./about/namepaths)
+[JSDoc 3에서 네임패스 사용하기](./about/namepaths.md)
 
-A guide to using namepaths with JSDoc 3.
+JSDoc 3와 함께 네임패스를 사용하는 방법에 대한 가이드.
 
-[Command-line arguments to JSDoc](./about/commandline)
+[JSDoc에 대한 명령줄 인수](./about/commandline.md)
 
-About command-line arguments to JSDoc.
+JSDoc에 대한 명령줄 인수에 대한 정보.
 
-[Configuring JSDoc with a configuration file](./about/configuring-jsdoc)
+[구성 파일로 JSDoc 구성하기](./about/configuring-jsdoc.md)
 
-How to configure JSDoc using a configuration file.
+구성 파일을 사용하여 JSDoc을 구성하는 방법.
 
-[Configuring JSDoc's default template](./about/configuring-default-template)
+[JSDoc의 기본 템플릿 구성하기](./about/configuring-default-template.md)
 
-How to configure the output from JSDoc's default template.
+JSDoc의 기본 템플릿에서 출력 구성을 설정하는 방법.
 
-[Block and inline tags](./about/block-inline-tags)
+[블록 및 인라인 태그](./about/block-inline-tags.md)
 
-Overview of block and inline JSDoc tags.
+블록 및 인라인 JSDoc 태그에 대한 개요.
 
-[About JSDoc plugins](./about/plugins)
+[JSDoc 플러그인에 대하여](./about/plugins.md)
 
-How to create and use JSDoc plugins.
+JSDoc 플러그인을 만드는 방법과 사용하는 방법.
 
-[Using the Markdown plugin](./about/plugins-markdown)
+[마크다운 플러그인 사용하기](./about/plugins-markdown.md)
 
-Enable Markdown support in JSDoc.
+JSDoc에서 마크다운 지원을 활성화합니다.
 
-[Tutorials](./about/tutorials)
+[튜토리얼](./about/tutorials.md)
 
-Adding tutorials to your API documentation.
+API 문서에 튜토리얼 추가하기.
 
-[Including a Package File](./about/including-package)
+[패키지 파일 포함하기](./about/including-package.md)
 
-How to show package details in your documentation.
+문서에서 패키지 세부정보를 표시하는 방법.
 
-[Including a README File](./about/including-readme)
+[README 파일 포함하기](./about/including-readme.md)
 
-How to include a README file in your documentation.
+문서에 README 파일을 포함하는 방법.
 
-[License](./about/license-jsdoc3)
+[라이센스](./about/license-jsdoc3.md)
 
-License information for JSDoc 3.
+JSDoc 3에 대한 라이센스 정보.
 
-## JSDoc Examples
+## JSDoc 예제
 
-[ES 2015 Classes](./howto/es2015-classes)
+[ES 2015 클래스](./howto/es2015-classes.md)
 
-How to add JSDoc comments to ECMAScript 2015 classes.
+ECMAScript 2015 클래스에 JSDoc 주석 추가하기.
 
-[ES 2015 Modules](./howto/es2015-modules)
+[ES 2015 모듈](./howto/es2015-modules.md)
 
-How to add JSDoc comments to ECMAScript 2015 modules.
+ECMAScript 2015 모듈에 JSDoc 주석 추가하기.
 
-[CommonJS Modules](./howto/commonjs-modules)
+[CommonJS 모듈](./howto/commonjs-modules.md)
 
-How to add JSDoc comments to CommonJS and Node.js modules.
+CommonJS 및 Node.js 모듈에 JSDoc 주석 추가하기.
 
-[AMD Modules](./howto/amd-modules)
+[AMD 모듈](./howto/amd-modules.md)
 
-How to add JSDoc comments to AMD and RequireJS modules.
+AMD 및 RequireJS 모듈에 JSDoc 주석 추가하기.
 
-## Block Tags
+## 블록 태그
 
-[@abstract](./tags/abstract) (synonyms: @virtual)
+[@abstract](./tags/abstract.md) (동의어: @virtual)
 
-This member must be implemented (or overridden) by the inheritor.
+이 구성원은 상속자가 구현(또는 재정의)해야 합니다.
 
-[@access](./tags/access)
+[@access](./tags/access.md)
 
-Specify the access level of this member (private, package-private, public, or protected).
+이 구성원의 접근 수준을 지정합니다(비공개, 패키지-비공식, 공개 또는 보호됨).
 
-[@alias](./tags/alias)
+[@alias](./tags/alias.md)
 
-Treat a member as if it had a different name.
+구성원을 다른 이름으로 취급합니다.
 
-[@async](./tags/async)
+[@async](./tags/async.md)
 
-Indicate that a function is asynchronous.
+함수가 비동기적임을 나타냅니다.
 
-[@augments](./tags/augments) (synonyms: @extends)
+[@augments](./tags/augments.md) (동의어: @extends)
 
-Indicate that a symbol inherits from, and adds to, a parent symbol.
+기호가 부모 기호에서 상속하고 추가됨을 나타냅니다.
 
-[@author](./tags/author)
+[@author](./tags/author.md)
 
-Identify the author of an item.
+항목의 저자를 식별합니다.
 
-[@borrows](./tags/borrows)
+[@borrows](./tags/borrows.md)
 
-This object uses something from another object.
+이 객체는 다른 객체에서 무언가를 사용합니다.
 
-[@callback](./tags/callback)
+[@callback](./tags/callback.md)
 
-Document a callback function.
+콜백 함수를 문서화합니다.
 
-[@class](./tags/class) (synonyms: @constructor)
+[@class](./tags/class.md) (동의어: @constructor)
 
-This function is intended to be called with the "new" keyword.
+이 함수는 "new" 키워드와 함께 호출될 예정입니다.
 
-[@classdesc](./tags/classdesc)
+[@classdesc](./tags/classdesc.md)
 
-Use the following text to describe the entire class.
+전체 클래스를 설명하는 데 사용할 텍스트를 제공합니다.
 
-[@constant](./tags/constant) (synonyms: @const)
+[@constant](./tags/constant.md) (동의어: @const)
 
-Document an object as a constant.
+객체를 상수로 문서화합니다.
 
-[@constructs](./tags/constructs)
+[@constructs](./tags/constructs.md)
 
-This function member will be the constructor for the previous class.
+이 함수 구성원은 이전 클래스의 생성자가 됩니다.
 
-[@copyright](./tags/copyright)
+[@copyright](./tags/copyright.md)
 
-Document some copyright information.
+저작권 정보를 문서화합니다.
 
-[@default](./tags/default) (synonyms: @defaultvalue)
+[@default](./tags/default.md) (동의어: @defaultvalue)
 
-Document the default value.
+기본값을 문서화합니다.
 
-[@deprecated](./tags/deprecated)
+[@deprecated](./tags/deprecated.md)
 
-Document that this is no longer the preferred way.
+더 이상 권장되지 않음을 문서화합니다.
 
-[@description](./tags/description) (synonyms: @desc)
+[@description](./tags/description.md) (동의어: @desc)
 
-Describe a symbol.
+기호에 대한 설명을 제공합니다.
 
-[@enum](./tags/enum)
+[@enum](./tags/enum.md)
 
-Document a collection of related properties.
+연관된 속성의 컬렉션을 문서화합니다.
 
-[@event](./tags/event)
+[@event](./tags/event.md)
 
-Document an event.
+이벤트를 문서화합니다.
 
-[@example](./tags/example)
+[@example](./tags/example.md)
 
-Provide an example of how to use a documented item.
+문서화된 항목을 사용하는 방법의 예시를 제공합니다.
 
-[@exports](./tags/exports)
+[@exports](./tags/exports.md)
 
-Identify the member that is exported by a JavaScript module.
+JavaScript 모듈에 의해 내보내지는 구성원을 식별합니다.
 
-[@external](./tags/external) (synonyms: @host)
+[@external](./tags/external.md) (동의어: @host)
 
-Identifies an external class, namespace, or module.
+외부 클래스, 네임스페이스 또는 모듈을 식별합니다.
 
-[@file](./tags/file) (synonyms: @fileoverview, @overview)
+[@file](./tags/file.md) (동의어: @fileoverview, @overview)
 
-Describe a file.
+파일을 설명합니다.
 
-[@fires](./tags/fires) (synonyms: @emits)
+[@fires](./tags/fires.md) (동의어: @emits)
 
-Describe the events this method may fire.
+이 메소드에서 발생할 수 있는 이벤트를 설명합니다.
 
-[@function](./tags/function) (synonyms: @func, @method)
+[@function](./tags/function.md) (동의어: @func, @method)
 
-Describe a function or method.
+함수 또는 메소드를 문서화합니다.
 
-[@generator](./tags/generator)
+[@generator](./tags/generator.md)
 
-Indicate that a function is a generator function.
+함수가 생성기 함수임을 나타냅니다.
 
-[@global](./tags/global)
+[@global](./tags/global.md)
 
-Document a global object.
+전역 객체를 문서화합니다.
 
-[@hideconstructor](./tags/hideconstructor)
+[@hideconstructor](./tags/hideconstructor.md)
 
-Indicate that the constructor should not be displayed.
+생성자를 표시하지 않아야 함을 나타냅니다.
 
-[@ignore](./tags/ignore)
+[@ignore](./tags/ignore.md)
 
-Omit a symbol from the documentation.
+문서에서 기호를 생략합니다.
 
-[@implements](./tags/implements)
+[@implements](./tags/implements.md)
 
-This symbol implements an interface.
+이 기호는 인터페이스를 구현합니다.
 
-[@inheritdoc](./tags/inheritdoc)
+[@inheritdoc](./tags/inheritdoc.md)
 
-Indicate that a symbol should inherit its parent's documentation.
+이 기호가 부모의 문서를 상속해야 함을 나타냅니다.
 
-[@inner](./tags/inner)
+[@inner](./tags/inner.md)
 
-Document an inner object.
+내부 객체를 문서화합니다.
 
-[@instance](./tags/instance)
+[@instance](./tags/instance.md)
 
-Document an instance member.
+인스턴스 구성원을 문서화합니다.
 
-[@interface](./tags/interface)
+[@interface](./tags/interface.md)
 
-This symbol is an interface that others can implement.
+이 기호는 다른 사람들이 구현할 수 있는 인터페이스입니다.
 
-[@kind](./tags/kind)
+[@kind](./tags/kind.md)
 
-What kind of symbol is this?
+이 기호는 어떤 유형인가요?
 
-[@lends](./tags/lends)
+[@lends](./tags/lends.md)
 
-Document properties on an object literal as if they belonged to a symbol with a given name.
+기호가 주어진 이름을 가진 객체 리터럴의 속성으로 문서화합니다.
 
-[@license](./tags/license)
+[@license](./tags/license.md)
 
-Identify the license that applies to this code.
+이 코드에 적용되는 라이센스를 식별합니다.
 
-[@listens](./tags/listens)
+[@listens](./tags/listens.md)
 
-List the events that a symbol listens for.
+기호가 수신하는 이벤트 목록을 나열합니다.
 
-[@member](./tags/member) (synonyms: @var)
+[@member](./tags/member.md) (동의어: @var)
 
-Document a member.
+구성원을 문서화합니다.
 
-[@memberof](./tags/memberof)
+[@memberof](./tags/memberof.md)
 
-This symbol belongs to a parent symbol.
+이 기호는 부모 기호에 속합니다.
 
-[@mixes](./tags/mixes)
+[@mixes](./tags/mixes.md)
 
-This object mixes in all the members from another object.
+이 객체는 다른 객체의 모든 구성원을 혼합합니다.
 
-[@mixin](./tags/mixin)
+[@mixin](./tags/mixin.md)
 
-Document a mixin object.
+믹스인 객체를 문서화합니다.
 
-[@module](./tags/module)
+[@module](./tags/module.md)
 
-Document a JavaScript module.
+JavaScript 모듈을 문서화합니다.
 
-[@name](./tags/name)
+[@name](./tags/name.md)
 
-Document the name of an object.
+객체의 이름을 문서화합니다.
 
-[@namespace](./tags/namespace)
+[@namespace](./tags/namespace.md)
 
-Document a namespace object.
+네임스페이스 객체를 문서화합니다.
 
-[@override](./tags/override)
+[@override](./tags/override.md)
 
-Indicate that a symbol overrides its parent.
+이 기호가 부모를 재정의해야 함을 나타냅니다.
 
-[@package](./tags/package)
+[@package](./tags/package.md)
 
-This symbol is meant to be package-private.
+이 기호는 패키지-비공식으로 되어 있습니다.
 
-[@param](./tags/param) (synonyms: @arg, @argument)
+[@param](./tags/param.md) (동의어: @arg, @argument)
 
-Document the parameter to a function.
+함수의 매개변수를 문서화합니다.
 
-[@private](./tags/private)
+[@private](./tags/private.md)
 
-This symbol is meant to be private.
+이 기호는 비공개로 되어 있습니다.
 
-[@property](./tags/property) (synonyms: @prop)
+[@property](./tags/property.md) (동의어: @prop)
 
-Document a property of an object.
+객체의 속성을 문서화합니다.
 
-[@protected](./tags/protected)
+[@protected](./tags/protected.md)
 
-This symbol is meant to be protected.
+이 기호는 보호됨으로 되어 있습니다.
 
-[@public](./tags/public)
+[@public](./tags/public.md)
 
-This symbol is meant to be public.
+이 기호는 공개됨으로 되어 있습니다.
 
-[@readonly](./tags/readonly)
+[@readonly](./tags/readonly.md)
 
-This symbol is meant to be read-only.
+이 기호는 읽기 전용으로 되어 있습니다.
 
-[@requires](./tags/requires)
+[@requires](./tags/requires.md)
 
-This file requires a JavaScript module.
+이 파일은 JavaScript 모듈을 요구합니다.
 
-[@returns](./tags/returns) (synonyms: @return)
+[@returns](./tags/returns.md) (동의어: @return)
 
-Document the return value of a function.
+함수의 반환값을 문서화합니다.
 
-[@see](./tags/see)
+[@see](./tags/see.md)
 
-Refer to some other documentation for more information.
+더 많은 정보를 위해 다른 문서를 참조합니다.
 
-[@since](./tags/since)
+[@since](./tags/since.md)
 
-When was this feature added?
+이 기능이 언제 추가되었나요?
 
-[@static](./tags/static)
+[@static](./tags/static.md)
 
-Document a static member.
+정적 구성원을 문서화합니다.
 
-[@summary](./tags/summary)
+[@summary](./tags/summary.md)
 
-A shorter version of the full description.
+전체 설명의 짧은 버전입니다.
 
-[@this](./tags/this)
+[@this](./tags/this.md)
 
-What does the 'this' keyword refer to here?
+여기에서 'this' 키워드는 무엇을 참조합니까?
 
-[@throws](./tags/throws) (synonyms: @exception)
+[@throws](./tags/throws.md) (동의어: @exception)
 
-Describe what errors could be thrown.
+발생할 수 있는 오류를 설명합니다.
 
-[@todo](./tags/todo)
+[@todo](./tags/todo.md)
 
-Document tasks to be completed.
+완료해야 할 작업을 문서화합니다.
 
-[@tutorial](./tags/tutorial)
+[@tutorial](./tags/tutorial.md)
 
-Insert a link to an included tutorial file.
+포함된 튜토리얼 파일에 대한 링크를 삽입합니다.
 
-[@type](./tags/type)
+[@type](./tags/type.md)
 
-Document the type of an object.
+객체의 유형을 문서화합니다.
 
-[@typedef](./tags/typedef)
+[@typedef](./tags/typedef.md)
 
-Document a custom type.
+사용자 정의 유형을 문서화합니다.
 
-[@variation](./tags/variation)
+[@variation](./tags/variation.md)
 
-Distinguish different objects with the same name.
+같은 이름을 가진 다른 객체를 구분합니다.
 
-[@version](./tags/version)
+[@version](./tags/version.md)
 
-Documents the version number of an item.
+항목의 버전 번호를 문서화합니다.
 
-[@yields](./tags/yields) (synonyms: @yield)
-
-Document the value yielded by a generator function.
-
-## Inline Tags
-
-[@link](./tags/inline-link) (synonyms: @linkcode, @linkplain)
-
-Link to another item in the documentation.
-
-[@tutorial](./tags/inline-tutorial)
-
-Link to a tutorial.
-
-## Contribute
-
-[JSDoc project on GitHub](https://github.com/jsdoc3/jsdoc)
-
-Contribute to JSDoc.
-
-[Use JSDoc project on GitHub](https://github.com/jsdoc3/jsdoc3.github.com)
-
-Contribute to the JSDoc documentation.
+[@yields](

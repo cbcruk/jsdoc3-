@@ -4,37 +4,37 @@ title: '@listens'
 sidebar_label: '@listens'
 ---
 
-## Syntax
+## 문법
 
 `@listens <eventName>`
 
-## Overview
+## 개요
 
-The `@listens` tag indicates that a symbol listens for the specified event. Use the [`@event tag`](./event.md) to document the event's content.
+`@listens` 태그는 기호가 지정된 사건을 듣고 있음을 나타냅니다. 사건의 내용을 문서화하려면 [`@event 태그`](./event.md)를 사용하세요.
 
-## Example
+## 예제
 
-The following example shows how to document an event named `module:hurler~event:snowball`, as well as a method named `module:playground/monitor.reportThrowage` that listens for the event.
+다음 예제는 `module:hurler~event:snowball`이라는 이름의 사건과 이 사건을 듣고 있는 `module:playground/monitor.reportThrowage`라는 메서드를 문서화하는 방법을 보여줍니다.
 
-Documenting an event and its listener
+사건과 그 리스너 문서화하기
 
 ```js
 define('hurler', [], function () {
   /**
-   * Event reporting that a snowball has been hurled.
+   * 눈덩이가 던져졌다는 사건을 보고합니다.
    *
    * @event module:hurler~snowball
-   * @property {number} velocity - The snowball's velocity, in meters per second.
+   * @property {number} velocity - 눈덩이의 속도(초당 미터).
    */
 
   /**
-   * Snowball-hurling module.
+   * 눈덩이를 던지는 모듈입니다.
    *
    * @module hurler
    */
   var exports = {
     /**
-     * Attack an innocent (or guilty) person with a snowball.
+     * 무고한(혹은 유죄인) 사람에게 눈덩이를 던집니다.
      *
      * @method
      * @fires module:hurler~snowball
@@ -49,20 +49,20 @@ define('hurler', [], function () {
 
 define('playground/monitor', [], function () {
   /**
-   * Keeps an eye out for snowball-throwers.
+   * 눈덩이를 던지는 사람을 감시합니다.
    *
    * @module playground/monitor
    */
   var exports = {
     /**
-     * Report the throwing of a snowball.
+     * 눈덩이가 던져졌다고 보고합니다.
      *
      * @method
-     * @param {module:hurler~event:snowball} e - A snowball event.
+     * @param {module:hurler~event:snowball} e - 눈덩이 사건.
      * @listens module:hurler~event:snowball
      */
     reportThrowage: function (e) {
-      this.log('snowball thrown: velocity ' + e.velocity)
+      this.log('눈덩이가 던져졌습니다: 속도 ' + e.velocity)
     },
   }
 
@@ -70,7 +70,7 @@ define('playground/monitor', [], function () {
 })
 ```
 
-## Related Links
+## 관련 링크
 
 - [@event](./event.md)
 - [@fires](./fires.md)

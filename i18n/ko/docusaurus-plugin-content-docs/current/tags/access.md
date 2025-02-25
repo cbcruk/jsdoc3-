@@ -4,26 +4,26 @@ title: '@access'
 sidebar_label: '@access'
 ---
 
-## Syntax
+## 문법
 
 `@access <package|private|protected|public>`
 
-## Overview
+## 개요
 
-The `@access` tag specifies the access level of a member. You can use the `@access` tag as a synonym for other tags:
+`@access` 태그는 멤버의 접근 수준을 지정합니다. `@access` 태그는 다른 태그의 동의어로 사용할 수 있습니다:
 
-- `@access package` is the same as `@package`. This option is available in JSDoc 3.5.0 and later.
-- `@access private` is the same as `@private`.
-- `@access protected` is the same as `@protected`.
-- `@access public` is the same as `@public`.
+- `@access package`는 `@package`와 동일합니다. 이 옵션은 JSDoc 3.5.0 이상에서 사용 가능합니다.
+- `@access private`는 `@private`와 동일합니다.
+- `@access protected`는 `@protected`와 동일합니다.
+- `@access public`은 `@public`과 동일합니다.
 
-Private members are not shown in the generated output unless JSDoc is run with the `-p/--private` command-line option. In JSDoc 3.3.0 and later, you can also use the [`-a/--access` command-line option](../about/commandline.md) to change this behavior.
+개인 멤버는 `-p/--private` 명령줄 옵션을 사용하여 JSDoc을 실행하지 않는 한, 생성된 출력에 표시되지 않습니다. JSDoc 3.3.0 이상에서는 [`-a/--access` 명령줄 옵션](../about/commandline.md)을 사용하여 이 동작을 변경할 수도 있습니다.
 
-Note that a doclet's _access level_ is different from its _scope_. For example, if `Parent` has an inner variable named `child` that is documented as `@public`, the `child` variable will still be treated as an inner variable with the namepath `Parent~child`. In other words, the `child` variable will have an inner scope, even though the variable is public. To change a doclet's scope, use the [`@instance`](./instance.md), [`@static`](./static.md), and [`@global`](./global.md) tags.
+문서 객체의 _접근 수준_은 _범위_와 다르다는 점에 유의하세요. 예를 들어, `Parent`가 `@public`으로 문서화된 내부 변수 `child`를 가지고 있다면, `child` 변수는 여전히 `Parent~child`라는 이름 경로를 가진 내부 변수로 처리됩니다. 즉, 변수는 공개적이지만 여전히 내부 범위를 가집니다. 문서 객체의 범위를 변경하려면 [`@instance`](./instance.md), [`@static`](./static.md) 및 [`@global`](./global.md) 태그를 사용하세요.
 
-## Examples
+## 예제
 
-Using @access as a synonym for other tags
+다른 태그의 동의어로서 @access 사용
 
 ```js
 /** @constructor */
@@ -41,7 +41,7 @@ function Thingy() {
   this.pez = 3
 }
 
-// same as...
+// 동일한...
 
 /** @constructor */
 function OtherThingy() {
@@ -59,7 +59,7 @@ function OtherThingy() {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 - [@global](./global.md)
 - [@instance](./instance.md)

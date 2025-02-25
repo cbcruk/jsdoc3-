@@ -4,17 +4,17 @@ title: '@constructs'
 sidebar_label: '@constructs'
 ---
 
-## Overview
+## 개요
 
-When using an object literal to define a class (for example with the `@lends` tag) the `@constructs` tag allows you to document that a particular function will be used to construct instances of that class.
+객체 리터럴을 사용하여 클래스를 정의할 때(예: `@lends` 태그와 함께) `@constructs` 태그는 특정 함수가 해당 클래스의 인스턴스를 생성하는 데 사용될 것임을 문서화할 수 있게 해줍니다.
 
-## Syntax
+## 문법
 
 `@constructs [<name>]`
 
-## Examples
+## 예시
 
-Using the @constructs tag with @lends
+@lends와 함께 @constructs 태그 사용
 
 ```js
 var Person = makeClass(
@@ -24,15 +24,15 @@ var Person = makeClass(
     initialize: function (name) {
       this.name = name
     },
-    /** Describe me. */
+    /** 나를 설명해주세요. */
     say: function (message) {
-      return this.name + ' says: ' + message
+      return this.name + '가 말하기: ' + message
     },
   }
 )
 ```
 
-Without @lends you must provide the name of the class
+@lends 없이 클래스 이름을 제공해야 합니다.
 
 ```js
 makeClass(
@@ -49,6 +49,6 @@ makeClass(
 )
 ```
 
-## Related Links
+## 관련 링크
 
 [@lends](./lends.md)

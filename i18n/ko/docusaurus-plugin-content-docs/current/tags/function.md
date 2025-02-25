@@ -4,36 +4,36 @@ title: '@function'
 sidebar_label: '@function'
 ---
 
-## Synonyms
+## 동의어
 
 - `@func`
 - `@method`
 
-## Syntax
+## 구문
 
 `@function [<FunctionName>]`
 
-## Overview
+## 개요
 
-This marks an object as being a function, even though it may not appear to be one to the parser. It sets the doclet's [@kind](./kind.md) to 'function'.
+이렇게 하면 개체가 함수로 표시되지만, 구문 분석기에는 그렇게 보이지 않을 수 있습니다. doclet의 [@kind](./kind.md)를 'function'으로 설정합니다.
 
-## Examples
+## 예제
 
-Using @function to mark a function.
+함수를 표시하기 위해 @function 사용하기.
 
 ```js
 /** @function */
 var paginate = paginateFactory(pages)
 ```
 
-Without the @function tag, the `paginate` object would be documented as a generic object (a [@member](./member.md)), because it isn't possible to tell from examining the line of code what type of value `paginate` will hold when it is run.
+@function 태그가 없으면 `paginate` 객체는 일반 개체(즉, [@member](./member.md))로 문서화됩니다. 이는 코드의 해당 행을 검사하는 것만으로는 `paginate`가 실행될 때 어떤 유형의 값을 보유할지 알 수 없기 때문입니다.
 
-Using @function with a name.
+이름과 함께 @function 사용하기.
 
 ```js
 /** @function myFunction */
 
-// the above is the same as:
+// 위 코드는 다음과 동일합니다:
 /** @function
  * @name myFunction */
 ```

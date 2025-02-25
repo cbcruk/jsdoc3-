@@ -1,88 +1,88 @@
 ---
 id: commonjs-modules
-title: CommonJS Modules
-sidebar_label: CommonJS Modules
+title: CommonJS 모듈
+sidebar_label: CommonJS 모듈
 ---
 
-## Overview
+## 개요
 
-To help you document [CommonJS modules](http://wiki.commonjs.org/wiki/Modules/1.1), JSDoc 3 understands many of the conventions used in the CommonJS specification (for example, adding properties to the `exports` object). In addition, JSDoc recognizes the conventions of [Node.js modules](http://nodejs.org/api/modules.html), which extend the CommonJS standard (for example, assigning a value to `module.exports`). Depending on the coding conventions you follow, you may need to provide some additional tags to help JSDoc understand your code.
+[CommonJS 모듈](http://wiki.commonjs.org/wiki/Modules/1.1)을 문서화하는 데 도움을 주기 위해, JSDoc 3는 CommonJS 사양에서 사용되는 많은 규칙(예: `exports` 객체에 속성 추가)을 이해합니다. 또한 JSDoc는 CommonJS 표준을 확장하는 [Node.js 모듈](http://nodejs.org/api/modules.html)의 규칙을 인식합니다(예: `module.exports`에 값 할당). 따르는 코딩 규약에 따라, JSDoc이 코드를 이해하는 데 도움이 되는 추가 태그를 제공해야 할 수도 있습니다.
 
-This page explains how to document CommonJS and Node.js modules that use several different coding conventions. If you're documenting Asynchronous Module Definition (AMD) modules (also known as "RequireJS modules"), see [AMD Modules](./amd-modules.md).
+이 페이지에서는 여러 다양한 코딩 규약을 사용하는 CommonJS 및 Node.js 모듈을 문서화하는 방법을 설명합니다. Asynchronous Module Definition (AMD) 모듈(즉, "RequireJS 모듈")을 문서화하려는 경우 [AMD 모듈](./amd-modules.md)을 참조하십시오.
 
-## Module identifiers
+## 모듈 식별자
 
-In most cases, your CommonJS or Node.js module should include a standalone JSDoc comment that contains a [`@module` tag](../tags/module.md). The `@module` tag's value should be the module identifier that's passed to the `require()` function. For example, if users load the module by calling `require('my/shirt')`, your JSDoc comment would contain the tag `@module my/shirt`.
+대부분의 경우, CommonJS 또는 Node.js 모듈은 독립형 JSDoc 주석을 포함해야 하며, 이 주석에는 [`@module` 태그](../tags/module.md)가 포함됩니다. `@module` 태그의 값은 `require()` 함수에 전달되는 모듈 식별자여야 합니다. 예를 들어, 사용자가 `require('my/shirt')`를 호출하여 모듈을 로드하는 경우, JSDoc 주석에는 태그 `@module my/shirt`가 포함됩니다.
 
-If you use the `@module` tag without a value, JSDoc will try to guess the correct module identifier based on the filepath.
+값 없이 `@module` 태그를 사용하면, JSDoc은 파일 경로를 기반으로 올바른 모듈 식별자를 추측하려고 합니다.
 
-When you use a JSDoc [namepath](../about/namepaths.md) to refer to a module from another JSDoc comment, you must add the prefix `module:`. For example, if you want the documentation for the module `my/pants` to link to the module `my/shirt`, you could use the [`@see` tag](../tags/see.md) to document `my/pants` as follows:
+다른 JSDoc 주석에서 모듈을 참조하기 위해 JSDoc [네임패스](../about/namepaths.md)를 사용할 때는 `module:` 접두사를 추가해야 합니다. 예를 들어, `my/pants` 모듈의 문서가 `my/shirt` 모듈에 링크되도록 하려면, 다음과 같이 [`@see` 태그](../tags/see.md)를 사용할 수 있습니다:
 
 ```js
 /**
- * Pants module.
+ * 바지 모듈.
  * @module my/pants
  * @see module:my/shirt
  */
 ```
 
-Similarly, the namepath for each member of the module will start with `module:`, followed by the module name. For example, if your `my/pants` module exports a `Jeans` constructor, and `Jeans` has an instance method named `hem`, the instance method's longname is `module:my/pants.Jeans#hem`.
+마찬가지로, 모듈의 각 멤버에 대한 네임패스는 `module:`으로 시작하며, 뒤에는 모듈 이름이 옵니다. 예를 들어, `my/pants` 모듈이 `Jeans` 생성자를 내보내고 `Jeans`에 `hem`이라는 인스턴스 메서드가 있다면, 인스턴스 메서드의 롱네임은 `module:my/pants.Jeans#hem`이 됩니다.
 
-## Properties of the 'exports' object
+## 'exports' 객체의 속성
 
-It's easiest to document symbols that are directly assigned to a property of the `exports` object. JSDoc will automatically recognize that the module exports these symbols.
+`exports` 객체의 속성에 직접 할당된 기호를 문서화하는 것이 가장 쉽습니다. JSDoc은 모듈이 이러한 기호를 내보낸다는 것을 자동으로 인식합니다.
 
-In the following example, the `my/shirt` module exports the methods `button` and `unbutton`. JSDoc will automatically detect that the module exports these methods.
+다음 예에서 `my/shirt` 모듈은 `button` 및 `unbutton` 메서드를 내보냅니다. JSDoc은 모듈이 이 메서드를 내보낸다는 것을 자동으로 감지합니다.
 
-Methods added to the exports object
+exports 객체에 추가된 메서드
 
 ```js
 /**
- * Shirt module.
+ * 셔츠 모듈.
  * @module my/shirt
  */
 
-/** Button the shirt. */
+/** 셔츠에 단추를 채웁니다. */
 exports.button = function() {
   // ...
 };
 
-/** Unbutton the shirt. */
+/** 셔츠의 단추를 풀습니다. */
 exports.unbutton = function() {
   // ...
 };
 ```
 
-## Values assigned to local variables
+## 지역 변수에 할당된 값
 
-In some cases, an exported symbol may be assigned to a local variable before it's added to the `exports` object. For example, if your module exports a `wash` method, and the module itself often calls the `wash` method, you might write the module as follows:
+일부 경우, 내보낸 기호가 `exports` 객체에 추가되기 전에 지역 변수에 할당될 수 있습니다. 예를 들어, 모듈이 `wash` 메서드를 내보내고 모듈 자체에서 `wash` 메서드를 자주 호출하는 경우, 모듈을 다음과 같이 작성할 수 있습니다:
 
-Method assigned to a local variable and added to the exports object
+지역 변수에 할당된 메서드와 exports 객체에 추가된 메서드
 
 ```js
 /**
- * Shirt module.
+ * 셔츠 모듈.
  * @module my/shirt
  */
 
-/** Wash the shirt. */
+/** 셔츠를 씻습니다. */
 var wash = (exports.wash = function() {
   // ...
 });
 ```
 
-In this case, JSDoc will _not_ automatically document `wash` as an exported method, because the JSDoc comment appears immediately before the local variable `wash` rather than `exports.wash`. One solution is to add an [`@alias` tag](../tags/alias.md) that defines the correct longname for the method. In this case, the method is a static member of the module `my/shirt`, so the correct longname is `module:my/shirt.wash`:
+이 경우, JSDoc은 `wash`가 내보낸 메서드로 자동 문서화되지 않습니다. 이는 JSDoc 주석이 지역 변수 `wash` 바로 앞에 위치하기 때문입니다. 하나의 솔루션은 메서드의 정확한 롱네임을 정의하는 [`@alias` 태그](../tags/alias.md)를 추가하는 것입니다. 이 경우, 메서드는 `my/shirt` 모듈의 정적 멤버이므로 올바른 롱네임은 `module:my/shirt.wash`입니다:
 
-Longname defined in an @alias tag
+@alias 태그로 정의된 롱네임
 
 ```js
 /**
- * Shirt module.
+ * 셔츠 모듈.
  * @module my/shirt
  */
 
 /**
- * Wash the shirt.
+ * 셔츠를 씻습니다.
  * @alias module:my/shirt.wash
  */
 var wash = (exports.wash = function() {
@@ -90,55 +90,55 @@ var wash = (exports.wash = function() {
 });
 ```
 
-Another solution is to move the method's JSDoc comment so it comes immediately before `exports.wash`. This change allows JSDoc to detect that `wash` is exported by the module `my/shirt`:
+또 다른 솔루션은 메서드의 JSDoc 주석을 `exports.wash` 바로 앞에 두는 것입니다. 이 변경으로 JSDoc이 `wash`가 `my/shirt` 모듈에 의해 내보내졌다고 감지할 수 있게 됩니다:
 
-JSDoc comment immediately before exports.wash
+exports.wash 바로 앞에 JSDoc 주석
 
 ```js
 /**
- * Shirt module.
+ * 셔츠 모듈.
  * @module my/shirt
  */
 
 var wash =
-  /** Wash the shirt. */
+  /** 셔츠를 씻습니다. */
   (exports.wash = function() {
     // ...
   });
 ```
 
-## Values assigned to 'module.exports'
+## 'module.exports'에 할당된 값
 
-In a Node.js module, you can assign a value directly to `module.exports`. This section explains how to document different types of values when they are assigned to `module.exports`.
+Node.js 모듈에서는 값을 직접 `module.exports`에 할당할 수 있습니다. 이 섹션에서는 `module.exports`에 할당될 때 다양한 유형의 값을 문서화하는 방법을 설명합니다.
 
-### Object literal assigned to 'module.exports'
+### 'module.exports'에 할당된 객체 리터럴
 
-If a module assigns an object literal to `module.exports`. JSDoc automatically recognizes that the module exports only this value. In addition, JSDoc automatically sets the correct longname for each property:
+모듈이 `module.exports`에 객체 리터럴을 할당하는 경우, JSDoc은 해당 모듈이 오로지 이 값만 내보낸다는 것을 자동으로 인식합니다. 또한 JSDoc은 각 속성에 대해 올바른 롱네임을 자동으로 설정합니다:
 
-Object literal assigned to module.exports
+module.exports에 할당된 객체 리터럴
 
 ```js
 /**
- * Color mixer.
+ * 색상 혼합기.
  * @module color/mixer
  */
 
 module.exports = {
   /**
-   * Blend two colors together.
-   * @param {string} color1 - The first color, in hexadecimal format.
-   * @param {string} color2 - The second color, in hexadecimal format.
-   * @return {string} The blended color.
+   * 두 가지 색을 혼합합니다.
+   * @param {string} color1 - 첫 번째 색, 16진수 형식.
+   * @param {string} color2 - 두 번째 색, 16진수 형식.
+   * @return {string} 혼합된 색.
    */
   blend: function(color1, color2) {
     // ...
   },
 
   /**
-   * Darken a color by the given percentage.
-   * @param {string} color - The color, in hexadecimal format.
-   * @param {number} percent - The percentage, ranging from 0 to 100.
-   * @return {string} The darkened color.
+   * 주어진 비율로 색을 어둡게 합니다.
+   * @param {string} color - 색상, 16진수 형식.
+   * @param {number} percent - 비율, 0에서 100까지.
+   * @return {string} 어두워진 색.
    */
   darken: function(color, percent) {
     // ..
@@ -146,22 +146,22 @@ module.exports = {
 };
 ```
 
-You can also use this pattern if you add properties to `module.exports` outside of the object literal:
+또한 객체 리터럴 외부에서 `module.exports`에 속성을 추가할 때 이 패턴을 사용할 수 있습니다:
 
-Assignment to module.exports followed by property definition
+module.exports에 대한 할당 후 속성 정의
 
 ```js
 /**
- * Color mixer.
+ * 색상 혼합기.
  * @module color/mixer
  */
 
 module.exports = {
   /**
-   * Blend two colors together.
-   * @param {string} color1 - The first color, in hexadecimal format.
-   * @param {string} color2 - The second color, in hexadecimal format.
-   * @return {string} The blended color.
+   * 두 가지 색을 혼합합니다.
+   * @param {string} color1 - 첫 번째 색, 16진수 형식.
+   * @param {string} color2 - 두 번째 색, 16진수 형식.
+   * @return {string} 혼합된 색.
    */
   blend: function(color1, color2) {
     // ...
@@ -169,120 +169,43 @@ module.exports = {
 };
 
 /**
- * Darken a color by the given percentage.
- * @param {string} color - The color, in hexadecimal format.
- * @param {number} percent - The percentage, ranging from 0 to 100.
- * @return {string} The darkened color.
+ * 주어진 비율로 색을 어둡게 합니다.
+ * @param {string} color - 색상, 16진수 형식.
+ * @param {number} percent - 비율, 0에서 100까지.
+ * @return {string} 어두워진 색.
  */
 module.exports.darken = function(color, percent) {
   // ..
 };
 ```
 
-### Function assigned to 'module.exports'
+### 'module.exports'에 할당된 함수
 
-If you assign a function to `module.exports`, JSDoc will automatically set the correct longname for the function:
+함수를 `module.exports`에 할당하면, JSDoc은 해당 함수의 올바른 롱네임을 자동으로 설정합니다:
 
-Function assigned to 'module.exports'
+'module.exports'에 할당된 함수
 
 ```js
 /**
- * Color mixer.
+ * 색상 혼합기.
  * @module color/mixer
  */
 
 /**
- * Blend two colors together.
- * @param {string} color1 - The first color, in hexadecimal format.
- * @param {string} color2 - The second color, in hexadecimal format.
- * @return {string} The blended color.
+ * 두 가지 색을 혼합합니다.
+ * @param {string} color1 - 첫 번째 색, 16진수 형식.
+ * @param {string} color2 - 두 번째 색, 16진수 형식.
+ * @return {string} 혼합된 색.
  */
 module.exports = function(color1, color2) {
   // ...
 };
 ```
 
-The same pattern works for constructor functions:
+이와 같은 패턴은 생성자 함수에도 적용됩니다:
 
-Constructor assigned to 'module.exports'
-
-```js
-/**
- * Color mixer.
- * @module color/mixer
- */
-
-/** Create a color mixer. */
-module.exports = function ColorMixer() {
-  // ...
-};
-```
-
-### String, number, or boolean assigned to 'module.exports'
-
-For value types (strings, numbers, and booleans) assigned to `module.exports`, you must document the exported value's type by using the [`@type` tag](../tags/type.md) in the same JSDoc comment as the `@module` tag:
-
-String assigned to module.exports
+'module.exports'에 할당된 생성자
 
 ```js
 /**
- * Module representing the word of the day.
- * @module wotd
- * @type {string}
- */
-
-module.exports = "perniciousness";
-```
-
-## Values assigned to 'module.exports' and local variables
-
-If your module exports symbols that are not directly assigned to `module.exports`, you can use the [`@exports` tag](../tags/exports.md) in place of the `@module` tag. The `@exports` tag tells JSDoc that a symbol represents the value exported by a module.
-
-Object literal assigned to a local variable and module.exports
-
-```js
-/**
- * Color mixer.
- * @exports color/mixer
- */
-var mixer = (module.exports = {
-  /**
-   * Blend two colors together.
-   * @param {string} color1 - The first color, in hexadecimal format.
-   * @param {string} color2 - The second color, in hexadecimal format.
-   * @return {string} The blended color.
-   */
-  blend: function(color1, color2) {
-    // ...
-  }
-});
-```
-
-## Properties added to 'this'
-
-When a module adds a property to its `this` object, JSDoc 3 automatically recognizes that the new property is exported by the module:
-
-Properties added to a module's 'this' object
-
-```js
-/**
- * Module for bookshelf-related utilities.
- * @module bookshelf
- */
-
-/**
- * Create a new Book.
- * @class
- * @param {string} title - The title of the book.
- */
-this.Book = function(title) {
-  /** The title of the book. */
-  this.title = title;
-};
-```
-
-## Related Links
-
-- [Using namepaths with JSDoc 3](../about/namepaths.md)
-- [@exports](../tags/exports.md)
-- [@module](../tags/module.md)
+ * 색상 혼합기

@@ -4,46 +4,46 @@ title: '@private'
 sidebar_label: '@private'
 ---
 
-## Syntax
+## 구문
 
-With the JSDoc tag dictionary (enabled by default):
+JSDoc 태그 사전(기본적으로 활성화됨)에서:
 
 `@private`
 
-With the [Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) tag dictionary:
+[Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) 태그 사전에서:
 
 `@private [{typeExpression}]`
 
-## Overview
+## 개요
 
-The `@private` tag marks a symbol as private, or not meant for general use. Private members are not shown in the generated output unless JSDoc is run with the `-p/--private` command-line option. In JSDoc 3.3.0 and later, you can also use the [`-a/--access` command-line option](../about/commandline.md) to change this behavior.
+`@private` 태그는 기호를 비공식(private)으로 표시하며, 일반적인 사용을 위한 것이 아님을 나타냅니다. 비공식 멤버는 JSDoc가 `-p/--private` 명령줄 옵션으로 실행되지 않는 한 생성된 출력에 표시되지 않습니다. JSDoc 3.3.0 이후로는 [`-a/--access` 명령줄 옵션](../about/commandline.md)을 사용하여 이 동작을 변경할 수 있습니다.
 
-The `@private` tag is not inherited by child members. For example, if the `@private` tag is added to a namespace, members of the namespace can still appear in the generated output; because the namespace is private, the members' namepath will not include the namespace.
+`@private` 태그는 자식 멤버에게 상속되지 않습니다. 예를 들어, 네임스페이스에 `@private` 태그가 추가된 경우, 네임스페이스의 멤버는 여전히 생성된 출력에 나타날 수 있습니다. 네임스페이스가 비공식이기 때문에, 멤버의 이름 경로는 네임스페이스를 포함하지 않습니다.
 
-The `@private` tag is equivalent to `@access private`.
+`@private` 태그는 `@access private`과 동등합니다.
 
-## Examples
+## 예제
 
-In the following example, `Documents` and `Documents.Newspaper` appear in the generated documentation, but not `Documents.Diary`.
+다음 예제에서는 `Documents`와 `Documents.Newspaper`는 생성된 문서에 나타나지만, `Documents.Diary`는 나타나지 않습니다.
 
-Using the @private tag
+`@private` 태그 사용
 
 ```js
 /** @namespace */
 var Documents = {
   /**
-   * An ordinary newspaper.
+   * 일반 신문입니다.
    */
   Newspaper: 1,
   /**
-   * My diary.
+   * 나의 일기입니다.
    * @private
    */
   Diary: 2,
 }
 ```
 
-## Related Links
+## 관련 링크
 
 - [@access](./access.md)
 - [@global](./global.md)

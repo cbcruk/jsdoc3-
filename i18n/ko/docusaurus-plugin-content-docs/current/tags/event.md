@@ -4,39 +4,39 @@ title: '@event'
 sidebar_label: '@event'
 ---
 
-## Syntax
+## 문법
 
 `@event <className>#[event:]<eventName>`
 
-## Overview
+## 개요
 
-The @event tag allows you to document an event that can be fired. A typical event is represented by an object with a defined set of properties.
+@event 태그를 사용하면 발생할 수 있는 이벤트를 문서화할 수 있습니다. 일반적인 이벤트는 정의된 일련의 속성을 가진 객체로 표현됩니다.
 
-Once you have used the @event tag to define a specific type of event, you can use the @fires tag to indicate that a method can fire that event. You can also use the @listens tag to indicate that a symbol listens for the event.
+특정 유형의 이벤트를 정의하기 위해 @event 태그를 사용한 후, @fires 태그를 사용하여 메서드가 해당 이벤트를 발생시킬 수 있음을 나타낼 수 있습니다. 또한 @listens 태그를 사용하여 기호가 이벤트를 수신하고 있음을 나타낼 수 있습니다.
 
-JSDoc automatically prepends the namespace `event:` to each event's name. In general, you must include this namespace when you link to the event in another doclet. (The @fires tag is a notable exception; it allows you to omit the namespace.)
+JSDoc은 각 이벤트 이름 앞에 자동으로 네임스페이스 `event:`를 추가합니다. 일반적으로 다른 문서에서 이벤트에 링크할 때 이 네임스페이스를 포함해야 합니다. (@fires 태그는 예외이며, 네임스페이스를 생략할 수 있습니다.)
 
-**Note**: JSDoc 3 uses @event doclets to document the content of an event. In contrast, JSDoc Toolkit 2 used @event doclets to identify a function that can be fired when an event of the same name occurs.
+**참고**: JSDoc 3은 @event 문서 단위를 사용하여 이벤트의 내용을 문서화합니다. 반면, JSDoc Toolkit 2는 동일한 이름의 이벤트가 발생할 때 실행될 수 있는 함수를 식별하기 위해 @event 문서 단위를 사용했습니다.
 
-## Examples
+## 예제
 
-The following examples show how to document an event in the `Hurl` class called `snowball`. The event contains an object with a single property.
+다음 예제는 `Hurl` 클래스에서 `snowball`이라는 이벤트를 문서화하는 방법을 보여줍니다. 해당 이벤트는 단일 속성을 가진 객체를 포함합니다.
 
-Documenting a function call as an event
+이벤트로 함수 호출 문서화하기
 
 ```js
 /**
- * Throw a snowball.
+ * 눈덩이를 던집니다.
  *
  * @fires Hurl#snowball
  */
 Hurl.prototype.snowball = function () {
   /**
-   * Snowball event.
+   * 눈덩이 이벤트.
    *
    * @event Hurl#snowball
    * @type {object}
-   * @property {boolean} isPacked - Indicates whether the snowball is tightly packed.
+   * @property {boolean} isPacked - 눈덩이가 단단하게 뭉쳐져 있는지를 나타냅니다.
    */
   this.emit('snowball', {
     isPacked: this._snowball.isPacked,
@@ -44,11 +44,11 @@ Hurl.prototype.snowball = function () {
 }
 ```
 
-Using a named doclet to document an event
+명명된 문서 단위를 사용하여 이벤트 문서화하기
 
 ```js
 /**
- * Throw a snowball.
+ * 눈덩이를 던집니다.
  *
  * @fires Hurl#snowball
  */
@@ -57,15 +57,15 @@ Hurl.prototype.snowball = function () {
 }
 
 /**
- * Snowball event.
+ * 눈덩이 이벤트.
  *
  * @event Hurl#snowball
  * @type {object}
- * @property {boolean} isPacked - Indicates whether the snowball is tightly packed.
+ * @property {boolean} isPacked - 눈덩이가 단단하게 뭉쳐져 있는지를 나타냅니다.
  */
 ```
 
-## Related Links
+## 관련 링크
 
 - [@fires](./fires.md)
 - [@listens](./listens.md)

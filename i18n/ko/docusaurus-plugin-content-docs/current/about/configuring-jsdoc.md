@@ -1,21 +1,21 @@
 ---
 id: configuring-jsdoc
-title: Configuring JSDoc with a configuration file
-sidebar_label: Configuring JSDoc with a configuration file
+title: 구성 파일을 사용한 JSDoc 설정
+sidebar_label: 구성 파일을 사용한 JSDoc 설정
 ---
 
-## Configuration file formats
+## 구성 파일 포맷
 
-To customize JSDoc's behavior, you can provide a configuration file to JSDoc in one of the following formats:
+JSDoc의 동작을 사용자 정의하려면, 다음 형식 중 하나로 JSDoc에 구성 파일을 제공할 수 있습니다:
 
-- A JSON file. In JSDoc 3.3.0 and later, this file may include comments.
-- A CommonJS module that exports a single configuration object. This format is supported in JSDoc 3.5.0 and later.
+- JSON 파일. JSDoc 3.3.0 이상에서는 이 파일에 주석이 포함될 수 있습니다.
+- 단일 구성 객체를 내보내는 CommonJS 모듈. 이 형식은 JSDoc 3.5.0 이상에서 지원됩니다.
 
-To run JSDoc with a configuration file, use the [`-c` command-line option](./commandline.md) (for example, `jsdoc -c /path/to/conf.json` or `jsdoc -c /path/to/conf.js`).
+구성 파일을 사용하여 JSDoc을 실행하려면 [`-c` 명령줄 옵션](./commandline.md)을 사용하세요 (예: `jsdoc -c /path/to/conf.json` 또는 `jsdoc -c /path/to/conf.js`).
 
-The following examples show a simple configuration file that enables JSDoc's [Markdown plugin](./plugins-markdown.md). JSDoc's configuration options are explained in detail in the following sections.
+다음 예제는 JSDoc의 [Markdown 플러그인](./plugins-markdown.md)을 활성화하는 간단한 구성 파일을 보여줍니다. JSDoc의 구성 옵션은 다음 섹션에서 자세히 설명합니다.
 
-JSON configuration file
+JSON 구성 파일
 
 ```json
 {
@@ -23,7 +23,7 @@ JSON configuration file
 }
 ```
 
-JavaScript configuration file
+JavaScript 구성 파일
 
 ```js
 'use strict'
@@ -33,11 +33,11 @@ module.exports = {
 }
 ```
 
-For a more comprehensive example of a JSON configuration file, see the file [`conf.json.EXAMPLE`](https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE).
+JSON 구성 파일의 더 포괄적인 예는 파일 [`conf.json.EXAMPLE`](https://github.com/jsdoc3/jsdoc/blob/master/conf.json.EXAMPLE)를 참조하십시오.
 
-## Default configuration options
+## 기본 구성 옵션
 
-If you do not specify a configuration file, JSDoc uses the following configuration options:
+구성 파일을 지정하지 않으면 JSDoc은 다음 구성 옵션을 사용합니다:
 
 ```json
 {
@@ -59,26 +59,26 @@ If you do not specify a configuration file, JSDoc uses the following configurati
 }
 ```
 
-This means:
+이는 다음을 의미합니다:
 
-- No plugins are loaded (`plugins`).
-- If recursion is enabled with the [`-r` command-line flag](./commandline.md), JSDoc will search for files 10 levels deep (`recurseDepth`).
-- Only files ending in `.js`, `.jsdoc`, and `.jsx` will be processed (`source.includePattern`).
-- Any file starting with an underscore, or in a directory starting with an underscore, will be ignored (`source.excludePattern`).
-- JSDoc supports code that uses [ES2015 modules](../howto/es2015-modules.md) (`sourceType`).
-- JSDoc allows you to use unrecognized tags (`tags.allowUnknownTags`).
-- Both standard JSDoc tags and [Closure Compiler tags](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) are enabled ( `tags.dictionaries`).
-- [Inline `@link` tags](../tags/inline-link.md) are rendered in plain text (`templates.cleverLinks`, `templates.monospaceLinks`).
+- 플러그인이 로드되지 않습니다 (`plugins`).
+- [`-r` 명령줄 플래그](./commandline.md)를 사용하여 재귀가 활성화된 경우, JSDoc은 10단계 깊이까지 파일을 검색합니다 (`recurseDepth`).
+- `.js`, `.jsdoc`, 및 `.jsx`로 끝나는 파일만 처리됩니다 (`source.includePattern`).
+- 밑줄로 시작하는 파일이나, 밑줄로 시작하는 디렉토리에 있는 파일은 무시됩니다 (`source.excludePattern`).
+- JSDoc은 [ES2015 모듈](../howto/es2015-modules.md)을 사용하는 코드를 지원합니다 (`sourceType`).
+- JSDoc은 인식되지 않는 태그를 사용할 수 있습니다 (`tags.allowUnknownTags`).
+- 표준 JSDoc 태그와 [Closure Compiler 태그](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags)가 모두 활성화됩니다 (`tags.dictionaries`).
+- [인라인 `@link` 태그](../tags/inline-link.md)는 일반 텍스트로 렌더링됩니다 (`templates.cleverLinks`, `templates.monospaceLinks`).
 
-These options and others are explained in the following sections.
+이 옵션과 기타 옵션은 다음 섹션에서 설명됩니다.
 
-## Configuring plugins
+## 플러그인 구성
 
-To enable plugins, add their paths (relative to the JSDoc folder) into the `plugins` array.
+플러그인을 활성화하려면, JSDoc 폴더에 대한 상대 경로로 `plugins` 배열에 경로를 추가하세요.
 
-For example, the following JSON configuration file will enable the Markdown plugin, which converts Markdown-formatted text to HTML, and the "summarize" plugin, which autogenerates a summary for each doclet:
+예를 들어, 다음 JSON 구성 파일은 Markdown 플러그인과 "summarize" 플러그인을 활성화합니다:
 
-JSON configuration file with plugins
+플러그인이 포함된 JSON 구성 파일
 
 ```json
 {
@@ -86,13 +86,13 @@ JSON configuration file with plugins
 }
 ```
 
-See the [plugin reference](./plugins.md) for further information, and look in [JSDoc's `plugins` directory](https://github.com/jsdoc3/jsdoc/tree/master/plugins) for the plugins built into JSDoc.
+더 많은 정보는 [플러그인 참조](./plugins.md)를 참조하고, [JSDoc의 `plugins` 디렉토리](https://github.com/jsdoc3/jsdoc/tree/master/plugins)에서 JSDoc에 내장된 플러그인을 확인하십시오.
 
-You can configure the Markdown plugin by adding a `markdown` object to your configuration file. See [Configuring the Markdown Plugin](./plugins-markdown.md) for details.
+Markdown 플러그인은 구성 파일에 `markdown` 객체를 추가하여 구성할 수 있습니다. 자세한 내용은 [Markdown 플러그인 구성](./plugins-markdown.md)를 참조하십시오.
 
-## Specifying recursion depth
+## 재귀 깊이 지정
 
-The `recurseDepth` option controls how many levels deep JSDoc will recursively search for source files and tutorials. This option is available in JSDoc 3.5.0 and later. This option is used only if you also specify the [`-r` command-line flag](./commandline.md), which tells JSDoc to recursively search for input files.
+`recurseDepth` 옵션은 JSDoc이 소스 파일 및 튜토리얼을 재귀적으로 검색할 깊이를 제어합니다. 이 옵션은 JSDoc 3.5.0 이상에서 사용할 수 있습니다. 이 옵션은 [`-r` 명령줄 플래그](./commandline.md)를 지정할 경우에만 사용됩니다.
 
 ```json
 {
@@ -100,18 +100,18 @@ The `recurseDepth` option controls how many levels deep JSDoc will recursively s
 }
 ```
 
-## Specifying input files
+## 입력 파일 지정
 
-The `source` set of options, in combination with paths given to JSDoc on the command line, determines the set of input files that JSDoc uses to generate documentation.
+`source` 옵션 세트는 JSDoc에 명령줄에서 지정된 경로와 결합되어 문서를 생성하는 데 사용되는 입력 파일 세트를 결정합니다.
 
 ```json
 {
   "source": {
     "include": [
-      /* array of paths to files to generate documentation for */
+      /* 문서를 생성할 파일의 경로 배열 */
     ],
     "exclude": [
-      /* array of paths to exclude */
+      /* 제외할 경로 배열 */
     ],
     "includePattern": ".+\\.js(doc|x)?$",
     "excludePattern": "(^|\\/|\\\\)_"
@@ -119,21 +119,21 @@ The `source` set of options, in combination with paths given to JSDoc on the com
 }
 ```
 
-- `source.include`: An optional array of paths that contain files for which JSDoc should generate documentation. The paths given to JSDoc on the command line are combined with these paths. You can use the [`-r` command-line option](./commandline.md) to recurse into subdirectories.
-- `source.exclude`: An optional array of paths that JSDoc should ignore. In JSDoc 3.3.0 and later, this array may include subdirectories of the paths in `source.include`.
-- `source.includePattern`: An optional string, interpreted as a regular expression. If present, all filenames must match this regular expression to be processed by JSDoc. By default, this option is set to ".+\\.js(doc|x)?$", meaning that only files with the extensions `.js`, `.jsdoc`, and `.jsx` will be processed.
-- `source.excludePattern`: An optional string, interpreted as a regular expression. If present, any file matching this regular expression will be ignored. By default, this option is set so that files beginning with an underscore (or anything under a directory beginning with an underscore) is ignored.
+- `source.include`: JSDoc가 문서를 생성해야 하는 파일을 포함한 경로의 선택적 배열입니다. 명령줄에서 JSDoc에 제공된 경로가 이 경로와 결합됩니다. [`-r` 명령줄 옵션](./commandline.md)을 사용하여 하위 디렉토리로 재귀적으로 들어갈 수 있습니다.
+- `source.exclude`: JSDoc가 무시해야 하는 경로의 선택적 배열입니다. JSDoc 3.3.0 이상에서는 이 배열에 `source.include`의 하위 디렉토리를 포함할 수 있습니다.
+- `source.includePattern`: 선택적 문자열로, 정규 표현식으로 해석됩니다. 존재할 경우 모든 파일 이름은 이 정규 표현식과 일치해야 JSDoc에 의해 처리됩니다. 기본적으로 이 옵션은 ".+\\.js(doc|x)?$"로 설정되어 있어 `.js`, `.jsdoc`, 및 `.jsx` 확장자로 끝나는 파일만 처리됩니다.
+- `source.excludePattern`: 선택적 문자열로, 정규 표현식으로 해석됩니다. 존재할 경우 이 정규 표현식과 일치하는 모든 파일은 무시됩니다. 기본적으로 이 옵션은 밑줄로 시작하는 파일(또는 밑줄로 시작하는 디렉토리 내의 모든 파일)을 무시하도록 설정되어 있습니다.
 
-These options are interpreted in the following order:
+이 옵션은 다음 순서대로 해석됩니다:
 
-1.  Start with all paths given on the command line and in `source.include`.
-2.  For each file found in Step 1, if the regular expression `source.includePattern` is present, the filename must match it, or it is ignored.
-3.  For each file left from Step 2, if the regular expression `source.excludePattern` is present, any filename matching this regular expression is ignored.
-4.  For each file left from Step 3, if the file's path is in `source.exclude`, it is ignored.
+1. 명령줄 및 `source.include`에 제공된 모든 경로에서 시작합니다.
+2. 1단계에서 찾은 각 파일에 대해, 정규 표현식 `source.includePattern`이 있을 경우, 파일 이름은 이 정규 표현식과 일치해야 하며, 일치하지 않으면 무시됩니다.
+3. 2단계에서 남은 각 파일에 대해, 정규 표현식 `source.excludePattern`이 있을 경우, 이 정규 표현식과 일치하는 모든 파일 이름은 무시됩니다.
+4. 3단계에서 남은 각 파일에 대해, 파일의 경로가 `source.exclude`에 있는 경우, 무시됩니다.
 
-All remaining files after these four steps are processed by JSDoc.
+이 네 단계를 거친 후 남은 모든 파일은 JSDoc에 의해 처리됩니다.
 
-As an example, suppose you have the following file structure:
+예를 들어, 다음과 같은 파일 구조가 있다고 가정해 보겠습니다:
 
 ```bash
     myProject/
@@ -148,7 +148,7 @@ As an example, suppose you have the following file structure:
        |- d.txt
 ```
 
-In addition, suppose your `conf.json` file looks like this example:
+또한 `conf.json` 파일이 다음과 같다고 가정해 보겠습니다:
 
 ```json
 {
@@ -161,105 +161,18 @@ In addition, suppose your `conf.json` file looks like this example:
 }
 ```
 
-If you run `jsdoc myProject/c.js -c /path/to/my/conf.json -r` from the file containing the `myProject` folder, JSDoc will generate documentation for the following files:
+`myProject` 폴더를 포함하는 파일에서 `jsdoc myProject/c.js -c /path/to/my/conf.json -r`을 실행하면, JSDoc은 다음 파일에 대한 문서를 생성합니다:
 
 - `myProject/a.js`
 - `myProject/c.js`
 - `myProject/lib/a.js`
 
-Here's why:
+이유는 다음과 같습니다:
 
-1.  Given `source.include` and the paths given on the command line, JSDoc starts off with these files:
-    - `myProject/c.js` (from the command line)
-    - `myProject/a.js` (from `source.include`)
-    - `myProject/lib/a.js`, `myProject/lib/ignore.js`, `myProject/lib/d.txt` (from `source.include` and using the `-r` option)
-    - `myProject/_private/a.js` (from `source.include`)
-2.  JSDoc applies `source.includePattern`, leaving us with all of the above files _except_ `myProject/lib/d.txt`, which does not end in `.js`, `.jsdoc`, or `.jsx`.
-3.  JSDoc applies `source.excludePattern`, which removes `myProject/_private/a.js`.
-4.  JSDoc applies `source.exclude`, which removes `myProject/lib/ignore.js`.
-
-## Specifying the source type
-
-The `sourceType` option affects how JSDoc parses your JavaScript files. This option is available in JSDoc 3.5.0 and later. This option accepts the following values:
-
-- `module` (default): Use this value for most types of JavaScript files.
-- `script`: Use this value if JSDoc logs errors such as `Delete of an unqualified identifier in strict mode` when it parses your code.
-
-```json
-{
-  "sourceType": "module"
-}
-```
-
-## Incorporating command-line options into the configuration file
-
-You can put many of JSDoc's [command-line options](./commandline.md) into the configuration file instead of specifying them on the command line. To do this, add the long names of the relevant options into an `opts` section of the configuration file, with the value set to the option's value.
-
-JSON configuration file with command-line options
-
-```json
-{
-  "opts": {
-    "template": "templates/default", // same as -t templates/default
-    "encoding": "utf8", // same as -e utf8
-    "destination": "./out/", // same as -d ./out/
-    "recurse": true, // same as -r
-    "tutorials": "path/to/tutorials" // same as -u path/to/tutorials
-  }
-}
-```
-
-By using the `source.include` and `opts` options, you can put almost all of the arguments to JSDoc in a configuration file, so that the command line reduces to:
-
-    jsdoc -c /path/to/conf.json
-
-When options are specified on the command line _and_ in the configuration file, the command line takes precedence.
-
-## Configuring tags and tag dictionaries
-
-The options in `tags` control which JSDoc tags are allowed and how each tag is interpreted.
-
-```json
-{
-  "tags": {
-    "allowUnknownTags": true,
-    "dictionaries": ["jsdoc", "closure"]
-  }
-}
-```
-
-The `tags.allowUnknownTags` property affects how JSDoc handles unrecognized tags. If you set this option to `false`, and JSDoc finds a tag that it does not recognize (for example, `@foo`), JSDoc logs a warning. By default, this option is set to `true`. In JSDoc 3.4.1 and later, you can also set this property to an array of tag names that JSDoc should allow (for example, `["foo","bar"]`).
-
-The `tags.dictionaries` property controls which tags JSDoc recognizes, as well as how JSDoc interprets the tags that it recognizes. In JSDoc 3.3.0 and later, there are two built-in tag dictionaries:
-
-- `jsdoc`: Core JSDoc tags.
-- `closure`: [Closure Compiler tags](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags).
-
-By default, both dictionaries are enabled. Also, by default, the `jsdoc` dictionary is listed first; as a result, if the `jsdoc` dictionary handles a tag differently than the `closure` dictionary, the `jsdoc` version of the tag takes precedence.
-
-If you are using JSDoc with a Closure Compiler project, and you want to avoid using tags that Closure Compiler does not recognize, change the `tags.dictionaries` setting to `["closure"]`. You can also change this setting to `["closure","jsdoc"]` if you want to allow core JSDoc tags, but you want to ensure that Closure Compiler-specific tags are interpreted as Closure Compiler would interpret them.
-
-## Configuring templates
-
-The options in `templates` affect the appearance and content of generated documentation. Third-party templates may not implement all of these options. See [Configuring JSDoc's Default Template](./configuring-default-template.md) for additional options that the default template supports.
-
-```json
-{
-  "templates": {
-    "cleverLinks": false,
-    "monospaceLinks": false
-  }
-}
-```
-
-If `templates.monospaceLinks` is true, all link text from the [inline `@link` tag](../tags/inline-link.md) will be rendered in monospace.
-
-If `templates.cleverLinks` is true, `{@link asdf}` will be rendered in normal font if `asdf` is a URL, and monospace otherwise. For example, `{@link http://github.com}` will render in plain text, but `{@link MyNamespace.myFunction}` will be in monospace.
-
-If `templates.cleverLinks` is true, `templates.monospaceLinks` is ignored.
-
-## Related Links
-
-- [Command-line arguments to JSDoc](./commandline.md)
-- [About JSDoc plugins](./plugins.md)
-- [Using the Markdown plugin](./plugins-markdown.md)
+1. JSDoc은 `source.include`와 명령줄에서 주어진 경로를 기반으로 다음 파일들로 시작합니다:
+    - `myProject/c.js` (명령줄에서)
+    - `myProject/a.js` (`source.include`에서)
+    - `myProject/lib/a.js`, `myProject/lib/ignore.js`, `myProject/lib/d.txt` (`source.include`에서 및 `-r` 옵션 사용)
+    - `myProject/_private/a.js` (`source.include`에서)
+2. JSDoc은 `source.includePattern`을 적용하여, 위 파일들 중 `.js`, `.jsdoc`, 또는 `.jsx`로 끝나지 않는 `myProject/lib/d.txt`를 제외합니다.
+3. JSDoc은 `source.excludePattern`을 적용하여 `my

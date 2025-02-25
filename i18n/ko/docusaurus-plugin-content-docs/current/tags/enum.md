@@ -4,30 +4,30 @@ title: '@enum'
 sidebar_label: '@enum'
 ---
 
-## Syntax
+## 문법
 
 `@enum [<type>]`
 
-## Overview
+## 개요
 
-The @enum tag documents a collection of static properties whose values are all of the same type.
+@enum 태그는 값이 모두 동일한 유형인 정적 속성의 집합을 문서화합니다.
 
-An enum is similar a collection of properties, except that an enum is documented in its own doc comment, whereas properties are documented within the doc comment of their container. Often this tag is used with @readonly, as an enum typically represents a collection of constants.
+열거형은 속성 집합과 유사하지만, 열거형은 자신의 문서 주석에 문서화되는 반면, 속성은 컨테이너의 문서 주석 내에서 문서화됩니다. 이 태그는 일반적으로 @readonly와 함께 사용되며, 열거형은 전형적으로 상수 집합을 나타냅니다.
 
-## Examples
+## 예제
 
-This shows how to document an object that represents a value with three possible states. Note that the enum members can have optional descriptions added if you wish. Also you can override the type, as is shown with "MAYBE" -- by default enum members will be documented with the same type as the enum itself.
+이 예제는 세 가지 가능한 상태를 가진 값을 나타내는 객체를 문서화하는 방법을 보여줍니다. 열거형 구성원에 선택적 설명을 추가할 수 있습니다. 또한 "MAYBE"에서 보여주듯이 유형을 재정의할 수 있습니다. 기본적으로 열거형 구성원은 열거형 자체와 동일한 유형으로 문서화됩니다.
 
-A numeric enum, representing three states
+숫자 열거형, 세 가지 상태를 나타냅니다.
 
 ```js
 /**
- * Enum for tri-state values.
+ * 삼중 상태 값에 대한 열거형.
  * @readonly
  * @enum {number}
  */
 var triState = {
-  /** The true value */
+  /** 진짜 값 */
   TRUE: 1,
   FALSE: -1,
   /** @type {boolean} */
@@ -35,6 +35,6 @@ var triState = {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@property](./property.md)

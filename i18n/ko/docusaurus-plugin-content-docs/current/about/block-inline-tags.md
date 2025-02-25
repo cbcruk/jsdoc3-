@@ -1,67 +1,67 @@
 ---
 id: block-inline-tags
-title: Block and inline tags
-sidebar_label: Block and inline tags
+title: 블록 및 인라인 태그
+sidebar_label: 블록 및 인라인 태그
 ---
 
-## Overview
+## 개요
 
-JSDoc supports two different kinds of tags:
+JSDoc은 두 가지 종류의 태그를 지원합니다:
 
-- **Block tags**, which are at the top level of a JSDoc comment.
-- **Inline tags**, which are within the text of a block tag or a description.
+- **블록 태그**: JSDoc 주석의 최상위에 위치합니다.
+- **인라인 태그**: 블록 태그 또는 설명의 텍스트 내에 위치합니다.
 
-Block tags usually provide detailed information about your code, such as the parameters that a function accepts. Inline tags usually link to other parts of the documentation, similar to the anchor tag (`<a>`) in HTML.
+블록 태그는 일반적으로 함수가 수용하는 매개변수와 같은 코드에 대한 자세한 정보를 제공합니다. 인라인 태그는 HTML의 앵커 태그(` <a> `)와 유사하게 문서의 다른 부분 링크를 제공합니다.
 
-Block tags always begin with an at sign (`@`). Each block tag must be followed by a line break, with the exception of the last block tag in a JSDoc comment.
+블록 태그는 항상 @ 기호(`@`)로 시작합니다. 각 블록 태그는 줄 바꿈으로 이어져야 하며, JSDoc 주석의 마지막 블록 태그는 예외입니다.
 
-Inline tags also begin with an at sign. However, inline tags and their text must be enclosed in curly braces (`{` and `}`). The `{` denotes the start of the inline tag, and the `}` denotes the end of the inline tag. If your tag's text includes a closing curly brace (`}`), you must escape it with a leading backslash (`\`). You do not need to use a line break after inline tags.
+인라인 태그도 @ 기호로 시작합니다. 그러나 인라인 태그와 그 텍스트는 중괄호(`{` 및 `}`)로 감싸야 합니다. `{`는 인라인 태그의 시작을 나타내고, `}`는 인라인 태그의 끝을 나타냅니다. 태그의 텍스트에 닫는 중괄호(`}`)가 포함되어 있는 경우, 앞에 백슬래시(`\`)로 이스케이프해야 합니다. 인라인 태그 뒤에 줄 바꿈을 사용할 필요는 없습니다.
 
-Most JSDoc tags are block tags. In general, when this site refers to "JSDoc tags," we really mean "block tags."
+대부분의 JSDoc 태그는 블록 태그입니다. 일반적으로 이 사이트에서 "JSDoc 태그"라고 언급할 때는 "블록 태그"를 의미합니다.
 
-## Examples
+## 예시
 
-In the following example, `@param` is a block tag, and `@link` is an inline tag:
+다음 예시에서 `@param`은 블록 태그이고, `@link`는 인라인 태그입니다:
 
-Block and inline tags in JSDoc comments
+JSDoc 주석의 블록 및 인라인 태그
 
 ```js
 /**
- * Set the shoe's color. Use {@link Shoe#setSize} to set the shoe size.
+ * 신발의 색상을 설정합니다. {@link Shoe#setSize}를 사용하여 신발 사이즈를 설정하세요.
  *
- * @param {string} color - The shoe's color.
+ * @param {string} color - 신발의 색상입니다.
  */
 Shoe.prototype.setColor = function (color) {
   // ...
 }
 ```
 
-You can use inline tags within a description, as shown above, or within a block tag, as shown below:
+위와 같이 설명 내에서 인라인 태그를 사용하거나 아래처럼 블록 태그 내에서 사용할 수 있습니다:
 
-Inline tag used within a block tag
+블록 태그 내에서 사용된 인라인 태그
 
 ```js
 /**
- * Set the shoe's color.
+ * 신발의 색상을 설정합니다.
  *
- * @param {SHOE_COLORS} color - The shoe color. Must be an enumerated
- * value of {@link SHOE_COLORS}.
+ * @param {SHOE_COLORS} color - 신발 색상입니다. {@link SHOE_COLORS}의 열거된
+ * 값이어야 합니다.
  */
 Shoe.prototype.setColor = function (color) {
   // ...
 }
 ```
 
-When you use multiple block tags in a JSDoc comment, they must be separated by line breaks:
+JSDoc 주석에서 여러 개의 블록 태그를 사용할 때는 줄 바꿈으로 구분해야 합니다:
 
-Multiple block tags separated by line breaks
+줄 바꿈으로 구분된 여러 블록 태그
 
 ```js
 /**
- * Set the color and type of the shoelaces.
+ * 신발끈의 색상과 유형을 설정합니다.
  *
- * @param {LACE_COLORS} color - The shoelace color.
- * @param {LACE_TYPES} type - The type of shoelace.
+ * @param {LACE_COLORS} color - 신발끈 색상입니다.
+ * @param {LACE_TYPES} type - 신발끈의 유형입니다.
  */
 Shoe.prototype.setLaceType = function (color, type) {
   // ...

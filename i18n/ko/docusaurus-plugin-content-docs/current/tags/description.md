@@ -4,27 +4,27 @@ title: '@description'
 sidebar_label: '@description'
 ---
 
-## Synonyms
+## 동의어
 
 `@desc`
 
-## Syntax
+## 문법
 
 `@description <some description>`
 
-## Overview
+## 개요
 
-The @description tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the [Markdown plugin](../about/plugins-markdown.md) is enabled.
+@description 태그를 사용하여 문서화하는 기호에 대한 일반적인 설명을 제공할 수 있습니다. 설명에는 HTML 마크업이 포함될 수 있으며, [Markdown 플러그인](../about/plugins-markdown.md)이 활성화된 경우 Markdown 형식을 포함할 수도 있습니다.
 
-## Examples
+## 예제
 
-If you describe a symbol at the very beginning of a JSDoc comment, before using any block tags, you may omit the @description tag.
+JSDoc 주석의 처음 부분에서 기호를 설명할 때, 어떤 블록 태그를 사용하기 전에 @description 태그를 생략할 수 있습니다.
 
-Describing a symbol without the @description tag
+@description 태그 없이 기호 설명하기
 
 ```js
 /**
- * Add two numbers.
+ * 두 숫자를 더합니다.
  * @param {number} a
  * @param {number} b
  * @returns {number}
@@ -34,25 +34,25 @@ function add(a, b) {
 }
 ```
 
-By using the @description tag, you can place the description anywhere in the JSDoc comment.
+@description 태그를 사용하면 JSDoc 주석의 어디서든 설명을 배치할 수 있습니다.
 
-Describing a symbol with the @description tag
+@description 태그로 기호 설명하기
 
 ```js
 /**
  * @param {number} a
  * @param {number} b
  * @returns {number}
- * @description Add two numbers.
+ * @description 두 숫자를 더합니다.
  */
 function add(a, b) {
   return a + b
 }
 ```
 
-If there's both a description at the beginning of a JSDoc comment and a description provided with the @description tag, the description specified with the @description will override the description at the beginning of the comment.
+JSDoc 주석의 처음 부분에 설명이 있고 @description 태그로 제공된 설명이 모두 있을 경우, @description으로 지정된 설명이 주석의 처음 부분에 있는 설명을 덮어쓰게 됩니다.
 
-## Related Links
+## 관련 링크
 
 - [@classdesc](./classdesc.md)
 - [@summary](./summary.md)

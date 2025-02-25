@@ -4,36 +4,36 @@ title: '@inheritdoc'
 sidebar_label: '@inheritdoc'
 ---
 
-## Overview
+## 개요
 
-The `@inheritdoc` tag indicates that a symbol should inherit its documentation from its parent class. Any other tags that you include in the JSDoc comment will be ignored.
+`@inheritdoc` 태그는 심볼이 부모 클래스의 문서를 상속받아야 함을 나타냅니다. JSDoc 주석에 포함하는 다른 태그는 무시됩니다.
 
-This tag is provided for compatibility with [Closure Compiler](https://developers.google.com/closure/compiler/). By default, if you do not add a JSDoc comment to a symbol, the symbol will inherit documentation from its parent.
+이 태그는 [Closure Compiler](https://developers.google.com/closure/compiler/)와 호환성을 위해 제공됩니다. 기본적으로, 심볼에 JSDoc 주석을 추가하지 않으면, 심볼은 부모로부터 문서를 상속받습니다.
 
-The presence of the `@inheritdoc` tag implies the presence of the [`@override` tag](./override.md).
+`@inheritdoc` 태그의 존재는 [`@override` 태그](./override.md)의 존재를 의미합니다.
 
-## Examples
+## 예시
 
-The following example shows how a class can indicate that it inherits documentation from its parent class:
+다음 예시는 클래스가 부모 클래스의 문서를 상속받는 방법을 보여줍니다:
 
-Class that inherits from a parent class
+부모 클래스로부터 상속받는 클래스
 
 ```js
 /**
- * @classdesc Abstract class representing a network connection.
+ * @classdesc 네트워크 연결을 나타내는 추상 클래스입니다.
  * @class
  */
 function Connection() {}
 
 /**
- * Open the connection.
+ * 연결을 엽니다.
  */
 Connection.prototype.open = function () {
   // ...
 }
 
 /**
- * @classdesc Class representing a socket connection.
+ * @classdesc 소켓 연결을 나타내는 클래스입니다.
  * @class
  * @augments Connection
  */
@@ -45,26 +45,26 @@ Socket.prototype.open = function () {
 }
 ```
 
-You can get the same result by omitting the JSDoc comment from `Socket#open`:
+`Socket#open`에서 JSDoc 주석을 생략하여 같은 결과를 얻을 수 있습니다:
 
-Inheriting documentation without the `@inheritdoc` tag
+`@inheritdoc` 태그 없이 문서 상속하기
 
 ```js
 /**
- * @classdesc Abstract class representing a network connection.
+ * @classdesc 네트워크 연결을 나타내는 추상 클래스입니다.
  * @class
  */
 function Connection() {}
 
 /**
- * Open the connection.
+ * 연결을 엽니다.
  */
 Connection.prototype.open = function () {
   // ...
 }
 
 /**
- * @classdesc Class representing a socket connection.
+ * @classdesc 소켓 연결을 나타내는 클래스입니다.
  * @class
  * @augments Connection
  */
@@ -75,6 +75,6 @@ Socket.prototype.open = function () {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@override](./override.md)

@@ -4,68 +4,66 @@ title: '@implements'
 sidebar_label: '@implements'
 ---
 
-## Syntax
+## 문법
 
 `@implements {typeExpression}`
 
-## Overview
+## 개요
 
-The `@implements` tag indicates that a symbol implements an interface.
+`@implements` 태그는 특정 기호가 인터페이스를 구현함을 나타냅니다.
 
-Add the `@implements` tag to the top-level symbol that implements the interface (for example, a constructor function). You do not need to add the `@implements` tag to each member of the implementation (for example, the implementation's instance methods).
+인터페이스를 구현하는 최상위 기호(예: 생성자 함수)에 `@implements` 태그를 추가하십시오. 구현의 각 구성원(예: 구현의 인스턴스 메서드)에 `@implements` 태그를 추가할 필요는 없습니다.
 
-If you do not document one of the symbols in the implementation, JSDoc will automatically use the interface's documentation for that symbol.
+구현의 기호 중 하나를 문서화하지 않으면, JSDoc은 해당 기호에 대한 인터페이스의 문서를 자동으로 사용합니다.
 
-## Examples
+## 예제
 
-In the following example, the `TransparentColor` class implements the `Color` interface and adds a `TransparentColor#rgba` method.
+다음 예제에서 `TransparentColor` 클래스는 `Color` 인터페이스를 구현하고 `TransparentColor#rgba` 메서드를 추가합니다.
 
-Using the @implements tag
+`@implements` 태그 사용
 
 ```js
 /**
- * Interface for classes that represent a color.
+ * 색상을 나타내는 클래스의 인터페이스입니다.
  *
  * @interface
  */
 function Color() {}
 
 /**
- * Get the color as an array of red, green, and blue values, represented as
- * decimal numbers between 0 and 1.
+ * 0과 1 사이의 소수점 숫자로 표현된 빨강, 초록, 파랑 값의 배열로 색상을 가져옵니다.
  *
- * @returns {Array<number>} An array containing the red, green, and blue values,
- * in that order.
+ * @returns {Array<number>} 빨강, 초록, 파랑 값을 포함하는 배열,
+ * 그 순서대로.
  */
 Color.prototype.rgb = function () {
-  throw new Error('not implemented')
+  throw new Error('구현되지 않음')
 }
 
 /**
- * Class representing a color with transparency information.
+ * 투명도 정보가 포함된 색상을 나타내는 클래스입니다.
  *
  * @class
  * @implements {Color}
  */
 function TransparentColor() {}
 
-// inherits the documentation from `Color#rgb`
+// `Color#rgb`에서 문서를 상속받습니다.
 TransparentColor.prototype.rgb = function () {
   // ...
 }
 
 /**
- * Get the color as an array of red, green, blue, and alpha values, represented
- * as decimal numbers between 0 and 1.
+ * 0과 1 사이의 소수점 숫자로 표현된 빨강, 초록, 파랑 및 알파 값을 배열로 색상을 가져옵니다.
  *
- * @returns {Array<number>} An array containing the red, green, blue, and alpha
- * values, in that order.
+ * @returns {Array<number>} 빨강, 초록, 파랑 및 알파 값을 포함하는 배열,
+ * 그 순서대로.
  */
 TransparentColor.prototype.rgba = function () {
   // ...
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@interface](./interface.md)

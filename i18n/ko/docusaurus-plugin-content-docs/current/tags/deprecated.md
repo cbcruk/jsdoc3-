@@ -4,19 +4,19 @@ title: '@deprecated'
 sidebar_label: '@deprecated'
 ---
 
-## Syntax
+## 문법
 
 `@deprecated [<some text>]`
 
-## Overview
+## 개요
 
-The @deprecated tag marks a symbol in your code as being deprecated.
+@deprecated 태그는 코드 내의 기호가 더 이상 사용되지 않음을 표시합니다.
 
-## Examples
+## 예제
 
-You can use the @deprecated tag by itself, or include some text that describes more about the deprecation.
+@deprecated 태그를 단독으로 사용할 수 있으며, 사용 중단에 대한 추가 설명을 포함할 수도 있습니다.
 
-Document that the old function has been deprecated since version 2.0
+구 버전의 함수가 버전 2.0부터 더 이상 사용되지 않음을 문서화합니다.
 
 ```js
 /**

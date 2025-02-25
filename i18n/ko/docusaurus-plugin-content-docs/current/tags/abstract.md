@@ -4,44 +4,44 @@ title: '@abstract'
 sidebar_label: '@abstract'
 ---
 
-## Synonyms
+## 동의어
 
 `@virtual`
 
-## Overview
+## 개요
 
-The @abstract tag identifies members that must be implemented (or overridden) by objects that inherit the member.
+@abstract 태그는 멤버를 상속받는 객체가 반드시 구현(또는 재정의)해야 하는 멤버를 식별합니다.
 
-## Example
+## 예시
 
-Parent class with abstract method, and child class that implements the method
+추상 메서드를 가진 부모 클래스와 메서드를 구현하는 자식 클래스
 
 ```js
 /**
- * Generic dairy product.
+ * 일반적인 유제품.
  * @constructor
  */
 function DairyProduct() {}
 
 /**
- * Check whether the dairy product is solid at room temperature.
+ * 유제품이 실온에서 고체인지 여부를 확인합니다.
  * @abstract
  * @return {boolean}
  */
 DairyProduct.prototype.isSolid = function () {
-  throw new Error('must be implemented by subclass!')
+  throw new Error('서브클래스에서 구현해야 합니다!')
 }
 
 /**
- * Cool, refreshing milk.
+ * 시원하고 상쾌한 우유.
  * @constructor
  * @augments DairyProduct
  */
 function Milk() {}
 
 /**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
+ * 우유가 실온에서 고체인지 여부를 확인합니다.
+ * @return {boolean} 항상 false를 반환합니다.
  */
 Milk.prototype.isSolid = function () {
   return false

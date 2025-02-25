@@ -4,23 +4,23 @@ title: '@constant'
 sidebar_label: '@constant'
 ---
 
-## Synonyms
+## 동의어
 
 `@const`
 
-## Syntax
+## 문법
 
 `@constant [<type> <name>]`
 
-## Overview
+## 개요
 
-The @constant tag is used to mark the documentation as belonging to a symbol that is a constant.
+@constant 태그는 상수인 심볼에 속하는 문서로 마크하는 데 사용됩니다.
 
-## Examples
+## 예제
 
-In this example we are documenting a string constant. Note that although the code is using the `const` keyword, this is not required by JSDoc. If your JavaScript host environment doesn't yet support constant declarations, the @const documentation can just as effectively be used on `var` declarations.
+이 예제에서는 문자열 상수를 문서화하고 있습니다. 코드가 `const` 키워드를 사용하고 있지만, 이는 JSDoc에서 필수는 아닙니다. JavaScript 호스트 환경이 아직 상수 선언을 지원하지 않는 경우, @const 문서는 `var` 선언에도 효과적으로 사용할 수 있습니다.
 
-A string constant representing the color red
+빨간색을 나타내는 문자열 상수
 
 ```js
 /** @constant
@@ -33,9 +33,9 @@ const RED = 'FF0000'
 var ONE = 1
 ```
 
-Note that the example provides the type in a @type tag. This is optional. Also the optional @default tag is used here too, this will automatically add whatever the assigned value is (for example 'FF0000') to the documentation.
+예제에서 @type 태그에 타입이 제공된다는 점에 유의하세요. 이는 선택적입니다. 또한 선택적 @default 태그도 여기에서 사용되며, 이는 문서에 할당된 값을 자동으로 추가합니다 (예: 'FF0000').
 
-## Related Links
+## 관련 링크
 
 - [@default](./default.md)
 - [@type](./type.md)

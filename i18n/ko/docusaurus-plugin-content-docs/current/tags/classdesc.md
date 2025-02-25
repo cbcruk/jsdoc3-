@@ -4,32 +4,32 @@ title: '@classdesc'
 sidebar_label: '@classdesc'
 ---
 
-## Syntax
+## 문법
 
 `@classdesc <some description>`
 
-## Overview
+## 개요
 
-The @classdesc tag is used to provide a description for a class, separate from the constructor function's description. Use the @classdesc tag in combination with the [@class (or @constructor) tag](./class.md).
+@classdesc 태그는 생성자 함수의 설명과 구분된 클래스에 대한 설명을 제공하는 데 사용됩니다. [@class (또는 @constructor) 태그](./class.md)와 함께 @classdesc 태그를 사용하세요.
 
-The functionality of the @classdesc tag in JSDoc 3 duplicates that of the @class in previous versions. As of version 3, the syntax and functionality of the @class tag now exactly matches the @constructor tag, and the @classdesc tag more explicitly communicates its purpose: to document a class's description.
+JSDoc 3에서 @classdesc 태그의 기능은 이전 버전의 @class와 동일합니다. 버전 3부터 @class 태그의 문법과 기능은 이제 @constructor 태그와 완전히 일치하며, @classdesc 태그는 클래스의 설명을 문서화하기 위한 목적을 보다 명확하게 전달합니다.
 
-## Examples
+## 예시
 
-As shown below, a class has places for two descriptions, one applies to the function itself, while the other applies to the class in general.
+아래와 같이 클래스에는 두 개의 설명을 위한 자리가 있으며, 하나는 함수 자체에, 다른 하나는 클래스를 일반적으로 적용합니다.
 
-A doclet with both a constructor function description and a class description
+생성자 함수 설명과 클래스 설명이 모두 포함된 문서화 블록
 
 ```js
 /**
- * This is a description of the MyClass constructor function.
+ * 이것은 MyClass 생성자 함수에 대한 설명입니다.
  * @class
- * @classdesc This is a description of the MyClass class.
+ * @classdesc 이것은 MyClass 클래스에 대한 설명입니다.
  */
 function MyClass() {}
 ```
 
-## Related Links
+## 관련 링크
 
 - [@class](./class.md)
 - [@description](./description.md)

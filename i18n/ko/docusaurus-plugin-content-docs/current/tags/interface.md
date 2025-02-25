@@ -4,72 +4,68 @@ title: '@interface'
 sidebar_label: '@interface'
 ---
 
-## Syntax
+## 구문
 
-With the JSDoc tag dictionary (enabled by default):
+JSDoc 태그 사전(기본적으로 활성화됨)을 사용하여:
 
 `@interface [<name>]`
 
-With the [Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) tag dictionary:
+[Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) 태그 사전을 사용하여:
 
 `@interface`
 
-## Overview
+## 개요
 
-The `@interface` tag marks a symbol as an interface that other symbols can implement. For example, your code might define a parent class whose methods and properties are stubbed out. You can add the `@interface` tag to the parent class to indicate that child classes must implement the parent class' methods and properties.
+`@interface` 태그는 다른 심볼이 구현할 수 있는 인터페이스로 심볼을 표시합니다. 예를 들어, 여러분의 코드는 메소드와 속성이 스텁 처리된 부모 클래스를 정의할 수 있습니다. 자식 클래스가 부모 클래스의 메소드와 속성을 구현해야 함을 나타내기 위해 부모 클래스에 `@interface` 태그를 추가할 수 있습니다.
 
-Add the `@interface` tag to the top-level symbol for the interface (for example, a constructor function). You do not need to add the `@interface` tag to each member of the interface (for example, the interface's instance methods).
+인터페이스의 최상위 심볼(예: 생성자 함수)에 `@interface` 태그를 추가하세요. 인터페이스의 각 구성원(예: 인터페이스의 인스턴스 메소드)마다 `@interface` 태그를 추가할 필요는 없습니다.
 
-If you are using the JSDoc tag dictionary (enabled by default), you can also define an interface with virtual comments, rather than by writing code for the interface. See "[Virtual comments that define an interface](#virtual-comments)" for an example.
+기본적으로 활성화된 JSDoc 태그 사전을 사용하는 경우, 인터페이스를 정의하기 위해 코드 대신 가상 주석을 사용할 수도 있습니다. "[인터페이스를 정의하는 가상 주석](#virtual-comments)"에서 예제를 확인하세요.
 
-## Examples
+## 예제
 
-In the following example, the `Color` function represents an interface that other classes can implement:
+다음 예제에서 `Color` 함수는 다른 클래스가 구현할 수 있는 인터페이스를 나타냅니다:
 
-Using the @interface tag
+@interface 태그 사용
 
 ```js
 /**
- * Interface for classes that represent a color.
+ * 색상을 나타내는 클래스의 인터페이스입니다.
  *
  * @interface
  */
 function Color() {}
 
 /**
- * Get the color as an array of red, green, and blue values, represented as
- * decimal numbers between 0 and 1.
+ * 색상을 0과 1 사이의 소수로 표현된 빨강, 초록, 파랑 값의 배열로 가져옵니다.
  *
- * @returns {Array<number>} An array containing the red, green, and blue values,
- * in that order.
+ * @returns {Array<number>} 빨강, 초록, 파랑 값이 그 순서대로 포함된 배열입니다.
  */
 Color.prototype.rgb = function () {
-  throw new Error('not implemented')
+  throw new Error('구현되지 않음')
 }
 ```
 
-The following example uses virtual comments, rather than code, to define the `Color` interface:
+다음 예제는 코드 대신 가상 주석을 사용하여 `Color` 인터페이스를 정의합니다:
 
-Virtual comments that define an interface
+인터페이스를 정의하는 가상 주석
 
 ```js
 /**
- * Interface for classes that represent a color.
+ * 색상을 나타내는 클래스의 인터페이스입니다.
  *
  * @interface Color
  */
 
 /**
- * Get the color as an array of red, green, and blue values, represented as
- * decimal numbers between 0 and 1.
+ * 색상을 0과 1 사이의 소수로 표현된 빨강, 초록, 파랑 값의 배열로 가져옵니다.
  *
  * @function
  * @name Color#rgb
- * @returns {Array<number>} An array containing the red, green, and blue values,
- * in that order.
+ * @returns {Array<number>} 빨강, 초록, 파랑 값이 그 순서대로 포함된 배열입니다.
  */
 ```
 
-## Related Links
+## 관련 링크
 
 [@implements](./implements.md)

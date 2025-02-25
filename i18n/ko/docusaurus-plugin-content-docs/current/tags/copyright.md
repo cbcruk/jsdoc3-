@@ -4,23 +4,23 @@ title: '@copyright'
 sidebar_label: '@copyright'
 ---
 
-## Syntax
+## 문법
 
-`@copyright <some copyright text>`
+`@copyright <저작권 텍스트>`
 
-## Overview
+## 개요
 
-The @copyright tag is used to document copyright information in a file overview comment. Use this tag in combination with the [@file tag](./file.md).
+@copyright 태그는 파일 개요 주석에서 저작권 정보를 문서화하는 데 사용됩니다. 이 태그는 [@file 태그](./file.md)와 함께 사용하십시오.
 
-## Examples
+## 예시
 
 ```js
 /**
- * @file This is my cool script.
+ * @file 이것은 나의 멋진 스크립트입니다.
  * @copyright Michael Mathews 2011
  */
 ```
 
-## Related Links
+## 관련 링크
 
 [@file](./file.md)

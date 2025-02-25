@@ -4,29 +4,29 @@ title: '@package'
 sidebar_label: '@package'
 ---
 
-## Syntax
+## 문법
 
-With the JSDoc tag dictionary (enabled by default):
+JSDoc 태그 사전을 사용하는 경우(기본적으로 활성화됨):
 
 `@package`
 
-With the [Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) tag dictionary:
+[Closure Compiler](https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler#jsdoc-tags) 태그 사전을 사용하는 경우:
 
 `@package [{typeExpression}]`
 
-## Overview
+## 개요
 
-The `@package` tag marks a symbol as package-private. Typically, this tag indicates that a symbol is available only to code in the same directory as the source file for this symbol. This tag is available in JSDoc 3.5.0 and later.
+`@package` 태그는 기호를 패키지 전용으로 표시합니다. 일반적으로 이 태그는 기호가 이 기호의 소스 파일과 동일한 디렉토리에 있는 코드에만 사용 가능하다는 것을 나타냅니다. 이 태그는 JSDoc 3.5.0 이상에서 사용할 수 있습니다.
 
-By default, symbols marked with the `@package` tag will appear in your documentation. In JSDoc 3.3.0 and later, you can use the [`-a/--access` command-line option](../about/commandline.md) to change this behavior.
+기본적으로 `@package` 태그로 표시된 기호는 문서에 나타납니다. JSDoc 3.3.0 이상에서는 [`-a/--access` 명령줄 옵션](../about/commandline.md)을 사용하여 이 동작을 변경할 수 있습니다.
 
-The `@package` tag is equivalent to `@access package`.
+`@package` 태그는 `@access package`와 동일합니다.
 
-## Examples
+## 예제
 
-In the following example, the instance member `Thingy#_bar` appears in the generated documentation, but with an annotation indicating that it is package-private:
+다음 예제에서 인스턴스 멤버 `Thingy#_bar`는 생성된 문서에 나타나지만 패키지 전용임을 나타내는 주석이 추가됩니다:
 
-Using the @package tag
+@package 태그 사용
 
 ```js
 /** @constructor */
@@ -36,7 +36,7 @@ function Thingy() {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 - [@access](./access.md)
 - [@global](./global.md)

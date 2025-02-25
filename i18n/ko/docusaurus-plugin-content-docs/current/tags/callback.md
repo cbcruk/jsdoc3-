@@ -4,21 +4,21 @@ title: '@callback'
 sidebar_label: '@callback'
 ---
 
-## Syntax
+## 구문
 
 `@callback <namepath>`
 
-## Overview
+## 개요
 
-The @callback tag provides information about a callback function that can be passed to other functions, including the callback's parameters and return value. You can include any of the tags that you can provide for a @method.
+`@callback` 태그는 다른 함수에 전달될 수 있는 콜백 함수에 대한 정보를 제공하며, 콜백의 매개변수와 반환 값을 포함합니다. `@method`에 제공할 수 있는 모든 태그를 포함할 수 있습니다.
 
-Once you define a callback, you can use it in the same way as a custom type defined with the @typedef tag. In particular, you can use the callback's name as a type name. This allows you to indicate that a function parameter should contain a certain type of callback.
+콜백을 정의한 후, `@typedef` 태그로 정의된 사용자 지정 유형과 같은 방식으로 사용할 수 있습니다. 특히, 콜백의 이름을 타입 이름으로 사용할 수 있습니다. 이를 통해 함수 매개변수가 특정 유형의 콜백을 포함해야 함을 나타낼 수 있습니다.
 
-If you want a callback to be displayed with the type definitions for a specific class, you can give the callback a namepath indicating that it is an inner function of that class. You can also define a global callback type that is referenced from multiple classes.
+콜백이 특정 클래스의 타입 정의와 함께 표시되도록 하려면, 해당 클래스의 내부 함수임을 나타내는 이름 경로를 콜백에 부여할 수 있습니다. 또한 여러 클래스에서 참조되는 전역 콜백 타입을 정의할 수도 있습니다.
 
-## Examples
+## 예제
 
-Documenting a class-specific callback
+클래스 특정 콜백 문서화
 
 ```js
 /**
@@ -27,22 +27,22 @@ Documenting a class-specific callback
 function Requester() {}
 
 /**
- * Send a request.
- * @param {Requester~requestCallback} cb - The callback that handles the response.
+ * 요청을 보냅니다.
+ * @param {Requester~requestCallback} cb - 응답을 처리하는 콜백입니다.
  */
 Requester.prototype.send = function (cb) {
-  // code
+  // 코드
 }
 
 /**
- * This callback is displayed as part of the Requester class.
+ * 이 콜백은 Requester 클래스의 일부로 표시됩니다.
  * @callback Requester~requestCallback
  * @param {number} responseCode
  * @param {string} responseMessage
  */
 ```
 
-Documenting a global callback
+전역 콜백 문서화
 
 ```js
 /**
@@ -51,22 +51,22 @@ Documenting a global callback
 function Requester() {}
 
 /**
- * Send a request.
- * @param {requestCallback} cb - The callback that handles the response.
+ * 요청을 보냅니다.
+ * @param {requestCallback} cb - 응답을 처리하는 콜백입니다.
  */
 Requester.prototype.send = function (cb) {
-  // code
+  // 코드
 }
 
 /**
- * This callback is displayed as a global member.
+ * 이 콜백은 전역 구성원으로 표시됩니다.
  * @callback requestCallback
  * @param {number} responseCode
  * @param {string} responseMessage
  */
 ```
 
-## Related Links
+## 관련 링크
 
 - [@function](./function.md)
 - [@typedef](./typedef.md)

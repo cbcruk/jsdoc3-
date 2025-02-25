@@ -4,25 +4,25 @@ title: '@class'
 sidebar_label: '@class'
 ---
 
-## Synonyms
+## 동의어
 
 `@constructor`
 
-## Syntax
+## 구문
 
 `@class [<type> <name>]`
 
-## Overview
+## 개요
 
-The @class tag marks a function as being a constructor, meant to be called with the new keyword to return an instance.
+@class 태그는 함수를 생성자로 표시하며, 새로운 인스턴스를 반환하기 위해 new 키워드와 함께 호출되어야 합니다.
 
-## Examples
+## 예시
 
-A function that constructs Person instances.
+Person 인스턴스를 생성하는 함수.
 
 ```js
 /**
- * Creates a new Person.
+ * 새로운 Person을 생성합니다.
  * @class
  */
 function Person() {}
@@ -30,6 +30,6 @@ function Person() {}
 var p = new Person()
 ```
 
-## Related Links
+## 관련 링크
 
 [@constructs](./constructs.md)

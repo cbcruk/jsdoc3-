@@ -1,68 +1,68 @@
 ---
 id: es2015-modules
-title: ES 2015 Modules
-sidebar_label: ES 2015 Modules
+title: ES 2015 모듈
+sidebar_label: ES 2015 모듈
 ---
 
-JSDoc 3 makes it possible to document modules that follow the [ECMAScript 2015 specification](http://www.ecma-international.org/ecma-262/6.0/#sec-modules). ES 2015 modules are supported in JSDoc 3.4.0 and later.
+JSDoc 3은 [ECMAScript 2015 사양](http://www.ecma-international.org/ecma-262/6.0/#sec-modules)을 따르는 모듈을 문서화하는 것을 가능하게 합니다. ES 2015 모듈은 JSDoc 3.4.0 이상에서 지원됩니다.
 
-## Module identifiers
+## 모듈 식별자
 
-When you document an ES 2015 module, you'll use a [`@module` tag](../tags/module.md) to document the identifier for the module. For example, if users load the module by calling `import * as myShirt from 'my/shirt'`, you'll write a JSDoc comment that contains the tag `@module my/shirt`.
+ES 2015 모듈을 문서화할 때, 모듈의 식별자를 문서화하기 위해 [`@module` 태그](../tags/module.md)를 사용합니다. 예를 들어, 사용자가 `import * as myShirt from 'my/shirt'`를 호출하여 모듈을 로드하는 경우, `@module my/shirt` 태그를 포함하는 JSDoc 주석을 작성합니다.
 
-If you use the `@module` tag without a value, JSDoc will try to guess the correct module identifier based on the filepath.
+값 없이 `@module` 태그를 사용하는 경우, JSDoc는 파일 경로를 기반으로 올바른 모듈 식별자를 추측하려고 시도합니다.
 
-When you use a JSDoc [namepath](../about/namepaths.md) to refer to a module from another JSDoc comment, you must add the prefix `module:`. For example, if you want the documentation for the module `my/pants` to link to the module `my/shirt`, you could use the [`@see` tag](../tags/see.md) to document `my/pants` as follows:
+다른 JSDoc 주석에서 모듈을 언급하기 위해 JSDoc [namepath](../about/namepaths.md)를 사용하는 경우, `module:` 접두사를 추가해야 합니다. 예를 들어, 모듈 `my/pants`의 문서가 모듈 `my/shirt`에 링크되도록 하려면, [`@see` 태그](../tags/see.md)를 사용하여 `my/pants`를 다음과 같이 문서화할 수 있습니다:
 
 ```js
 /**
- * Pants module.
+ * 바지 모듈.
  * @module my/pants
  * @see module:my/shirt
  */
 ```
 
-Similarly, the namepath for each member of the module will start with `module:`, followed by the module name. For example, if your `my/pants` module exports a `Jeans` class, and `Jeans` has an instance method named `hem`, the instance method's longname is `module:my/pants.Jeans#hem`.
+마찬가지로, 모듈의 각 멤버에 대한 namepath는 `module:`으로 시작하고 뒤에 모듈 이름이 옵니다. 예를 들어, `my/pants` 모듈이 `Jeans` 클래스를 내보내고, `Jeans`에 `hem`이라는 인스턴스 메서드가 있다면, 인스턴스 메서드의 전체 이름은 `module:my/pants.Jeans#hem`이 됩니다.
 
-## Exported values
+## 내보낸 값
 
-The following example shows how to document different kinds of exported values in an ES 2015 module. In most cases, you can simply add a JSDoc comment to the `export` statement that defines the exported value. If you are exporting a value under another name, you can document the exported value within its `export` block.
+다음 예시는 ES 2015 모듈에서 다양한 종류의 내보낸 값을 문서화하는 방법을 보여줍니다. 대부분의 경우, 내보낸 값을 정의하는 `export` 문에 간단히 JSDoc 주석을 추가할 수 있습니다. 다른 이름으로 값을 내보내는 경우, 해당 `export` 블록 내에서 내보낸 값을 문서화할 수 있습니다.
 
-Documenting values exported by a module
+모듈에 의해 내보낸 값 문서화
 
 ```js
 /** @module color/mixer */
 
-/** The name of the module. */
+/** 모듈의 이름. */
 export const name = "mixer";
 
-/** The most recent blended color. */
+/** 가장 최근의 혼합 색상. */
 export var lastColor = null;
 
 /**
- * Blend two colors together.
- * @param {string} color1 - The first color, in hexadecimal format.
- * @param {string} color2 - The second color, in hexadecimal format.
- * @return {string} The blended color.
+ * 두 색상을 혼합합니다.
+ * @param {string} color1 - 첫 번째 색상, 16진수 형식.
+ * @param {string} color2 - 두 번째 색상, 16진수 형식.
+ * @return {string} 혼합된 색상.
  */
 export function blend(color1, color2) {}
 
-// convert color to array of RGB values (0-255)
+// 색상을 RGB 값 배열(0-255)로 변환
 function rgbify(color) {}
 
 export {
   /**
-   * Get the red, green, and blue values of a color.
+   * 색상의 빨간색, 초록색 및 파란색 값을 가져옵니다.
    * @function
-   * @param {string} color - A color, in hexadecimal format.
-   * @returns {Array.<number>} An array of the red, green, and blue values,
-   * each ranging from 0 to 255.
+   * @param {string} color - 색상, 16진수 형식.
+   * @returns {Array.<number>} 빨간색, 초록색 및 파란색 값의 배열,
+   * 각각 0에서 255 사이의 값을 가집니다.
    */
   rgbify as toRgb
 };
 ```
 
-## Related Links
+## 관련 링크
 
-- [Using namepaths with JSDoc 3](../about/namepaths.md)
+- [JSDoc 3에서 namepaths 사용하기](../about/namepaths.md)
 - [@module](../tags/module.md)

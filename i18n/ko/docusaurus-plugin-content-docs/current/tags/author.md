@@ -4,17 +4,17 @@ title: '@author'
 sidebar_label: '@author'
 ---
 
-## Syntax
+## 구문
 
-`@author <name> [<emailAddress>]`
+`@author <이름> [<이메일주소>]`
 
-## Overview
+## 개요
 
-The @author tag identifies the author of an item. In JSDoc 3.2 and later, if the author's name is followed by an email address enclosed in angle brackets, the default template will convert the email address to a `mailto:` link.
+@author 태그는 항목의 저자를 식별합니다. JSDoc 3.2 이후로 저자의 이름 뒤에 각괄호로 묶인 이메일 주소가 오는 경우, 기본 템플릿은 이메일 주소를 `mailto:` 링크로 변환합니다.
 
-## Examples
+## 예제
 
-Documenting the author of an item
+항목의 저자를 문서화하기
 
 ```js
 /**
@@ -23,7 +23,7 @@ Documenting the author of an item
 function MyClass() {}
 ```
 
-## Related Links
+## 관련 링크
 
 - [@file](./file.md)
 - [@version](./version.md)

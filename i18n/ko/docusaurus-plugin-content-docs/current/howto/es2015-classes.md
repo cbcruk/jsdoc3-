@@ -1,49 +1,49 @@
 ---
 id: es2015-classes
-title: ES 2015 Classes
-sidebar_label: ES 2015 Classes
+title: ES 2015 클래스
+sidebar_label: ES 2015 클래스
 ---
 
-JSDoc 3 makes it easy to document classes that follow the [ECMAScript 2015 specification](http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions). You don't need to use tags such as `@class` and `@constructor` with ES 2015 classes—JSDoc automatically identifies classes and their constructors simply by parsing your code. ES 2015 classes are supported in JSDoc 3.4.0 and later.
+JSDoc 3는 [ECMAScript 2015 사양](http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions)을 따르는 클래스를 문서화하는 것을 쉽게 만들어줍니다. ES 2015 클래스와 함께 `@class` 및 `@constructor`와 같은 태그를 사용할 필요가 없습니다. JSDoc는 코드를 파싱하여 클래스와 그 생성자를 자동으로 식별합니다. ES 2015 클래스는 JSDoc 3.4.0 이상에서 지원됩니다.
 
-## Documenting a simple class
+## 간단한 클래스 문서화하기
 
-The following example shows how to document a simple class with a constructor, two instance methods, and one static method:
+다음 예제는 생성자, 두 개의 인스턴스 메서드 및 하나의 정적 메서드를 가진 간단한 클래스를 문서화하는 방법을 보여줍니다:
 
-Simple ES 2015 class
+간단한 ES 2015 클래스
 
 ```js
-/** Class representing a point. */
+/** 점을 나타내는 클래스. */
 class Point {
   /**
-   * Create a point.
-   * @param {number} x - The x value.
-   * @param {number} y - The y value.
+   * 점을 생성합니다.
+   * @param {number} x - x 값.
+   * @param {number} y - y 값.
    */
   constructor(x, y) {
     // ...
   }
 
   /**
-   * Get the x value.
-   * @return {number} The x value.
+   * x 값을 가져옵니다.
+   * @return {number} x 값.
    */
   getX() {
     // ...
   }
 
   /**
-   * Get the y value.
-   * @return {number} The y value.
+   * y 값을 가져옵니다.
+   * @return {number} y 값.
    */
   getY() {
     // ...
   }
 
   /**
-   * Convert a string containing two comma-separated numbers into a point.
-   * @param {string} str - The string containing two comma-separated numbers.
-   * @return {Point} A Point object.
+   * 쉼표로 구분된 두 숫자를 포함하는 문자열을 점으로 변환합니다.
+   * @param {string} str - 쉼표로 구분된 두 숫자를 포함하는 문자열.
+   * @return {Point} Point 객체.
    */
   static fromString(str) {
     // ...
@@ -51,44 +51,44 @@ class Point {
 }
 ```
 
-You can also document classes that are defined in a class expression, which assigns the class to a variable or constant:
+클래스를 변수 또는 상수에 할당하는 클래스 표현식으로 정의된 클래스도 문서화할 수 있습니다:
 
-ES 2015 class expression
+ES 2015 클래스 표현식
 
 ```js
-/** Class representing a point. */
+/** 점을 나타내는 클래스. */
 const Point = class {
-  // and so on
+  // 계속
 };
 ```
 
-## Extending classes
+## 클래스 확장하기
 
-When you use the `extends` keyword to extend an existing class, you also need to tell JSDoc which class you're extending. You do this with the [`@augments` (or `@extends`) tag](../tags/augments.md).
+기존 클래스를 확장하기 위해 `extends` 키워드를 사용할 때, 어떤 클래스를 확장하는지 JSDoc에 알려주어야 합니다. 이를 [`@augments` (또는 `@extends`) 태그](../tags/augments.md)로 수행합니다.
 
-For example, to extend the `Point` class shown above:
+예를 들어, 위에서 설명한 `Point` 클래스를 확장하는 경우:
 
-Extending an ES 2015 class
+ES 2015 클래스 확장하기
 
 ```js
 /**
- * Class representing a dot.
+ * 점을 나타내는 클래스.
  * @extends Point
  */
 class Dot extends Point {
   /**
-   * Create a dot.
-   * @param {number} x - The x value.
-   * @param {number} y - The y value.
-   * @param {number} width - The width of the dot, in pixels.
+   * 점을 생성합니다.
+   * @param {number} x - x 값.
+   * @param {number} y - y 값.
+   * @param {number} width - 점의 폭(픽셀 단위).
    */
   constructor(x, y, width) {
     // ...
   }
 
   /**
-   * Get the dot's width.
-   * @return {number} The dot's width, in pixels.
+   * 점의 폭을 가져옵니다.
+   * @return {number} 점의 폭(픽셀 단위).
    */
   getWidth() {
     // ...
@@ -96,6 +96,6 @@ class Dot extends Point {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@augments](../tags/augments.md)

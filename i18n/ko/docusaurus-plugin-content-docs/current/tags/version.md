@@ -4,18 +4,17 @@ title: '@version'
 sidebar_label: '@version'
 ---
 
-## Overview
+## 개요
 
-Documents the version of an item. The text following the @version tag will be used to denote the version of the item.
+항목의 버전을 문서화합니다. @version 태그 뒤의 텍스트는 항목의 버전을 나타내는 데 사용됩니다.
 
-## Examples
+## 예제
 
-Using the @version tag
+@version 태그 사용
 
 ```js
 /**
- * Solves equations of the form a * x = b. Returns the value
- * of x.
+ * a * x = b 형태의 방정식을 풉니다. x의 값을 반환합니다.
  * @version 1.2.3
  * @tutorial solver
  */
@@ -24,6 +23,6 @@ function solver(a, b) {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@since](./since.md)

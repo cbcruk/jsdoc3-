@@ -4,21 +4,21 @@ title: '@borrows'
 sidebar_label: '@borrows'
 ---
 
-## Syntax
+## 문법
 
 `@borrows <that namepath> as <this namepath>`
 
-## Overview
+## 개요
 
-The @borrows tag allows you to add documentation for another symbol to your documentation.
+@borrows 태그는 문서에 다른 기호에 대한 문서를 추가할 수 있게 해줍니다.
 
-This tag would be useful if you had more than one way to reference a function, but you didn't want to duplicate the same documentation in two places.
+이 태그는 함수에 대한 참조 방식이 여러 개 있을 때 유용하며, 두 곳에서 동일한 문서를 중복 작성하지 않기를 원할 때 사용됩니다.
 
-## Examples
+## 예제
 
-In this example there exists documentation for the "trstr" function, but "util.trim" is just a reference to that same function by a different name.
+이 예제에서는 "trstr" 함수에 대한 문서가 존재하지만, "util.trim"은 다른 이름으로 같은 함수를 참조하는 것입니다.
 
-Duplicate the documentation for trstr as util.trim
+trstr의 문서를 util.trim으로 중복합니다.
 
 ```js
 /**
@@ -30,7 +30,7 @@ var util = {
 }
 
 /**
- * Remove whitespace from around a string.
+ * 문자열 주변의 공백을 제거합니다.
  * @param {string} str
  */
 function trstr(str) {}

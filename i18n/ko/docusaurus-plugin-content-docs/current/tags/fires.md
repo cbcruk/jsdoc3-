@@ -4,25 +4,25 @@ title: '@fires'
 sidebar_label: '@fires'
 ---
 
-## Synonyms
+## 동의어
 
 `@emits`
 
-## Syntax
+## 구문
 
 `@fires <className>#[event:]<eventName>`
 
-## Overview
+## 개요
 
-The @fires tag indicates that a method can fire a specified type of event when it is called. Use the [@event tag](./event.md) to document the event's content.
+@fires 태그는 메서드가 호출될 때 지정된 유형의 이벤트를 발생시킬 수 있음을 나타냅니다. 이벤트의 내용을 문서화하려면 [@event 태그](./event.md)를 사용하세요.
 
-## Examples
+## 예시
 
-Method that fires a 'drain' event
+'drain' 이벤트를 발생시키는 메서드
 
 ```js
 /**
- * Drink the milkshake.
+ * 밀크셰이크를 마십니다.
  *
  * @fires Milkshake#drain
  */
@@ -31,7 +31,7 @@ Milkshake.prototype.drink = function () {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 - [@event](./event.md)
 - [@listens](./listens.md)

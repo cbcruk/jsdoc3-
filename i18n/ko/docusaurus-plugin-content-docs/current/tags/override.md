@@ -4,43 +4,43 @@ title: '@override'
 sidebar_label: '@override'
 ---
 
-## Overview
+## 개요
 
-The `@override` tag indicates that a symbol overrides a symbol with the same name in a parent class.
+`@override` 태그는 기호가 부모 클래스에서 동일한 이름을 가진 기호를 오버라이드(재정의)함을 나타냅니다.
 
-This tag is provided for compatibility with [Closure Compiler](https://developers.google.com/closure/compiler/). By default, JSDoc automatically identifies symbols that override a parent.
+이 태그는 [Closure Compiler](https://developers.google.com/closure/compiler/)와의 호환성을 위해 제공됩니다. 기본적으로 JSDoc은 부모를 오버라이드하는 기호를 자동으로 식별합니다.
 
-If your JSDoc comment includes the [`@inheritdoc` tag](./inheritdoc.md), you do not need to include the `@override` tag. The presence of the `@inheritdoc` tag implies the presence of the `@override` tag.
+JSDoc 주석에 [`@inheritdoc` 태그](./inheritdoc.md)가 포함되어 있는 경우, `@override` 태그를 포함할 필요가 없습니다. `@inheritdoc` 태그의 존재는 `@override` 태그의 존재를 암시합니다.
 
-## Example
+## 예시
 
-The following example shows how to indicate that a method overrides a method in its parent class:
+다음 예시는 메서드가 부모 클래스의 메서드를 오버라이드함을 나타내는 방법을 보여줍니다:
 
-Method that overrides a parent
+부모를 오버라이드하는 메서드
 
 ```js
 /**
- * @classdesc Abstract class representing a network connection.
+ * @classdesc 네트워크 연결을 나타내는 추상 클래스입니다.
  * @class
  */
 function Connection() {}
 
 /**
- * Open the connection.
+ * 연결을 엽니다.
  */
 Connection.prototype.open = function () {
   // ...
 }
 
 /**
- * @classdesc Class representing a socket connection.
+ * @classdesc 소켓 연결을 나타내는 클래스입니다.
  * @class
  * @augments Connection
  */
 function Socket() {}
 
 /**
- * Open the socket.
+ * 소켓을 엽니다.
  * @override
  */
 Socket.prototype.open = function () {
@@ -48,6 +48,6 @@ Socket.prototype.open = function () {
 }
 ```
 
-## Related Links
+## 관련 링크
 
 [@inheritdoc](./inheritdoc.md)

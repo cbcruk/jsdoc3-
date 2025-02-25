@@ -4,44 +4,44 @@ title: '@inner'
 sidebar_label: '@inner'
 ---
 
-## Overview
+## 개요
 
-Using the @inner tag will mark a symbol as an inner member of its parent symbol. This means it can be referred to by "Parent~Child".
+@inner 태그를 사용하면 기호를 상위 기호의 내부 멤버로 표시합니다. 이는 "부모~자식" 형태로 참조할 수 있음을 의미합니다.
 
-Using @inner will override a doclet's default scope (unless it is in the global scope, in which case it will remain global).
+@inner를 사용하면 doclet의 기본 범위를 재정의합니다 (전역 범위에 있는 경우를 제외하고, 이 경우 전역으로 남아 있습니다).
 
-## Examples
+## 예제
 
-Using @inner to make a virtual doclet an inner member
+@inner를 사용하여 가상 doclet을 내부 멤버로 만드는 경우
 
 ```js
 /** @namespace MyNamespace */
 /**
- * myFunction is now MyNamespace~myFunction.
+ * myFunction은 이제 MyNamespace~myFunction입니다.
  * @function myFunction
  * @memberof MyNamespace
  * @inner
  */
 ```
 
-Note that in the above we could have used "@function MyNamespace~myFunction" instead of the @memberof and @inner tags.
+위의 경우 @memberof 및 @inner 태그 대신 "@function MyNamespace~myFunction"을 사용할 수 있었음을 주의하세요.
 
-Using @inner
+@inner 사용
 
 ```js
 /** @namespace */
 var MyNamespace = {
   /**
-   * foo is now MyNamespace~foo rather than MyNamespace.foo.
+   * foo는 이제 MyNamespace~foo이며 MyNamespace.foo가 아닙니다.
    * @inner
    */
   foo: 1,
 }
 ```
 
-In the above example, we use @inner to force a member of a namespace to be documented as an inner member (by default, it would be a static member). This means that `foo` now has the longname `MyNamespace~foo` instead of `MyNamespace.foo`.
+위 예제에서는 @inner를 사용하여 네임스페이스의 멤버가 내부 멤버로 문서화되도록 강제합니다 (기본적으로 이는 정적 멤버가 됩니다). 이는 `foo`가 이제 `MyNamespace.foo` 대신 `MyNamespace~foo`라는 긴 이름을 갖게 됨을 의미합니다.
 
-## Related Links
+## 관련 링크
 
 - [@global](./global.md)
 - [@instance](./instance.md)

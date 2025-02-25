@@ -4,37 +4,37 @@ title: '@external'
 sidebar_label: '@external'
 ---
 
-## Synonyms
+## 동의어
 
 `@host`
 
-## Syntax
+## 문법
 
-`@external <NameOfExternal>`
+`@external <외부 이름>`
 
-## Overview
+## 개요
 
-The `@external` tag identifies a class, namespace, or module that is defined outside of the current package. By using this tag, you can document your package's extensions to the external symbol, or you can provide information about the external symbol to your package's users. You can also refer to the external symbol's namepath in any other JSDoc tag.
+`@external` 태그는 현재 패키지 외부에 정의된 클래스, 네임스페이스 또는 모듈을 식별합니다. 이 태그를 사용하면 패키지가 외부 심볼에 대한 확장을 문서화할 수 있으며, 패키지 사용자를 위해 외부 심볼에 대한 정보를 제공할 수 있습니다. 또한 다른 JSDoc 태그 내에서 외부 심볼의 이름 경로를 참조할 수 있습니다.
 
-The namepath for an external symbol always uses the prefix `external:` (for example, `{@link external:Foo}` or `@augments external:Foo`). However, you can omit this prefix from the `@external` tag.
+외부 심볼의 이름 경로는 항상 접두사 `external:`을 사용합니다(예: `{@link external:Foo}` 또는 `@augments external:Foo`). 그러나 `@external` 태그에서 이 접두사를 생략할 수 있습니다.
 
-**Note**: You should only add the `@external` tag to the highest-level symbol that is defined outside of your project. See "[Documenting a nested external symbol](#nested-external-symbol)" for an example.
+**참고**: `@external` 태그는 프로젝트 외부에 정의된 최상위 심볼에만 추가해야 합니다. "[중첩 외부 심볼 문서화](#nested-external-symbol)"를 참조하여 예시를 확인하십시오.
 
-## Examples
+## 예제
 
-The following example shows how to document the built-in `String` object as an external, along with the new instance method `external:String#rot13`:
+다음 예제에서는 내장 `String` 객체를 외부로 문서화하는 방법과 새로운 인스턴스 메서드 `external:String#rot13`을 보여줍니다:
 
-Documenting methods added to built-in classes
+내장 클래스에 추가된 메서드 문서화
 
 ```js
 /**
- * The built in string object.
+ * 내장 문자열 객체.
  * @external String
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String|String}
  */
 
 /**
- * Create a ROT13-encoded version of the string. Added by the `foo` package.
+ * 문자열의 ROT13 인코딩 버전을 생성합니다. `foo` 패키지에서 추가되었습니다.
  * @function external:String#rot13
  * @example
  * var greeting = new String('hello world');
@@ -42,54 +42,54 @@ Documenting methods added to built-in classes
  */
 ```
 
-The following example documents a new `starfairy` function added to the external namespace `"jQuery.fn"`:
+다음 예제는 외부 네임스페이스 `"jQuery.fn"`에 추가된 새로운 `starfairy` 함수를 문서화합니다:
 
-Documenting external namespaces
+외부 네임스페이스 문서화
 
 ```js
 /**
- * The jQuery plugin namespace.
+ * jQuery 플러그인 네임스페이스.
  * @external "jQuery.fn"
  * @see {@link http://learn.jquery.com/plugins/|jQuery Plugins}
  */
 
 /**
- * A jQuery plugin to make stars fly around your home page.
+ * 별들이 홈페이지 주위를 날도록 만드는 jQuery 플러그인.
  * @function external:"jQuery.fn".starfairy
  */
 ```
 
-In the following example, the class `EncryptedRequest` is documented as a subclass of the built-in class `XMLHttpRequest`:
+다음 예제에서는 `EncryptedRequest` 클래스를 내장 클래스 `XMLHttpRequest`의 서브클래스로 문서화합니다:
 
-Extending an external.
+외부 확장.
 
 ```js
 /**
- * The built-in class for sending HTTP requests.
+ * HTTP 요청을 보내기 위한 내장 클래스.
  * @external XMLHttpRequest
  * @see https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
  */
 
 /**
- * Extends the built-in `XMLHttpRequest` class to send data encoded with a secret key.
+ * 비밀 키로 인코딩된 데이터를 보내기 위해 내장 `XMLHttpRequest` 클래스를 확장합니다.
  * @class EncodedRequest
  * @extends external:XMLHttpRequest
  */
 ```
 
-You should only add the `@external` tag to the highest-level symbol that is defined outside of your project. In the following example, the documentation refers to the external class `security.TLS`. As a result, the `@external` tag is used to document the external namespace `external:security`, but _not_ the external class `external:security.TLS`.
+`@external` 태그는 프로젝트 외부에 정의된 최상위 심볼에만 추가해야 합니다. 다음 예제에서는 문서가 외부 클래스 `security.TLS`를 참조합니다. 결과적으로, `@external` 태그는 외부 네임스페이스 `external:security`를 문서화하는 데 사용되지만, 외부 클래스 `external:security.TLS`는 문서화하지 않습니다.
 
-Documenting a nested external symbol
+중첩 외부 심볼 문서화
 
 ```js
 /**
- * External namespace for security-related classes.
+ * 보안 관련 클래스에 대한 외부 네임스페이스.
  * @external security
  * @see http://example.org/docs/security
  */
 
 /**
- * External class that provides Transport Layer Security (TLS) encryption.
+ * 전송 계층 보안(TLS) 암호화를 제공하는 외부 클래스.
  * @class TLS
  * @memberof external:security
  */

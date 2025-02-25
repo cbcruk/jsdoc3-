@@ -4,47 +4,46 @@ title: '@mixin'
 sidebar_label: '@mixin'
 ---
 
-## Syntax
+## 구문
 
 `@mixin [<MixinName>]`
 
-## Overview
+## 개요
 
-A mixin provides functionality that is intended to be added to other objects. If desired, you can use the @mixin tag to indicate that an object is a mixin. You can then add the @mixes tag to objects that use the mixin.
+믹스인은 다른 객체에 추가하기 위한 기능을 제공합니다. 원하면, @mixin 태그를 사용하여 객체가 믹스인임을 나타낼 수 있습니다. 그런 다음 믹스인을 사용하는 객체에 @mixes 태그를 추가할 수 있습니다.
 
-## Examples
+## 예제
 
-Using @mixin
+@mixin 사용하기
 
 ```js
 /**
- * This provides methods used for event handling. It's not meant to
- * be used directly.
+ * 이는 이벤트 처리를 위해 사용되는 메서드를 제공합니다. 직접 사용하기 위한 것이 아닙니다.
  *
  * @mixin
  */
 var Eventful = {
   /**
-   * Register a handler function to be called whenever this event is fired.
-   * @param {string} eventName - Name of the event.
-   * @param {function(Object)} handler - The handler to call.
+   * 이 이벤트가 발생할 때 호출될 핸들러 함수를 등록합니다.
+   * @param {string} eventName - 이벤트 이름.
+   * @param {function(Object)} handler - 호출할 핸들러.
    */
   on: function (eventName, handler) {
-    // code...
+    // 코드...
   },
 
   /**
-   * Fire an event, causing all handlers for that event name to run.
-   * @param {string} eventName - Name of the event.
-   * @param {Object} eventData - The data provided to each handler.
+   * 이벤트를 발생시켜 해당 이벤트 이름의 모든 핸들러가 실행되도록 합니다.
+   * @param {string} eventName - 이벤트 이름.
+   * @param {Object} eventData - 각 핸들러에 제공되는 데이터.
    */
   fire: function (eventName, eventData) {
-    // code...
+    // 코드...
   },
 }
 ```
 
-## Related Links
+## 관련 링크
 
 - [@borrows](./borrows.md)
 - [@class](./class.md)

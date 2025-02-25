@@ -4,59 +4,59 @@ title: '@exports'
 sidebar_label: '@exports'
 ---
 
-## Syntax
+## 구문
 
 `@exports <moduleName>`
 
-In JSDoc 3.3.0 and later, `<moduleName>` may include the `module:` prefix. In previous versions, you must omit this prefix.
+JSDoc 3.3.0 이후 버전에서는 `<moduleName>`에 `module:` 접두사를 포함할 수 있습니다. 이전 버전에서는 이 접두사를 생략해야 합니다.
 
-## Overview
+## 개요
 
-Use the @exports tag when documenting JavaScript modules that export anything other than the "exports" object or the "module.exports" property.
+JS 모듈에서 "exports" 객체나 "module.exports" 속성 외에 다른 것을 내보낼 때 @exports 태그를 사용합니다.
 
-## Examples
+## 예제
 
-In modules where you are using the special "exports" object, the @exports tag is never needed. JSDoc automatically recognizes that this object's members are being exported. Similarly, JSDoc automatically recognizes the special "module.exports" property in Node.js modules.
+특별한 "exports" 객체를 사용하는 모듈에서는 @exports 태그가 필요하지 않습니다. JSDoc는 이 객체의 멤버가 내보내지고 있음을 자동으로 인식합니다. 마찬가지로, JSDoc는 Node.js 모듈에서 특별한 "module.exports" 속성을 자동으로 인식합니다.
 
-CommonJS module
+공통JS 모듈
 
 ```js
 /**
- * A module that says hello!
+ * 안녕!이라고 말하는 모듈입니다.
  * @module hello/world
  */
 
-/** Say hello. */
+/** 인사 말하기. */
 exports.sayHello = function () {
   return 'Hello world'
 }
 ```
 
-Node.js module
+Node.js 모듈
 
 ```js
 /**
- * A module that shouts hello!
+ * 안녕!이라고 소리치는 모듈입니다.
  * @module hello/world
  */
 
-/** SAY HELLO. */
+/** 인사 말하기. */
 module.exports = function () {
   return 'HELLO WORLD'
 }
 ```
 
-AMD module that exports an object literal
+객체 리터럴을 내보내는 AMD 모듈
 
 ```js
 define(function () {
   /**
-   * A module that whispers hello!
+   * 안녕!이라고 속삭이는 모듈입니다.
    * @module hello/world
    */
   var exports = {}
 
-  /** say hello. */
+  /** 인사 말하기. */
   exports.sayHello = function () {
     return 'hello world'
   }
@@ -65,24 +65,24 @@ define(function () {
 })
 ```
 
-AMD module that exports a constructor
+생성자를 내보내는 AMD 모듈
 
 ```js
 define(function () {
   /**
-   * A module that creates greeters.
+   * 인사하는 사람을 만드는 모듈입니다.
    * @module greeter
    */
 
   /**
    * @constructor
-   * @param {string} subject - The subject to greet.
+   * @param {string} subject - 인사할 대상.
    */
   var exports = function (subject) {
     this.subject = subject || 'world'
   }
 
-  /** Say hello to the subject. */
+  /** 대상에게 인사하기. */
   exports.prototype.sayHello = function () {
     return 'Hello ' + this.subject
   }
@@ -91,19 +91,19 @@ define(function () {
 })
 ```
 
-If your module exports an object named anything other than "exports" or "module.exports", use the @exports tag to indicate what is being exported.
+모듈이 "exports" 또는 "module.exports"가 아닌 이름으로 객체를 내보내는 경우, 내보내는 것을 나타내기 위해 @exports 태그를 사용하세요.
 
-AMD module that exports an object
+객체를 내보내는 AMD 모듈
 
 ```js
 define(function () {
   /**
-   * A module that says hello!
+   * 안녕!이라고 말하는 모듈입니다.
    * @exports hello/world
    */
   var ns = {}
 
-  /** Say hello. */
+  /** 인사 말하기. */
   ns.sayHello = function () {
     return 'Hello world'
   }
@@ -112,8 +112,8 @@ define(function () {
 })
 ```
 
-## Related Links
+## 관련 링크
 
 - [@module](./module.md)
-- [CommonJS Modules](../howto/commonjs-modules.md)
-- [AMD Modules](../howto/amd-modules.md)
+- [CommonJS 모듈](../howto/commonjs-modules.md)
+- [AMD 모듈](../howto/amd-modules.md)

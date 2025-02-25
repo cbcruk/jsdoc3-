@@ -4,43 +4,43 @@ title: '@example'
 sidebar_label: '@example'
 ---
 
-## Overview
+## 개요
 
-Provide an example of how to use a documented item. The text that follows this tag will be displayed as highlighted code.
+문서화된 항목을 사용하는 방법에 대한 예제를 제공합니다. 이 태그 뒤에 오는 텍스트는 강조된 코드로 표시됩니다.
 
-## Examples
+## 예제
 
-Note that a doclet may have multiple examples.
+문서화된 요소는 여러 개의 예제를 가질 수 있습니다.
 
-Documenting examples
+예제 문서화
 
 ```js
 /**
- * Solves equations of the form a * x = b
+ * a * x = b 형태의 방정식을 풉니다.
  * @example
- * // returns 2
+ * // 2를 반환합니다.
  * globalNS.method1(5, 10);
  * @example
- * // returns 3
+ * // 3을 반환합니다.
  * globalNS.method(5, 15);
- * @returns {Number} Returns the value of x for the equation.
+ * @returns {Number} 방정식의 x 값을 반환합니다.
  */
 globalNS.method1 = function (a, b) {
   return b / a
 }
 ```
 
-Examples can also be captioned using `<caption></caption>` after the @example tag.
+예제는 `@example` 태그 뒤에 `<caption></caption>`을 사용하여 캡션을 추가할 수도 있습니다.
 
-Documenting examples with a caption
+캡션이 있는 예제 문서화
 
 ```js
 /**
- * Solves equations of the form a * x = b
- * @example <caption>Example usage of method1.</caption>
- * // returns 2
+ * a * x = b 형태의 방정식을 풉니다.
+ * @example <caption>method1의 예제 사용.</caption>
+ * // 2를 반환합니다.
  * globalNS.method1(5, 10);
- * @returns {Number} Returns the value of x for the equation.
+ * @returns {Number} 방정식의 x 값을 반환합니다.
  */
 globalNS.method1 = function (a, b) {
   return b / a

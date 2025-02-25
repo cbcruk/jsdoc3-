@@ -4,72 +4,72 @@ title: '@link'
 sidebar_label: '@link'
 ---
 
-## Synonyms
+## 동의어
 
 - `{@linkcode}`
 - `{@linkplain}`
 
-## Syntax
+## 구문
 
 ```js
 {@link namepathOrURL}
-[link text]{@link namepathOrURL}
-{@link namepathOrURL|link text}
-{@link namepathOrURL link text (after the first space)}
+[링크 텍스트]{@link namepathOrURL}
+{@link namepathOrURL|링크 텍스트}
+{@link namepathOrURL 링크 텍스트 (첫 번째 공백 이후)}
 ```
 
-## Overview
+## 개요
 
-The `@link` inline tag creates a link to the namepath or URL that you specify. When you use the `@link` tag, you can also provide link text, using one of several different formats. If you don't provide any link text, JSDoc uses the namepath or URL as the link text.
+`@link` 인라인 태그는 지정한 이름 경로나 URL에 대한 링크를 생성합니다. `@link` 태그를 사용할 때, 여러 가지 형식을 사용하여 링크 텍스트를 제공할 수도 있습니다. 링크 텍스트를 제공하지 않으면 JSDoc은 이름 경로나 URL을 링크 텍스트로 사용합니다.
 
-If you need to link to a tutorial, use the [`@tutorial` inline tag](./inline-tutorial.md) instead of the `@link` tag.
+튜토리얼에 링크해야 하는 경우, `@link` 태그 대신 [`@tutorial` 인라인 태그](./inline-tutorial.md)를 사용하십시오.
 
-## Link formatting
+## 링크 형식
 
-By default, `@link` generates standard HTML anchor tags. However, you may prefer to render certain links in a monospace font, or to specify the format of individual links. You can use the following synonyms for the `@link` tag to control the formatting of links:
+기본적으로 `@link`는 표준 HTML 앵커 태그를 생성합니다. 그러나 특정 링크를 모노스페이스 글꼴로 렌더링하거나 개별 링크의 형식을 지정할 수 있습니다. 링크 형식을 제어하기 위해 `@link` 태그의 다음 동의어를 사용할 수 있습니다:
 
-- `{@linkcode}`: Forces the link's text to use a monospace font.
-- `{@linkplain}`: Forces the link's text to appear as normal text, without a monospace font.
+- `{@linkcode}`: 링크 텍스트를 모노스페이스 글꼴로 강제합니다.
+- `{@linkplain}`: 링크 텍스트를 일반 텍스트로 표시하며, 모노스페이스 글꼴을 사용하지 않습니다.
 
-You can also set one of the following options in JSDoc's configuration file; see [Configuring JSDoc](../about/configuring-jsdoc.md) for more details:
+또한 JSDoc의 구성 파일에서 다음 옵션 중 하나를 설정할 수 있습니다. 자세한 내용은 [JSDoc 구성](../about/configuring-jsdoc.md)을 참조하십시오:
 
-- `templates.cleverLinks`: When set to `true`, links to URLs use normal text, and links to code use a monospace font.
-- `templates.monospaceLinks`: When set to `true`, all links use a monospace font, except for links created with the `{@linkplain}` tag.
+- `templates.cleverLinks`: `true`로 설정하면 URL에 대한 링크는 일반 텍스트를 사용하고, 코드에 대한 링크는 모노스페이스 글꼴을 사용합니다.
+- `templates.monospaceLinks`: `true`로 설정하면 `{@linkplain}` 태그로 생성된 링크를 제외한 모든 링크가 모노스페이스 글꼴을 사용합니다.
 
-**Note**: Although the default JSDoc template renders all of these tags correctly, other templates may not recognize the `{@linkcode}` and `{@linkplain}` tags. In addition, other templates may ignore the configuration options for link rendering.
+**참고**: 기본 JSDoc 템플릿은 이러한 모든 태그를 올바르게 렌더링하지만, 다른 템플릿은 `{@linkcode}` 및 `{@linkplain}` 태그를 인식하지 못할 수 있습니다. 또한, 다른 템플릿은 링크 렌더링에 대한 구성 옵션을 무시할 수 있습니다.
 
-## Examples
+## 예제
 
-The following example shows all of the ways to provide link text for the `@link` tag:
+다음 예제는 `@link` 태그에 대한 링크 텍스트를 제공하는 모든 방법을 보여줍니다:
 
-Providing link text
+링크 텍스트 제공
 
 ```js
 /**
- * See {@link MyClass} and [MyClass's foo property]{@link MyClass#foo}.
- * Also, check out {@link http://www.google.com|Google} and
- * {@link https://github.com GitHub}.
+ * {@link MyClass}와 [MyClass의 foo 속성]{@link MyClass#foo}를 참조하십시오.
+ * 또한 {@link http://www.google.com|구글} 및
+ * {@link https://github.com GitHub}를 확인하십시오.
  */
 function myFunction() {}
 ```
 
-By default, the example above produces output similar to the following:
+기본적으로 위 예제는 다음과 유사한 출력을 생성합니다:
 
-Output for `@link` tags
+`@link` 태그에 대한 출력
 
     See <a href="MyClass.html">MyClass</a> and <a href="MyClass.html#foo">MyClass's foo
     property</a>. Also, check out <a href="http://www.google.com">Google</a> and
     <a href="https://github.com">GitHub</a>.
 
-If the configuration property `templates.cleverLinks` were set to `true`, the example above would produce the following output:
+구성 속성 `templates.cleverLinks`가 `true`로 설정된 경우, 위 예제는 다음과 같은 출력을 생성합니다:
 
-Output with clever links enabled
+지능형 링크가 활성화된 출력
 
     See <a href="MyClass.html"><code>MyClass</code></a> and <a href="MyClass.html#foo">
     <code>MyClass's foo property</code></a>. Also, check out
     <a href="http://www.google.com">Google</a> and <a href="https://github.com">GitHub</a>.
 
-## Related Links
+## 관련 링크
 
-- [Configuring JSDoc with a configuration file](../about/configuring-jsdoc.md)
-- [Using namepaths with JSDoc 3](../about/namepaths.md)
+- [구성 파일을 사용하여 JSDoc 구성하기](../about/configuring-jsdoc.md)
+- [JSDoc 3에서 이름 경로 사용하기](../about/namepaths.md)

@@ -4,47 +4,47 @@ title: '@tutorial'
 sidebar_label: '@tutorial'
 ---
 
-## Syntax
+## 구문
 
 ```js
 {@tutorial tutorialID}
-[link text]{@tutorial tutorialID}
-{@tutorial tutorialID|link text}
-{@tutorial tutorialID link text (after the first space)}
+[링크 텍스트]{@tutorial tutorialID}
+{@tutorial tutorialID|링크 텍스트}
+{@tutorial tutorialID 링크 텍스트 (첫 번째 공백 이후)}
 ```
 
-## Overview
+## 개요
 
-The `@tutorial` inline tag creates a link to the tutorial identifier that you specify. When you use the `@tutorial` tag, you can also provide link text, using one of several different formats. If you don't provide any link text, JSDoc uses the tutorial's title as the link text.
+`@tutorial` 인라인 태그는 지정한 튜토리얼 식별자에 대한 링크를 생성합니다. `@tutorial` 태그를 사용할 때는 여러 가지 형식 중 하나를 사용하여 링크 텍스트를 제공할 수도 있습니다. 링크 텍스트를 제공하지 않으면, JSDoc은 튜토리얼의 제목을 링크 텍스트로 사용합니다.
 
-If you need to link to a namepath or a URL, use the [`@link` inline tag](./inline-link.md) instead of the `@tutorial` tag.
+이름 경로(namepath) 또는 URL에 연결해야 하는 경우, `@tutorial` 태그 대신에 [`@link` 인라인 태그](./inline-link.md)를 사용하십시오.
 
-## Examples
+## 예제
 
-The following example shows all of the ways to provide link text for the `@tutorial` tag:
+다음 예제는 `@tutorial` 태그에 링크 텍스트를 제공하는 모든 방법을 보여줍니다:
 
-Providing link text
+링크 텍스트 제공
 
 ```js
 /**
- * See {@tutorial gettingstarted} and [Configuring the Dashboard]{@tutorial dashboard}.
- * For more information, see {@tutorial create|Creating a Widget} and
- * {@tutorial destroy Destroying a Widget}.
+ * {@tutorial gettingstarted} 및 [대시보드 구성하기]{@tutorial dashboard}를 참조하세요.
+ * 자세한 정보는 {@tutorial create|위젯 생성하기} 및
+ * {@tutorial destroy 위젯 파괴하기}를 참조하세요.
  */
 function myFunction() {}
 ```
 
-If all of these tutorials are defined, and the title of the `gettingstarted` tutorial is "Getting Started," the example above produces output similar to the following:
+이 튜토리얼들이 모두 정의되어 있고, `gettingstarted` 튜토리얼의 제목이 "Getting Started"인 경우, 위의 예제는 다음과 유사한 출력을 생성합니다:
 
-Output for @link tags
+@link 태그에 대한 출력
 
 ```html
-See <a href="tutorial-gettingstarted.html">Getting Started</a> and
-<a href="tutorial-dashboard.html">Configuring the Dashboard</a>. For more
-information, see <a href="tutorial-create.html">Creating a Widget</a> and
-<a href="tutorial-destroy.html">Destroying a Widget</a>.
+<a href="tutorial-gettingstarted.html">Getting Started</a> 및
+<a href="tutorial-dashboard.html">대시보드 구성하기</a>를 참조하세요. 자세한 정보는 
+<a href="tutorial-create.html">위젯 생성하기</a> 및 
+<a href="tutorial-destroy.html">위젯 파괴하기</a>를 참조하세요.
 ```
 
-## Related Links
+## 관련 링크
 
 [@tutorial](./tutorial.md)
