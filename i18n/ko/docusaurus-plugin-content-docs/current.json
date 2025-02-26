@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.About": {
+    "message": "시작하기",
+    "description": "The label for category About in sidebar docs"
+  },
+  "sidebar.docs.category.How to": {
+    "message": "JSDoc 예제",
+    "description": "The label for category How to in sidebar docs"
+  },
+  "sidebar.docs.category.Tags": {
+    "message": "블록 태그",
+    "description": "The label for category Tags in sidebar docs"
+  }
+}
